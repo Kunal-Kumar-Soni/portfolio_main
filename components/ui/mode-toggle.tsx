@@ -13,11 +13,11 @@ export function ModeToggle() {
       variant="ghost"
       type="button"
       size="icon"
-      className="px-2 cursor-pointer"
+      className="group hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 rounded-full size-10 transition-all cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      <ImSun className="dark:hidden w-[1.2rem] h-[1.2rem] text-neutral-800 dark:text-neutral-200" />
-      <RxMoon className="hidden dark:block w-[1.2rem] h-[1.2rem] text-neutral-800 dark:text-neutral-200" />
+      <ImSun className="hidden dark:block size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
+      <RxMoon className="dark:hidden size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
     </Button>
   );
 }
