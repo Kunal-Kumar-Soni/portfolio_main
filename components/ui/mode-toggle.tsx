@@ -13,7 +13,7 @@ export function ModeToggle() {
       variant="ghost"
       type="button"
       size="icon"
-      className="group hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 rounded-full size-10 transition-all cursor-pointer"
+      className="group hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 rounded-full size-9 transition-all cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <ImSun className="hidden dark:block size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />

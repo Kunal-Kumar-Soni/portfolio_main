@@ -55,7 +55,7 @@ export function Navbar() {
                       href={item.href}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "relative size-10 rounded-full transition-all duration-300",
+                        "relative size-9 rounded-full transition-all ",
                         active
                           ? "bg-accent text-accent-foreground shadow-sm"
                           : "text-muted-foreground hover:bg-accent/50"
@@ -83,9 +83,10 @@ export function Navbar() {
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    target="_blank"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-10 rounded-full text-muted-foreground hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 active:text-primary"
+                      "size-9 rounded-full text-muted-foreground hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 active:text-primary"
                     )}
                   >
                     <social.icon className="size-4" />
@@ -108,7 +109,7 @@ export function Navbar() {
                   href="/contact"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "relative size-10 rounded-full transition-all duration-300",
+                    "relative size-9 rounded-full transition-all ",
                     pathname === "/contact"
                       ? "bg-accent text-accent-foreground shadow-sm"
                       : "text-muted-foreground hover:bg-accent/50"
@@ -127,7 +128,8 @@ export function Navbar() {
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="flex justify-center items-center size-10">
+                <div>
+                  {" "}
                   <ModeToggle />
                 </div>
               </TooltipTrigger>
