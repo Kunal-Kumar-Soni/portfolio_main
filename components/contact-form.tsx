@@ -15,31 +15,34 @@ export default function ContactForm() {
     formState: { errors, isSubmitting },
     handleSubmit,
     watch,
+    reset,
   } = useForm<ContactFormInput>();
   const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmit: SubmitHandler<ContactFormInput> = async (formData) => {
-    // try {
-    //   const data = await contactFormAction(formData);
-    //   if (data.status) {
-    //     setIsSuccess(true);
-    //   } else {
-    //     setIsSuccess(false);
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    // } finally {
-    //   setTimeout(() => setIsSuccess(false), 3000);
-    // }
-
-    await new Promise((res) =>
-      setTimeout(() => {
-        res("resolve succeed");
+    try {
+      const data = await contactFormAction(formData);
+      if (data.status) {
         setIsSuccess(true);
-      }, 1000)
-    );
+        reset();
+      } else {
+        setIsSuccess(false);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setTimeout(() => setIsSuccess(false), 3000);
+    }
 
-    setTimeout(() => setIsSuccess(false), 4000);
+    // await new Promise((res) =>
+    //   setTimeout(() => {
+    //     res("resolve succeed");
+    //     setIsSuccess(true);
+    //     reset();
+    //   }, 1000)
+    // );
+
+    // setTimeout(() => setIsSuccess(false), 4000);
   };
 
   return (
@@ -57,8 +60,8 @@ export default function ContactForm() {
       {/* Form Card */}
       <Card className="bg-background">
         {isSuccess ? (
-          <CardContent className="flex flex-col justify-center items-center opacity-100 py-14 text-center scale-100 transition-all duration-500 ease-in-out">
-            <div className="flex justify-center items-center bg-emerald-500/10 mb-4 rounded-full w-16 h-16 text-emerald-500 transition-transform duration-700 ease-out">
+          <CardContent className="flex flex-col justify-center items-center opacity-100 py-14 text-center scale-100">
+            <div className="flex justify-center items-center bg-emerald-500/10 mb-4 rounded-full w-16 h-16 text-emerald-500">
               <FaCheck className="text-2xl" />
             </div>
 
@@ -71,7 +74,7 @@ export default function ContactForm() {
             </p>
           </CardContent>
         ) : (
-          <CardContent className="animate-in duration-500 ease-in-out fade-in">
+          <CardContent className="">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               {/* Name + Phone */}
               <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
