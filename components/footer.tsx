@@ -1,5 +1,3 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Separator } from "./ui/separator";
 
 export default function Footer() {
