@@ -34,7 +34,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Divider */}
       <Separator className="my-6" />
 
       {/* Info Grid */}
