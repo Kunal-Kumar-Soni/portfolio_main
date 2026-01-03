@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ExperienceSection = () => {
   return (
-    <div className="mx-auto mt-6 px-4 max-w-3xl font-geistMono">
+    <div className="mx-auto mt-8 px-4 max-w-3xl font-geistMono">
       <Separator className="my-6" />
       <h1 className="mb-6 font-ibmPlexSans font-bold text-3xl">Experience</h1>
 
@@ -37,8 +37,8 @@ const ExperienceSection = () => {
             {/*  Working Badge */}
             <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
               <span className="relative flex w-2 h-2">
-                <span className="inline-flex absolute bg-green-400 opacity-75 rounded-full w-full h-full animate-ping"></span>
-                <span className="inline-flex relative bg-green-500 rounded-full w-2 h-2"></span>
+                <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
+                <span className="relative bg-green-500 rounded-full w-2 h-2"></span>
               </span>
               <span className="font-bold text-[12px] text-green-500 tracking-tighter sm:tracking-wider">
                 Working
@@ -76,8 +76,7 @@ const ExperienceSection = () => {
         {/* Experience Details - Points format is better */}
         <div className="space-y-3 mt-5">
           {/* Point 1 */}
-          <div className="group flex items-start gap-3 text-muted-foreground sm:text-[15px] text-sm leading-relaxed">
-            {/* Dot Wrapper: Isse dot hamesha pehli line ke center mein rahega */}
+          <div className="group flex items-start gap-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
             <div className="flex items-center h-6 shrink-0">
               <div className="bg-zinc-600 rounded-full w-1.5 h-1.5" />
             </div>
@@ -88,7 +87,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Point 2 */}
-          <div className="group flex items-start gap-3 text-muted-foreground sm:text-[15px] text-sm leading-relaxed">
+          <div className="group flex items-start gap-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
             {/* Dot Wrapper */}
             <div className="flex items-center h-6 shrink-0">
               <div className="bg-zinc-600 rounded-full w-1.5 h-1.5" />

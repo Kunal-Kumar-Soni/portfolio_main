@@ -13,11 +13,11 @@ import { TechBadge } from "../ui/tech-badges";
 export default function HeroSection() {
   const router = useRouter();
   return (
-    <section className="mx-auto p-4 max-w-3xl font-geistMono -xl">
+    <section className="mx-auto px-4 max-w-3xl font-geistMono">
       <div className="flex items-center gap-5">
         <div className="relative">
           {/* Profile */}
-          <Image src="/logo.png" alt="Profile" width={96} height={96} />
+          <Image src="/logo.jpg" alt="Profile" width={96} height={96} className="rounded-xl" />
           {/* Flag */}
           <span className="-right-1 -bottom-1 absolute">
             <Image src="/india.png" alt="India" width={26} height={26} />
@@ -27,7 +27,7 @@ export default function HeroSection() {
         {/* Name */}
         <div>
           <h1 className="flex items-center gap-2 font-semibold text-2xl">
-            Kunal <span className="hidden sm:block">Kumar</span> Soni
+            Kunal
             <BsPatchCheckFill className="text-sky-400" />
           </h1>
           <p className="text-sm">Open Source Contributor</p>
