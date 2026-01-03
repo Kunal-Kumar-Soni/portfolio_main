@@ -6,7 +6,7 @@ const ICONS = {
   ts: <SiTypescript className="text-[#3178C6]" />,
   react: <SiReact className="text-[#61DAFB]" />,
   next: <SiNextdotjs />,
-  shadcn: <SiShadcnui className="w-4 h-4 text-foreground" />,
+  shadcn: <SiShadcnui />,
   tailwind: <SiTailwindcss className="text-[#38BDF8]" />,
 } as const;
 

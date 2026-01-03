@@ -7,8 +7,13 @@ import Link from "next/link";
 const ExperienceSection = () => {
   return (
     <div className="mx-auto mt-8 px-4 max-w-3xl font-geistMono">
-      <Separator className="my-6" />
-      <h1 className="mb-6 font-ibmPlexSans font-bold text-3xl">Experience</h1>
+      <Separator className="mb-6" />
+
+      {/* Heading */}
+      <div className="mb-6">
+        <p className="text-muted-foreground text-sm tracking-widest">Insight</p>
+        <h1 className="font-ibmPlexSans font-bold text-3xl">Experience</h1>
+      </div>
 
       {/* Header Container */}
       <div className="flex sm:flex-row flex-col justify-between items-start gap-2 mb-6">

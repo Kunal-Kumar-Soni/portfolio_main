@@ -9,7 +9,7 @@ const AboutSection = () => {
       {/* Heading */}
       <div className="mb-6">
         <p className="text-muted-foreground text-sm tracking-widest">About</p>
-        <h1 className="mt-0.5 font-ibmPlexSans font-bold text-2xl">Me</h1>
+        <h1 className="mt-0.5 font-ibmPlexSans font-bold text-3xl">Me</h1>
       </div>
 
       {/* Content */}

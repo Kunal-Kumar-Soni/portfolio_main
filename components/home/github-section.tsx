@@ -2,15 +2,27 @@
 import { GitHubCalendar } from "react-github-calendar";
 import { Separator } from "../ui/separator";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const GithubActivity = () => {
   const { theme } = useTheme();
+  const [mount, setMount] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
+  if (!mount) return null;
 
   return (
     <div className="mx-auto mt-8 px-4 max-w-3xl font-geistMono">
-      <Separator className="my-6" />
+      <Separator className="mb-6" />
 
-      <h2 className="mb-6 font-ibmPlexSans font-bold text-3xl">GitHub Activity</h2>
+      {/* Heading */}
+      <div className="mb-6">
+        <p className="text-muted-foreground text-sm tracking-widest">Insight</p>
+        <h1 className="font-ibmPlexSans font-bold text-3xl">GitHub Activity</h1>
+      </div>
 
       <div className="bg-background px-5.5 py-5 border border-border rounded-xl">
         <GitHubCalendar
