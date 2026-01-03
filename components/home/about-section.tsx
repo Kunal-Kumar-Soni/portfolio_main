@@ -8,12 +8,12 @@ const AboutSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <p className="text-muted-foreground text-sm uppercase tracking-widest">About</p>
-        <h1 className="mt-1 font-bold text-2xl">Me</h1>
+        <p className="text-muted-foreground text-sm tracking-widest">About</p>
+        <h1 className="mt-0.5 font-ibmPlexSans font-bold text-2xl">Me</h1>
       </div>
 
       {/* Content */}
-      <div className="flex md:flex-row flex-col items-start gap-10">
+      <div className="flex md:flex-row flex-col items-start md:items-center gap-10">
         {/* Image */}
         <div className="shrink-0">
           <Image

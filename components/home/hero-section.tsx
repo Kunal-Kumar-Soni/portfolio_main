@@ -28,7 +28,7 @@ export default function HeroSection() {
         <div>
           <h1 className="flex items-center gap-2 font-semibold text-2xl">
             Kunal
-            <BsPatchCheckFill className="text-sky-400" />
+            <BsPatchCheckFill size={18} className="text-sky-400" />
           </h1>
           <p className="text-sm">Open Source Contributor</p>
         </div>
