@@ -24,7 +24,7 @@ const SkillSection = () => {
                   href={stack.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-background hover:bg-muted/40 rounded-lg w-10 h-10 transition-colors shrink-0"
+                  className="flex justify-center items-center bg-background rounded-lg w-10 h-10 transition-colors shrink-0"
                 >
                   <Icon className="w-8 h-8" style={{ color: stack.color }} />
                 </a>

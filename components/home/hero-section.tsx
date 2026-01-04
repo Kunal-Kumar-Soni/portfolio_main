@@ -74,14 +74,22 @@ export default function HeroSection() {
         {/* Left */}
         <div className="space-y-3">
           <Info icon={<Code2 size={14} />} text="Frontend Developer" link="#" />
-          <Info icon={<Phone size={14} />} text="+91 821 034 1466" link="#" />
+          <Info icon={<Phone size={14} />} text="+91 821 034 1466" link="tel:+918210341466" />
           <Info icon={<Globe size={14} />} text="kunalkumarsoni.com" link="#" />
         </div>
 
         {/* Right */}
         <div className="space-y-3">
-          <Info icon={<MapPin size={14} />} text="Bokaro, Jharkhand, India" link="#" />
-          <Info icon={<Mail size={14} />} text="kunal.codes24@gmail.com" link="#" />
+          <Info
+            icon={<MapPin size={14} />}
+            text="Bokaro, Jharkhand, India"
+            link="https://www.google.com/maps/place/Bokaro+Thermal,+Jharkhand/@23.7929814,85.8729708,15z/data=!3m1!4b1!4m6!3m5!1s0x39f46b84cf401591:0xd366eaa0a2518c13!8m2!3d23.7978583!4d85.8844404!16s%2Fm%2F027pq5d?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+          />
+          <Info
+            icon={<Mail size={14} />}
+            text="kunal.codes24@gmail.com"
+            link="mailto:kunal.codes24@gmail.com"
+          />
           <Info icon={<Mars size={14} />} text="he/him" link="#" />
         </div>
       </div>
@@ -149,7 +157,11 @@ function Info({ icon, text, link }: { icon: React.ReactNode; text: string; link:
         <span className="w-3.5 h-3.5">{icon}</span>
       </span>
 
-      <Link href={link} className="text-[14px] leading-tight">
+      <Link
+        href={link}
+        target="_blank"
+        className={`text-[14px] leading-tight ${link !== "#" && "hover:underline"}`}
+      >
         {text}
       </Link>
     </div>
