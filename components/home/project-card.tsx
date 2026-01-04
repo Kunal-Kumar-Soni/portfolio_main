@@ -63,7 +63,7 @@ export default function ProjectCard({
 
           <div>
             <h1 className="font-ibmPlexSans text-muted-foreground text-sm sm:text-base tracking-wide">
-              Techonologies
+              Technologies
             </h1>
             <ProjectTechStack technologies={technologies} />
           </div>

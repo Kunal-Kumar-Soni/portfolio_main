@@ -13,6 +13,7 @@ import {
   SiClerk,
   SiAxios,
   SiGooglegemini,
+  SiRedux,
 } from "react-icons/si";
 
 export const TECH_MAP = {
@@ -30,6 +31,11 @@ export const TECH_MAP = {
   css: { icon: SiCss3, color: "text-[#1572B6]", label: "CSS3" },
   axios: { icon: SiAxios, color: "text-[#5A29E4]", label: "Axios" },
   gemini: { icon: SiGooglegemini, color: "text-[#8E75FF]", label: "Gemini AI" },
+  redux: {
+    icon: SiRedux,
+    color: "text-[#764ABC]",
+    label: "Redux",
+  },
 } as const;
 
 export type TechKey = keyof typeof TECH_MAP;

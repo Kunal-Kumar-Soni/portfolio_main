@@ -9,9 +9,29 @@ import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { IoIosSend } from "react-icons/io";
 import { TechBadge } from "../ui/tech-badges";
+import { TextAnimate } from "../ui/text-animate";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [textIndex, setTextIndex] = useState<number>(0);
+  const [firstRender, setFirstRender] = useState<boolean>(true);
   const router = useRouter();
+  const text = ["Progress over perfection.", "Calm Progress.", "Open Source Contributor."];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => {
+        const isLastIndex = prevIndex >= text.length - 1;
+        return isLastIndex ? 0 : prevIndex + 1;
+      });
+
+      // after first interval tick, enable animation
+      setFirstRender(false);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="mx-auto px-4 max-w-3xl font-geistMono">
       <div className="flex items-center gap-5">
@@ -30,7 +50,20 @@ export default function HeroSection() {
             Kunal Soni
             <BsPatchCheckFill size={18} className="text-sky-400" />
           </h1>
-          <p className="text-sm">Open Source Contributor</p>
+
+          {/* Animated Text */}
+          {firstRender ? (
+            <p className="text-muted-foreground text-sm md:text-base">Open Source Contributor.</p>
+          ) : (
+            <TextAnimate
+              className="text-muted-foreground text-sm md:text-base"
+              animation="slideLeft"
+              by="line"
+              as="p"
+            >
+              {text[textIndex]}
+            </TextAnimate>
+          )}
         </div>
       </div>
 
