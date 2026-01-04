@@ -33,16 +33,6 @@ export default function ContactForm() {
     } finally {
       setTimeout(() => setIsSuccess(false), 3000);
     }
-
-    // await new Promise((res) =>
-    //   setTimeout(() => {
-    //     res("resolve succeed");
-    //     setIsSuccess(true);
-    //     reset();
-    //   }, 1000)
-    // );
-
-    // setTimeout(() => setIsSuccess(false), 4000);
   };
 
   return (

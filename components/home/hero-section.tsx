@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="mx-auto px-4 max-w-3xl font-geistMono">
+    <section className="mx-auto px-4 max-w-3xl">
       <div className="flex items-center gap-5">
         <div className="relative">
           {/* Profile */}
@@ -46,7 +46,7 @@ export default function HeroSection() {
 
         {/* Name */}
         <div>
-          <h1 className="flex items-center gap-2 font-semibold text-2xl">
+          <h1 className="flex items-center gap-2 font-ibmPlexSans font-semibold text-2xl">
             Kunal Soni
             <BsPatchCheckFill size={18} className="text-sky-400" />
           </h1>

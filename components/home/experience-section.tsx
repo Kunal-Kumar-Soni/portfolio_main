@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ExperienceSection = () => {
   return (
-    <div className="mx-auto mt-8 px-4 max-w-3xl font-geistMono">
+    <div className="mx-auto mt-8 px-4 max-w-3xl">
       <Separator className="mb-6" />
 
       {/* Heading */}

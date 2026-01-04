@@ -3,7 +3,7 @@ import { Separator } from "../ui/separator";
 
 const AboutSection = () => {
   return (
-    <section className="mx-auto mt-8 px-4 max-w-3xl font-geistMono">
+    <section className="mx-auto mt-8 px-4 max-w-3xl">
       <Separator className="mb-6" />
 
       {/* Heading */}
@@ -27,7 +27,9 @@ const AboutSection = () => {
 
         {/* Text */}
         <div className="space-y-4">
-          <h2 className="font-semibold text-2xl">Kunal Kumar Soni</h2>
+          <h2 className="font-ibmPlexSans font-semibold text-2xl tracking-wide">
+            Kunal Kumar Soni
+          </h2>
 
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
             I’m a frontend developer focused on building clean, reusable UI component libraries. I
