@@ -160,7 +160,9 @@ function Info({ icon, text, link }: { icon: React.ReactNode; text: string; link:
       <Link
         href={link}
         target="_blank"
-        className={`text-[14px] leading-tight ${link !== "#" && "hover:underline"}`}
+        className={`text-[14px] leading-tight cursor-default ${
+          link !== "#" && "hover:underline cursor-pointer"
+        }`}
       >
         {text}
       </Link>
