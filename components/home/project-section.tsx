@@ -20,8 +20,8 @@ const ProjectSection = () => {
             title={project.title}
             description={project.description}
             image={project.image}
-            technologies={project.technologies}
-            links={project.links}
+            technologies={project?.technologies}
+            socialLinks={project?.SocialLinks}
           />
         ))}
       </div>

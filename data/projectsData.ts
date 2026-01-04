@@ -6,11 +6,43 @@ export const projects = [
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
     image: "/projectsImg/resume_ai.png",
     status: "live", // "live" | "building" | "concept"
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Gemini", "Shadcn UI"],
-    links: {
-      web: "https://resume-ai-kunal.vercel.app",
-      github: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
-    },
+    technologies: [
+      {
+        icon: "Next.js",
+        link: "https://nextjs.org",
+      },
+      {
+        icon: "TypeScript",
+        link: "https://www.typescriptlang.org",
+      },
+      {
+        icon: "Tailwind CSS",
+        link: "https://tailwindcss.com",
+      },
+      {
+        icon: "Supabase",
+        link: "https://supabase.com",
+      },
+      {
+        icon: "Gemini",
+        link: "https://ai.google.dev",
+      },
+      {
+        icon: "Shadcn UI",
+        link: "https://ui.shadcn.com",
+      },
+    ],
+
+    SocialLinks: [
+      {
+        label: "Live Demo",
+        link: "https://resume-ai-kunal.vercel.app",
+      },
+      {
+        label: "Github",
+        link: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
+      },
+    ],
   },
 
   {
@@ -21,10 +53,33 @@ export const projects = [
 
     image: "/projectsImg/shop_karo.png",
     status: "building",
-    technologies: ["React", "JavaScript", "Tailwind CSS", "redux"],
-    links: {
-      web: "https://music-app-kunal.vercel.app/",
-      github: "https://github.com/Kunal-Kumar-Soni/MusicApp",
-    },
+    technologies: [
+      {
+        icon: "React",
+        link: "https://react.dev",
+      },
+      {
+        icon: "JavaScript",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        icon: "Tailwind CSS",
+        link: "https://tailwindcss.com",
+      },
+      {
+        icon: "redux",
+        link: "https://redux.js.org",
+      },
+    ],
+    SocialLinks: [
+      {
+        label: "Live Demo",
+        link: "https://e-commerce-website-kunal.vercel.app/",
+      },
+      {
+        label: "Github",
+        link: "https://github.com/Kunal-Kumar-Soni/E-commerce",
+      },
+    ],
   },
 ];
