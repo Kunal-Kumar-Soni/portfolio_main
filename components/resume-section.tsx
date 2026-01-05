@@ -3,6 +3,7 @@
 import React from "react";
 import { Download, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 const ResumeSection = () => {
   return (
@@ -16,24 +17,28 @@ const ResumeSection = () => {
 
         {/* Actions */}
         <div className="flex gap-3">
-          <Link
-            href="https://drive.google.com/file/d/1j0duZnwpb9H1lkTkiOPmiUhqlTz0im8L/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-secondary hover:bg-accent shadow-sm hover:shadow-lg px-4 py-2 rounded-md text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
-          >
-            <ExternalLink size={16} />
-            Open
-          </Link>
+          <Button asChild>
+            <Link
+              href="https://drive.google.com/file/d/1j0duZnwpb9H1lkTkiOPmiUhqlTz0im8L/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
+            >
+              <ExternalLink size={16} />
+              Open
+            </Link>
+          </Button>
 
-          <Link
-            href="/documents/Kunal's_Resume.pdf"
-            download
-            className="inline-flex items-center gap-2 bg-foreground hover:opacity-90 shadow-sm hover:shadow-lg px-4 py-2 rounded-md text-background text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
-          >
-            <Download size={16} />
-            Download
-          </Link>
+          <Button variant={"secondary"} asChild>
+            <Link
+              href="/documents/Kunal's_Resume.pdf"
+              download
+              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
+            >
+              <Download size={16} />
+              Download
+            </Link>
+          </Button>
         </div>
       </div>
 

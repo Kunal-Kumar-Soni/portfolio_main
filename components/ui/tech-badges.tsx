@@ -17,7 +17,7 @@ type TechBadgeProps = {
 
 export function TechBadge({ label, icon }: TechBadgeProps) {
   return (
-    <span className="inline-flex items-center gap-1.5 bg-zinc-100/80 dark:bg-zinc-900 backdrop-blur px-2.5 py-1 border border-zinc-300/90 dark:border-zinc-700 border-dashed rounded-md font-medium text-foreground text-sm">
+    <span className="inline-flex items-center gap-1.5 bg-zinc-100/80 dark:bg-zinc-800/90 backdrop-blur px-2.5 py-1 border border-zinc-300/90 dark:border-zinc-700 border-dashed rounded-md font-medium text-foreground text-sm">
       {ICONS[icon]}
       {label}
     </span>

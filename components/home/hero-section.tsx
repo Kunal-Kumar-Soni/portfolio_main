@@ -125,7 +125,7 @@ export default function HeroSection() {
         {/* Resume Button */}
         <Button
           onClick={() => router.push("/resume")}
-          className="group relative hover:shadow-lg px-4 text-white dark:text-slate-900 active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
+          className="group hover:shadow-lg active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
         >
           <div className="flex items-center">
             <BsFillFileTextFill className="text-base group-hover:-rotate-20 transition-transform duration-300" />
@@ -137,7 +137,7 @@ export default function HeroSection() {
         <Button
           variant="secondary"
           onClick={() => router.push("/contact")}
-          className="group relative shadow-sm hover:shadow-lg px-4 text-slate-900 dark:text-white active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
+          className="group shadow-sm hover:shadow-lg active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
         >
           <div className="flex items-center">
             <span className="mr-2">Get in touch</span>
