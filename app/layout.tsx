@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navbar";
-import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/main/theme-provider";
+import { Navbar } from "@/components/main/navbar";
+import Footer from "@/components/main/footer";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans",

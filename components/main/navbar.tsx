@@ -10,7 +10,7 @@ import { Dock, DockIcon } from "@/components/ui/dock";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuNotebookTabs } from "react-icons/lu";
-import { ModeToggle } from "./ui/mode-toggle";
+import { ModeToggle } from "../ui/mode-toggle";
 import { usePathname } from "next/navigation";
 import { MdMail } from "react-icons/md";
 

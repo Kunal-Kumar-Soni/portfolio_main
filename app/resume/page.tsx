@@ -1,4 +1,4 @@
-import ResumeSection from "@/components/resume-section";
+import ResumeSection from "@/components/main/resume-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -2,6 +2,7 @@ import AboutSection from "@/components/home/about-section";
 import ExperienceSection from "@/components/home/experience-section";
 import GithubActivity from "@/components/home/github-section";
 import HeroSection from "@/components/home/hero-section";
+import PersonalSection from "@/components/home/personal-section";
 import ProjectSection from "@/components/home/project-section";
 import SkillSection from "@/components/home/skills-section";
 
@@ -14,6 +15,7 @@ const page = () => {
       <AboutSection />
       <SkillSection />
       <GithubActivity />
+      <PersonalSection />
     </div>
   );
 };
