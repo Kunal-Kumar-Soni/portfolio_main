@@ -1,7 +1,26 @@
-import React from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
+import { QuotesData } from "@/data/quotes";
+
+type QuotesInfoType = {
+  quote: string;
+  author: string;
+};
 
 const QuotesSection = () => {
+  const [quotesInfo, setQuotesInfo] = useState<QuotesInfoType | null>(null);
+
+  const getQuotesData = () => {
+    const randomIndex = Math.floor(Math.random() * QuotesData.length);
+    const data = QuotesData[randomIndex];
+    setQuotesInfo(data);
+  };
+
+  useEffect(() => {
+    getQuotesData();
+  }, []);
+
   return (
     <div className="mx-auto mt-10 px-4 max-w-3xl font-geistMono">
       <Separator className="mb-6" />
@@ -17,11 +36,11 @@ const QuotesSection = () => {
 
         {/* Quote */}
         <p className="font-ibmPlexSans text-muted-foreground text-base sm:text-lg italic leading-relaxed">
-          "Working is in our hands but the result isn't."
+          {quotesInfo?.quote}
         </p>
 
         {/* Author */}
-        <div className="mt-4 text-sm text-right">— Kunal Kumar Soni</div>
+        <div className="mt-4 text-sm text-right">— {quotesInfo?.author}</div>
       </div>
     </div>
   );
