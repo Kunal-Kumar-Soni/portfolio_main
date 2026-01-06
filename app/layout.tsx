@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/main/theme-provider";
 import { Navbar } from "@/components/main/navbar";
 import Footer from "@/components/main/footer";
+import QuotesSection from "@/components/main/quotes-section";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans",
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <QuotesSection />
           <Footer />
         </ThemeProvider>
       </body>
