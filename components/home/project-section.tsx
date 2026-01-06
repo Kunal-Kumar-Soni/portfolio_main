@@ -9,7 +9,7 @@ const ProjectSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <p className="text-muted-foreground text-sm tracking-widest">Insight</p>
+        <p className="text-muted-foreground text-sm tracking-widest">Builds</p>
         <h1 className="font-ibmPlexSans font-bold text-3xl">Projects</h1>
       </div>
 
