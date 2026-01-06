@@ -3,10 +3,36 @@ import { GitHubCalendar } from "react-github-calendar";
 import { Separator } from "../ui/separator";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { GithubStates } from "@/types/github-activity";
+import Link from "next/link";
 
 const GithubActivity = () => {
   const { theme } = useTheme();
   const [mount, setMount] = useState<boolean>(false);
+  const [githubStates, setGithubStates] = useState<GithubStates | null>(null);
+  const [totalContribution, setTotalContribution] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      try {
+        const res = await fetch(`https://github-contributions-api.jogruber.de/v4/Kunal-Kumar-Soni`);
+        const data: GithubStates = await res.json();
+
+        setGithubStates(data);
+        setTotalContribution(
+          Object.values(data?.total).reduce((acc, curr) => (acc as number) + (curr as number), 0)
+        );
+      } catch (error) {
+        console.error("Could not fetch GitHub data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    getData();
+  }, []);
 
   useEffect(() => {
     setMount(true);
@@ -24,6 +50,20 @@ const GithubActivity = () => {
         <h1 className="font-ibmPlexSans font-bold text-3xl">GitHub Activity</h1>
       </div>
 
+      <div className="mb-2 text-sm">
+        <span className="mr-1 text-muted-foreground">Total contributions:</span>
+        <span className="bg-foreground/5 dark:bg-foreground/10 px-2 py-0.5 rounded font-medium text-foreground">
+          {totalContribution}
+        </span>
+        <Link
+          className="pl-2 text-muted-foreground hover:text-foreground underline"
+          href="https://github.com/Kunal-Kumar-Soni"
+          target="_blank"
+        >
+          Github
+        </Link>
+      </div>
+
       <div className="bg-background py-2">
         <GitHubCalendar
           username="Kunal-Kumar-Soni"
@@ -33,13 +73,12 @@ const GithubActivity = () => {
           blockRadius={0}
           fontSize={12}
           labels={{
-            totalCount: `{{count}} contributions in 2025`,
+            totalCount: ` `,
           }}
           theme={{
-            light: ["#ebedf0", "#afb5bb", "#6e7681", "#30363d", "#161b22"],
-            dark: ["#161b22", "#30363d", "#6e7681", "#bcbcbc", "#ffffff"],
+            light: ["#ebedf0", "#b6dbff", "#7fbfff", "#4098ff", "#1f6fe0"],
+            dark: ["#161b22", "#214f9a", "#1f6feb", "#58a6ff", "#a5d6ff"],
           }}
-          tooltips={{}}
         />
       </div>
     </div>
