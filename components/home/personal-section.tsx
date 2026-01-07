@@ -39,7 +39,7 @@ const PersonalSection = () => {
 
         {/* Inspiration */}
         <Link
-          href="/inspiration"
+          href="/inspirations"
           className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-4 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
           <div className="flex justify-center items-center bg-muted rounded-lg w-10 h-10">
