@@ -1,4 +1,9 @@
 import InspirationsSection from "@/components/main/inspirations-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inspirations - Discipline & Mental Strength",
+};
 
 const page = () => {
   return (
