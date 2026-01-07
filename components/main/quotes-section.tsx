@@ -36,11 +36,11 @@ const QuotesSection = () => {
 
         {/* Quote */}
         <p className="font-ibmPlexSans text-muted-foreground text-base sm:text-lg italic leading-relaxed">
-          {quotesInfo?.quote}
+          "{quotesInfo?.quote}"
         </p>
 
         {/* Author */}
-        <div className="mt-4 text-sm text-right">— {quotesInfo?.author}</div>
+        <div className="mt-4 font-semibold text-sm text-right">— {quotesInfo?.author}</div>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ export default function HeroSection() {
         <div>
           <h1 className="flex items-center gap-2 font-ibmPlexSans font-semibold text-2xl">
             Kunal <span className="hidden md:block">Kumar</span> Soni
-            <BsPatchCheckFill size={18} className="text-sky-400" />
+            <BsPatchCheckFill size={20} className="text-sky-400" />
           </h1>
 
           {/* Animated Text */}

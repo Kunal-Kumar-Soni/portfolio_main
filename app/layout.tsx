@@ -40,7 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <QuotesSection />
+        <QuotesSection/>
           <Footer />
         </ThemeProvider>
       </body>
