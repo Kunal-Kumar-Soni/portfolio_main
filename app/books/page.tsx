@@ -2,7 +2,7 @@ import BooksSection from "@/components/main/books-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Books - Kunal Kumar Soni",
+  title: "Books - Learning & Growth",
 };
 
 const page = () => {
