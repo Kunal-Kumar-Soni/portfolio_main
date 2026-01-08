@@ -18,7 +18,7 @@ export default function Footer() {
           href="https://ramx.in/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-foreground underline transition"
+          className="text-foreground underline transition"
         >
           Ram
         </a>{" "}
@@ -27,7 +27,7 @@ export default function Footer() {
           href="https://chanhdai.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-foreground underline transition"
+          className="text-foreground underline transition"
         >
           Chánh Đại
         </a>

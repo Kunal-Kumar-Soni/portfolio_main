@@ -1,4 +1,4 @@
-import InspirationsSection from "@/components/main/inspirations-section";
+import InspirationsSection from "@/components/main/inspirations/inspiration-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
