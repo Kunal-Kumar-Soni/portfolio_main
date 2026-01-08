@@ -1,6 +1,6 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { Separator } from "../ui/separator";
-import { STACKS } from "@/data/skillsData";
+import { STACKS } from "@/data/skills-info";
 
 const SkillSection = () => {
   return (

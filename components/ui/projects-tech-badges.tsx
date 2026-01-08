@@ -1,7 +1,7 @@
 "use client";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { TECH_MAP, TechKey } from "@/data/projectsTechBadgeIcons";
+import { TECH_MAP, TechKey } from "@/data/projects-techBadge-Icons";
 import Link from "next/link";
 
 export function ProjectTechStack({

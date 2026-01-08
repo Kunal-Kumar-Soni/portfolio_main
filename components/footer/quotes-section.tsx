@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
-import { QuotesData } from "@/data/quotes";
+import { QuotesData } from "@/data/quotes-info";
 
 type QuotesInfoType = {
   quote: string;

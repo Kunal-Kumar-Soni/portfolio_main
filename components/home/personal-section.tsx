@@ -1,7 +1,6 @@
-import React from "react";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { BsBookHalf, BsFire } from "react-icons/bs";
 
 const PersonalSection = () => {
