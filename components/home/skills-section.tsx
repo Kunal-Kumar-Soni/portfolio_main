@@ -1,6 +1,6 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { Separator } from "../ui/separator";
 import { STACKS } from "@/data/skills-info";
+import SkillIcon from "../ui/skill-icon";
 
 const SkillSection = () => {
   return (
@@ -14,26 +14,16 @@ const SkillSection = () => {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        {STACKS.map((stack, i) => {
-          const Icon = stack.icon;
-
-          return (
-            <Tooltip key={i}>
-              <TooltipTrigger asChild>
-                <a
-                  href={stack.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-background rounded-lg w-10 h-10 transition-colors shrink-0"
-                >
-                  <Icon className="w-8 h-8" style={{ color: stack.color }} />
-                </a>
-              </TooltipTrigger>
-
-              <TooltipContent className="text-xs">{stack.name}</TooltipContent>
-            </Tooltip>
-          );
-        })}
+        {STACKS.map((stack, i) => (
+          <SkillIcon
+            key={i}
+            name={stack.name}
+            link={stack.link}
+            icon={stack.icon}
+            image={stack.image}
+            color={stack.color}
+          />
+        ))}
       </div>
     </div>
   );
