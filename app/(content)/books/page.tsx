@@ -1,4 +1,4 @@
-import BooksSection from "@/components/main/books-section";
+import BooksSection from "@/components/main/books/book-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
