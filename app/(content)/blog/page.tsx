@@ -1,7 +1,8 @@
+import Container from "@/components/common/Container";
 import React from "react";
 
 const page = () => {
-  return <div>Blog Page</div>;
+  return <Container>Blog Page</Container>;
 };
 
 export default page;

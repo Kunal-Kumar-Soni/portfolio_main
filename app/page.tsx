@@ -1,3 +1,4 @@
+import Container from "@/components/common/Container";
 import AboutSection from "@/components/home/about-section";
 import ExperienceSection from "@/components/home/experience-section";
 import GithubActivity from "@/components/home/github-section";
@@ -8,7 +9,7 @@ import SkillSection from "@/components/home/skills-section";
 
 const page = () => {
   return (
-    <div className="bg-background fill-mode-both pt-15 sm:pt-20 w-full font-geistMono text-foreground animate-in duration-700 ease-linear fade-in">
+    <Container>
       <HeroSection />
       <ExperienceSection />
       <ProjectSection />
@@ -16,7 +17,7 @@ const page = () => {
       <SkillSection />
       <GithubActivity />
       <PersonalSection />
-    </div>
+    </Container>
   );
 };
 

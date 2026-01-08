@@ -1,3 +1,4 @@
+import Container from "@/components/common/Container";
 import BooksSection from "@/components/content/books/book-section";
 import { Metadata } from "next";
 
@@ -7,9 +8,9 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div className="bg-background fill-mode-both pt-15 sm:pt-20 w-full font-geistMono text-foreground animate-in duration-700 ease-linear fade-in">
+    <Container>
       <BooksSection />
-    </div>
+    </Container>
   );
 };
 
