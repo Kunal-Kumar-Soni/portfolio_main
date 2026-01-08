@@ -4,7 +4,7 @@ import type { InspirationGroupPropsType } from "@/types/inspirations";
 
 export const InspirationGroup = ({ title, data }: InspirationGroupPropsType) => {
   return (
-    <div className="mt-10">
+    <div className="mt-12">
       <div className="flex items-center gap-4 mb-6">
         <div className="flex justify-center items-center bg-muted rounded-lg w-10 h-10">
           <BsFire className="w-5 h-5 text-orange-500" />

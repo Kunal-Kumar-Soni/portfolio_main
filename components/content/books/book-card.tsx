@@ -1,5 +1,4 @@
-import { BookCardPropsType } from "@/types/books";
-import type { InspirationCardPropsType } from "@/types/inspirations";
+import type { BookCardPropsType } from "@/types/books";
 import Image from "next/image";
 
 export const BookCard = ({ item }: { item: BookCardPropsType }) => {

@@ -4,7 +4,7 @@ import type { BookGroupPropsType } from "@/types/books";
 
 export const BookGroup = ({ title, data }: BookGroupPropsType) => {
   return (
-    <div className="mt-10">
+    <div className="mt-12">
       <div className="flex items-center gap-4 mb-6">
         <div className="flex justify-center items-center bg-muted rounded-lg w-10 h-10">
           <BsBookHalf className="w-5 h-5 text-indigo-600 dark:text-indigo-500" />

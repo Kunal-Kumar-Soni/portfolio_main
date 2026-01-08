@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background pt-10 pb-30">
+    <footer className="bg-background pt-10">
       <Separator />
 
       <p className="mt-4 text-muted-foreground text-sm text-center">
