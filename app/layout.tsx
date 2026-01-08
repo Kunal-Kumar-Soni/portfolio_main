@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/main/theme-provider";
-import { Navbar } from "@/components/main/navbar";
-import Footer from "@/components/main/footer";
-import QuotesSection from "@/components/main/quotes-section";
+import { ThemeProvider } from "@/components/content/theme-provider";
+import { Navbar } from "@/components/content/navbar";
+import Footer from "@/components/content/footer";
+import QuotesSection from "@/components/content/quotes-section";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans",
@@ -40,7 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-        <QuotesSection/>
+          <QuotesSection />
           <Footer />
         </ThemeProvider>
       </body>
