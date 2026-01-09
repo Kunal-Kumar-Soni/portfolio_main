@@ -1,3 +1,4 @@
+import { IconType } from "react-icons/lib";
 import {
   SiTypescript,
   SiJavascript,
@@ -14,7 +15,16 @@ import {
   SiGooglegemini,
 } from "react-icons/si";
 
-export const skillsIconInfo = [
+type SkillIconInfoType = {
+  name: string;
+  label: string;
+  color?: string;
+  icon?: IconType;
+  link: string;
+  image?: string;
+}[];
+
+export const skillsIconInfo: SkillIconInfoType = [
   // Frameworks and Libraries
   {
     name: "react",

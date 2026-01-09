@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { Separator } from "../ui/separator";
-
-import { TechBadge } from "../ui/tech-badges";
-import Link from "next/link";
+import TechBadge from "@/components/ui/tech-bage";
 
 const ExperienceSection = () => {
   return (
@@ -64,18 +62,10 @@ const ExperienceSection = () => {
 
         {/* Badges Container */}
         <div className="flex flex-wrap gap-3 mt-2">
-          <Link target="_blank" href="https://react.dev/">
-            <TechBadge label="React" icon="react" />
-          </Link>
-          <Link target="_blank" href="https://nextjs.org/">
-            <TechBadge label="Next.js" icon="next" />
-          </Link>
-          <Link target="_blank" href="https://www.typescriptlang.org/">
-            <TechBadge label="TypeScript" icon="ts" />
-          </Link>
-          <Link target="_blank" href="https://tailwindcss.com/">
-            <TechBadge label="Tailwind CSS" icon="tailwind" />
-          </Link>
+          <TechBadge tech="react" />
+          <TechBadge tech="nextjs" />
+          <TechBadge tech="typescript" />
+          <TechBadge tech="tailwind" />
         </div>
 
         {/* Experience Details - Points format is better */}

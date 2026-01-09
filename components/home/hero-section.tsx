@@ -8,13 +8,13 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { IoIosSend } from "react-icons/io";
-import { TechBadge } from "../ui/tech-badges";
 import { TextAnimate } from "../ui/text-animate";
 import { useEffect, useState } from "react";
+import TechBadge from "@/components/ui/tech-bage";
 
 export default function HeroSection() {
   const [textIndex, setTextIndex] = useState<number>(0);
-  const [firstRender, setFirstRender] = useState<boolean>(true);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
   const router = useRouter();
   const text = ["Progress over perfection.", "Calm Progress.", "Open Source Contributor."];
 
@@ -26,7 +26,7 @@ export default function HeroSection() {
       });
 
       // after first interval tick, enable animation
-      setFirstRender(false);
+      setIsMounted(true);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -52,9 +52,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Animated Text */}
-          {firstRender ? (
-            <p className="text-muted-foreground text-sm md:text-base">Open Source Contributor.</p>
-          ) : (
+          {isMounted ? (
             <TextAnimate
               className="text-muted-foreground text-sm md:text-base"
               animation="slideLeft"
@@ -63,6 +61,8 @@ export default function HeroSection() {
             >
               {text[textIndex]}
             </TextAnimate>
+          ) : (
+            <p className="text-muted-foreground text-sm md:text-base">Open Source Contributor.</p>
           )}
         </div>
       </div>
@@ -96,28 +96,11 @@ export default function HeroSection() {
 
       <Separator className="my-6" />
 
-      <p className="text-muted-foreground text-sm sm:text-base leading-9 sm:leading-loose line">
-        Frontend developer experienced in{" "}
-        <Link target="_blank" href="https://react.dev/">
-          <TechBadge label="React" icon="react" />
-        </Link>
-        ,{" "}
-        <Link target="_blank" href="https://nextjs.org/">
-          <TechBadge label="Next.js" icon="next" />
-        </Link>
-        , and{" "}
-        <Link target="_blank" href="https://www.typescriptlang.org/">
-          <TechBadge label="TypeScript" icon="ts" />
-        </Link>
-        , focused on building modern and responsive web applications. Skilled in{" "}
-        <Link target="_blank" href="https://tailwindcss.com/">
-          <TechBadge label="Tailwind CSS" icon="tailwind" />
-        </Link>{" "}
-        and{" "}
-        <Link target="_blank" href="https://ui.shadcn.com/">
-          <TechBadge label="shadcn/ui" icon="shadcn" />
-        </Link>{" "}
-        for building clean, accessible, and consistent UI components.
+      <p className="text-muted-foreground text-sm sm:text-base leading-9 line">
+        Frontend developer experienced in <TechBadge tech="react" />, <TechBadge tech="nextjs" />,
+        and <TechBadge tech="typescript" />, focused on building modern and responsive web
+        applications. Skilled in <TechBadge tech="tailwind" /> and <TechBadge tech="shadcn" /> for
+        building clean, accessible, and consistent UI components.
       </p>
 
       {/* Buttons */}
