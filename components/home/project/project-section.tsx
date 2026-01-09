@@ -1,6 +1,6 @@
-import { Separator } from "../ui/separator";
-import ProjectCard from "./project-card";
+import { Separator } from "../../ui/separator";
 import { projectsInfo } from "@/data/projects-info";
+import ProjectCard from "./project-card";
 
 const ProjectSection = () => {
   return (

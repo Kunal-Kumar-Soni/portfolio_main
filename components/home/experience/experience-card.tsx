@@ -1,0 +1,90 @@
+import { Separator } from "@/components/ui/separator";
+import TechBadge from "@/components/ui/tech-bage";
+import { ExperienceType } from "@/data/experience-info";
+import Image from "next/image";
+import Link from "next/link";
+
+const ExperienceCard = ({ data }: { data: ExperienceType }) => {
+  const { company, link, role, logo, status, duration, location, technologies, points } = data;
+  return (
+    <>
+      {/* Header Container */}
+      <div className="flex sm:flex-row flex-col justify-between items-start gap-2">
+        {/* Left Side: Logo & Title */}
+        <div className="flex gap-4">
+          <div className="w-12 h-12">
+            <Image
+              height={40}
+              width={40}
+              src={logo}
+              alt="company's_logo"
+              className="rounded-full object-cover"
+            />
+          </div>
+
+          <div className="flex items-start gap-3">
+            <div className="flex flex-col justify-center">
+              <Link
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-ibmPlexSans font-semibold text-md sm:text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
+              >
+                {company}
+              </Link>
+
+              <p className="text-muted-foreground text-sm -tracking-wider">{role}</p>
+            </div>
+
+            {/* Working Badge */}
+            {status === "working" && (
+              <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
+                  <span className="relative bg-green-500 rounded-full w-2 h-2"></span>
+                </span>
+                <span className="font-bold text-[12px] text-green-500 tracking-tighter sm:tracking-wider">
+                  Working
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Right Side: Date & Location */}
+        <div className="flex flex-col sm:items-end ml-16 sm:ml-0 text-left sm:text-right">
+          <p className="font-medium text-muted-foreground text-sm">{duration}</p>
+          <p className="text-muted-foreground text-sm">{location}</p>
+        </div>
+      </div>
+
+      <div className="mt-5">
+        <h2 className="font-ibmPlexSans font-semibold tracking-wider">Technologies & Tools</h2>
+
+        {/* Badges Container */}
+        <div className="flex flex-wrap gap-3 mt-2">
+          {technologies.map((tech) => (
+            <TechBadge key={tech} tech={tech} />
+          ))}
+        </div>
+
+        {/* Experience Details */}
+        <div className="space-y-1 mt-5">
+          {points.map((point, index) => (
+            <div
+              key={index}
+              className="group flex items-start gap-3 text-muted-foreground text-sm sm:text-base"
+            >
+              <div className="flex items-center h-6 shrink-0">
+                <div className="bg-zinc-600 rounded-full w-1.5 h-1.5" />
+              </div>
+              <p>{point}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ExperienceCard;

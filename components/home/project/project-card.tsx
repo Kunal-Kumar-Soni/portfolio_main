@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import Link from "next/link";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import { skillsIcon } from "@/components/ui/skills-icon";
 
 type ProjectCardProps = {
