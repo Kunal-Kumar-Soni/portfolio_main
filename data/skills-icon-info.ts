@@ -11,31 +11,36 @@ import {
   SiGithub,
   SiPrisma,
   SiShadcnui,
+  SiGooglegemini,
 } from "react-icons/si";
 
-export const STACKS = [
-  // Most used daily
+export const skillsIconInfo = [
+  // Frameworks and Libraries
   {
-    name: "React",
+    name: "react",
+    label: "React.js",
     icon: SiReact,
     color: "#61DAFB",
     link: "https://react.dev/",
   },
   {
-    name: "Next.js",
+    name: "nextjs",
+    label: "Next.js",
     icon: SiNextdotjs,
     link: "https://nextjs.org/",
   },
 
-  // Language
+  // Languages
   {
-    name: "TypeScript",
+    name: "typescript",
+    label: "TypeScript",
     icon: SiTypescript,
     color: "#3178C6",
     link: "https://www.typescriptlang.org/",
   },
   {
-    name: "JavaScript",
+    name: "javascript",
+    label: "JavaScript",
     icon: SiJavascript,
     color: "#F7DF1E",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
@@ -43,66 +48,85 @@ export const STACKS = [
 
   // Styling / UI
   {
-    name: "Tailwind CSS",
+    name: "tailwind",
+    label: "Tailwind CSS",
     icon: SiTailwindcss,
     color: "#38BDF8",
     link: "https://tailwindcss.com/",
   },
   {
-    name: "shadcn/ui",
+    name: "shadcn",
+    label: "shadcn/ui",
     icon: SiShadcnui,
     link: "https://ui.shadcn.com/",
   },
 
-  // State
+  // States
   {
-    name: "Redux",
+    name: "redux",
+    label: "Redux",
     icon: SiRedux,
     color: "#764ABC",
     link: "https://redux.js.org/",
   },
 
-  // Backend / DB (used when needed)
+  // Backends / DB
   {
-    name: "Supabase",
+    name: "supabase",
+    label: "Supabase",
     icon: SiSupabase,
     color: "#3ECF8E",
     link: "https://supabase.com/",
   },
   {
-    name: "Appwrite",
+    name: "appwrite",
+    label: "Appwrite",
     icon: SiAppwrite,
     color: "#F02E65",
     link: "https://appwrite.io/",
   },
   {
-    name: "Prisma",
+    name: "prisma",
+    label: "Prisma",
     icon: SiPrisma,
     link: "https://www.prisma.io/",
   },
 
-  // Tools (not every minute, but daily)
+  // Tools
   {
-    name: "Git",
+    name: "git",
+    label: "Git",
     icon: SiGit,
     color: "#F05032",
     link: "https://git-scm.com/",
   },
   {
-    name: "GitHub",
+    name: "github",
+    label: "GitHub",
     icon: SiGithub,
     link: "https://github.com/",
   },
 
-  // Extras
+  // Animations / Designs
   {
-    name: "Motion",
+    name: "motion",
+    label: "Motion",
     link: "https://motion.dev/",
-    image: "/icons/motion.png",
+    image: "/iconsImage/motion.png",
   },
   {
-    name: "Photoshop",
+    name: "photoshop",
+    label: "Photoshop",
     link: "https://www.adobe.com/products/photoshop.html",
-    image: "/icons/photoshop.png",
+    image: "/iconsImage/photoshop.png",
+  },
+
+  //Models
+  {
+    name: "gemini",
+    label: "Gemini Ai",
+    icon: SiGooglegemini,
+    color: "#4285F4",
+    link: "https://ai.google.dev/",
   },
 ];

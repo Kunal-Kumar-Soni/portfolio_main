@@ -1,0 +1,17 @@
+export const skills = [
+  "react",
+  "nextjs",
+  "typescript",
+  "javascript",
+  "tailwind",
+  "framermotion",
+  "redux",
+  "supabase",
+  "shadcn",
+  "prisma",
+  "git",
+  "github",
+  "appwrite",
+  "motion",
+  "photoshop",
+];

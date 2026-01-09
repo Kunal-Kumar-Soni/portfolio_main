@@ -30,7 +30,7 @@ export const TECH_MAP = {
   html: { icon: SiHtml5, color: "text-[#E34F26]", label: "HTML5" },
   css: { icon: SiCss3, color: "text-[#1572B6]", label: "CSS3" },
   axios: { icon: SiAxios, color: "text-[#5A29E4]", label: "Axios" },
-  gemini: { icon: SiGooglegemini, color: "text-[#8E75FF]", label: "Gemini AI" },
+  gemini: { icon: SiGooglegemini, color: "text-[#4285F4]", label: "Gemini AI" },
   redux: {
     icon: SiRedux,
     color: "text-[#764ABC]",

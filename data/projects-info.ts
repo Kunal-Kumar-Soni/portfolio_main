@@ -5,7 +5,7 @@ export const projects = [
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
     image: "/projectsImg/resume_ai.png",
-    status: "live", // "live" | "building" | "concept"
+    status: "live",
     technologies: [
       {
         icon: "Next.js",
