@@ -14,4 +14,5 @@ export const skills = [
   "appwrite",
   "motion",
   "photoshop",
+  "gemini",
 ];

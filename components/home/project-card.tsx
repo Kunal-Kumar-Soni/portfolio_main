@@ -2,17 +2,17 @@
 
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import { ProjectTechStack } from "../ui/projects-tech-badges";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { skillsIcon } from "@/components/ui/skills-icon";
 
 type ProjectCardProps = {
   title: string;
   description: string;
   image: string;
-  technologies: { icon: string; link: string }[];
+  technologies: string[];
   socialLinks?: {
     label: string;
     link: string;
@@ -45,6 +45,7 @@ export default function ProjectCard({
         <div className="space-y-5">
           <div className="flex justify-between">
             <h3 className="font-ibmPlexSans font-semibold text-xl">{title}</h3>
+            {/* Live Demo & Github Icons */}
             <div className="flex gap-3">
               {socialLinks?.map((social, i) => (
                 <Tooltip key={i}>
@@ -74,7 +75,7 @@ export default function ProjectCard({
             <h1 className="font-ibmPlexSans text-muted-foreground text-sm sm:text-base tracking-wide">
               Technologies
             </h1>
-            <ProjectTechStack technologies={technologies} />
+            <div className="mt-2">{skillsIcon(technologies, "h-6 w-6")}</div>
           </div>
         </div>
 

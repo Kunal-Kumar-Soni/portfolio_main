@@ -1,5 +1,5 @@
 import { Separator } from "../ui/separator";
-import { skillsIcon } from "@/utils/skills-icon";
+import { skillsIcon } from "@/components/ui/skills-icon";
 import { skills } from "@/data/skills";
 
 const SkillSection = () => {

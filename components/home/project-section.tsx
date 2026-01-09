@@ -1,6 +1,6 @@
 import { Separator } from "../ui/separator";
 import ProjectCard from "./project-card";
-import { projects } from "@/data/projects-info";
+import { projectsInfo } from "@/data/projects-info";
 
 const ProjectSection = () => {
   return (
@@ -14,7 +14,7 @@ const ProjectSection = () => {
       </div>
 
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
-        {projects.map((project) => (
+        {projectsInfo.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}

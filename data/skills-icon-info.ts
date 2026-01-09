@@ -124,7 +124,7 @@ export const skillsIconInfo = [
   //Models
   {
     name: "gemini",
-    label: "Gemini Ai",
+    label: "Gemini",
     icon: SiGooglegemini,
     color: "#4285F4",
     link: "https://ai.google.dev/",

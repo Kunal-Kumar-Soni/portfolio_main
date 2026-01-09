@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const skillsIcon = (
   iconsData: string[],
-  className: string = cn("inline-flex justify-center items-center w-9 h-9")
+  className: string = cn("inline-flex justify-center items-center w-8 h-8")
 ) => {
   const skillData = skillsIconInfo.filter((skillInfo) => iconsData.includes(skillInfo.name));
 
