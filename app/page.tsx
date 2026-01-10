@@ -6,7 +6,6 @@ import HeroSection from "@/components/home/hero-section";
 import PersonalSection from "@/components/home/personal-section";
 import ProjectSection from "@/components/home/project/project-section";
 import SkillSection from "@/components/home/skills-section";
-import TechBadges from "@/components/ui/tech-bage";
 
 const page = () => {
   return (
