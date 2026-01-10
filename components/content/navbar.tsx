@@ -115,7 +115,12 @@ export function Navbar() {
                       : "text-muted-foreground hover:bg-accent/50"
                   )}
                 >
-                  <MdMail className="size-4" />
+                  <MdMail
+                    className={cn(
+                      "size-4 transition-transform",
+                      pathname === "/contact" && "scale-110"
+                    )}
+                  />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>

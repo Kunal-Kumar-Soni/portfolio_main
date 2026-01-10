@@ -33,25 +33,25 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
             </div>
 
             <div className="flex flex-col w-full">
-              <div className="flex justify-between gap-2">
+              <div className="flex justify-between sm:gap-2">
                 <Link
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-ibmPlexSans font-semibold text-base sm:text-lg hover:underline leading-tight tracking-normal"
+                  className="font-ibmPlexSans font-semibold text-[17px] sm:text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
                 >
                   {company}
                 </Link>
 
-                <div className="flex justify-between gap-2">
+                <div className="flex justify-between gap-1 sm:gap-2">
                   {/* Working Badge */}
                   {status === "working" && (
                     <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
-                      <span className="relative flex w-2 h-2">
+                      <span className="relative flex w-1.5 sm:w-2 h-1.5 sm:h-2">
                         <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
-                        <span className="relative bg-green-500 rounded-full w-2 h-2"></span>
+                        <span className="relative bg-green-500 rounded-full w-1.5 sm:w-2 h-1.5 sm:h-2"></span>
                       </span>
-                      <span className="font-bold text-[12px] text-green-500 tracking-tighter sm:tracking-wider">
+                      <span className="font-bold text-[11px] text-green-500 sm:text-[13px] tracking-tighter sm:tracking-normal">
                         Working
                       </span>
                     </div>
@@ -66,7 +66,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
                   </Tooltip>
                 </div>
               </div>
-              <p className="-mt-1 sm:mt-0 text-muted-foreground text-sm -tracking-wider">{role}</p>
+              <p className="-mt-1 sm:mt-0 text-muted-foreground text-sm tracking-tighter">{role}</p>
             </div>
           </div>
 

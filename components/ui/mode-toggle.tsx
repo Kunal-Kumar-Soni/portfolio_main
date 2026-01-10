@@ -8,13 +8,20 @@ import { RxMoon } from "react-icons/rx";
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const handleMode = () => {
+    const audio = new Audio("/capture/capture.wav");
+    audio.volume = 0.4;
+    audio.play();
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <Button
       variant="ghost"
       type="button"
       size="icon"
       className="group hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 rounded-full size-9 transition-all cursor-pointer"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={handleMode}
     >
       <ImSun className="hidden dark:block size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
       <RxMoon className="dark:hidden size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
