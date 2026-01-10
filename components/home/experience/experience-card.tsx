@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import TechBadge from "@/components/ui/tech-bage";
+import TechBadge from "@/components/ui/tech-badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { ExperienceType } from "@/data/experience-info";
 import { ChevronDown } from "lucide-react";
@@ -71,7 +71,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
           </div>
 
           {/* Right Side: Date & Location */}
-          <div className="flex flex-col sm:items-end -mt-1 sm:mt-0 ml-13 sm:ml-0 text-left sm:text-right">
+          <div className="flex flex-col sm:items-end -mt-1 sm:mt-0 ml-12.5 sm:ml-0 text-left sm:text-right">
             <p className="font-medium text-muted-foreground text-sm">{duration}</p>
             <p className="text-muted-foreground text-sm">{location}</p>
           </div>

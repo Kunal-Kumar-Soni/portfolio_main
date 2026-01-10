@@ -4,13 +4,13 @@ import Image from "next/image";
 import { Code2, MapPin, Phone, Globe, Mail, Mars } from "lucide-react";
 import { BsFillFileTextFill, BsPatchCheckFill } from "react-icons/bs";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { IoIosSend } from "react-icons/io";
 import { TextAnimate } from "../ui/text-animate";
 import { useEffect, useState } from "react";
-import TechBadge from "@/components/ui/tech-bage";
+import TechBadge from "@/components/ui/tech-badge";
+import { IconBadge } from "../ui/icon-badge";
 
 export default function HeroSection() {
   const [textIndex, setTextIndex] = useState<number>(0);
@@ -69,28 +69,28 @@ export default function HeroSection() {
 
       <Separator className="my-6" />
 
-      {/* Info Grid */}
+      {/* IconBadge Grid */}
       <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 text-sm">
         {/* Left */}
         <div className="space-y-5">
-          <Info icon={<Code2 size={16} />} text="Frontend Developer" link="#" />
-          <Info icon={<Phone size={16} />} text="+91 821 034 1466" link="tel:+918210341466" />
-          <Info icon={<Globe size={16} />} text="kunalkumarsoni.com" link="#" />
+          <IconBadge icon={<Code2 size={16} />} text="Frontend Developer" link="#" />
+          <IconBadge icon={<Phone size={16} />} text="+91 821 034 1466" link="tel:+918210341466" />
+          <IconBadge icon={<Globe size={16} />} text="kunalkumarsoni.com" link="#" />
         </div>
 
         {/* Right */}
         <div className="space-y-5">
-          <Info
+          <IconBadge
             icon={<MapPin size={16} />}
             text="Bokaro, Jharkhand, India"
             link="https://www.google.com/maps/place/Bokaro+Thermal,+Jharkhand/@23.7929814,85.8729708,15z/data=!3m1!4b1!4m6!3m5!1s0x39f46b84cf401591:0xd366eaa0a2518c13!8m2!3d23.7978583!4d85.8844404!16s%2Fm%2F027pq5d?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
           />
-          <Info
+          <IconBadge
             icon={<Mail size={16} />}
             text="kunal.codes24@gmail.com"
             link="mailto:kunal.codes24@gmail.com"
           />
-          <Info icon={<Mars size={16} />} text="he/him" link="#" />
+          <IconBadge icon={<Mars size={16} />} text="he/him" link="#" />
         </div>
       </div>
 
@@ -129,26 +129,5 @@ export default function HeroSection() {
         </Button>
       </div>
     </section>
-  );
-}
-
-/* Reusable Row */
-function Info({ icon, text, link }: { icon: React.ReactNode; text: string; link: string }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className="flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-md outline outline-zinc-200 dark:outline-zinc-700 outline-offset-2 w-7 h-7 text-zinc-500 dark:text-zinc-400">
-        <span className="w-4 h-4">{icon}</span>
-      </span>
-
-      <Link
-        href={link}
-        target="_blank"
-        className={`text-sm sm:text-[15px] tracking-wider cursor-default ${
-          link !== "#" && "hover:underline cursor-pointer"
-        }`}
-      >
-        {text}
-      </Link>
-    </div>
   );
 }
