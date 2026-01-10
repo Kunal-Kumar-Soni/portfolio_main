@@ -72,25 +72,25 @@ export default function HeroSection() {
       {/* Info Grid */}
       <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 text-sm">
         {/* Left */}
-        <div className="space-y-3">
-          <Info icon={<Code2 size={14} />} text="Frontend Developer" link="#" />
-          <Info icon={<Phone size={14} />} text="+91 821 034 1466" link="tel:+918210341466" />
-          <Info icon={<Globe size={14} />} text="kunalkumarsoni.com" link="#" />
+        <div className="space-y-5">
+          <Info icon={<Code2 size={16} />} text="Frontend Developer" link="#" />
+          <Info icon={<Phone size={16} />} text="+91 821 034 1466" link="tel:+918210341466" />
+          <Info icon={<Globe size={16} />} text="kunalkumarsoni.com" link="#" />
         </div>
 
         {/* Right */}
-        <div className="space-y-3">
+        <div className="space-y-5">
           <Info
-            icon={<MapPin size={14} />}
+            icon={<MapPin size={16} />}
             text="Bokaro, Jharkhand, India"
             link="https://www.google.com/maps/place/Bokaro+Thermal,+Jharkhand/@23.7929814,85.8729708,15z/data=!3m1!4b1!4m6!3m5!1s0x39f46b84cf401591:0xd366eaa0a2518c13!8m2!3d23.7978583!4d85.8844404!16s%2Fm%2F027pq5d?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
           />
           <Info
-            icon={<Mail size={14} />}
+            icon={<Mail size={16} />}
             text="kunal.codes24@gmail.com"
             link="mailto:kunal.codes24@gmail.com"
           />
-          <Info icon={<Mars size={14} />} text="he/him" link="#" />
+          <Info icon={<Mars size={16} />} text="he/him" link="#" />
         </div>
       </div>
 
@@ -136,14 +136,14 @@ export default function HeroSection() {
 function Info({ icon, text, link }: { icon: React.ReactNode; text: string; link: string }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-md w-6 h-6 text-zinc-500 dark:text-zinc-400">
-        <span className="w-3.5 h-3.5">{icon}</span>
+      <span className="flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-md outline outline-zinc-200 dark:outline-zinc-700 outline-offset-2 w-7 h-7 text-zinc-500 dark:text-zinc-400">
+        <span className="w-4 h-4">{icon}</span>
       </span>
 
       <Link
         href={link}
         target="_blank"
-        className={`text-[14px] leading-tight cursor-default ${
+        className={`text-sm sm:text-[15px] tracking-wider cursor-default ${
           link !== "#" && "hover:underline cursor-pointer"
         }`}
       >
