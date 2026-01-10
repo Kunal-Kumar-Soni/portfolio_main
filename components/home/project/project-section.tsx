@@ -4,7 +4,7 @@ import ProjectCard from "./project-card";
 
 const ProjectSection = () => {
   return (
-    <div className="mx-auto mt-8 px-4 max-w-3xl">
+    <div className="mx-auto mt-6 px-4 max-w-3xl">
       <Separator className="mb-6" />
 
       {/* Heading */}

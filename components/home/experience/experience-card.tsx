@@ -21,8 +21,8 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
       <AccordionTrigger className="group [&>svg]:hidden p-0 w-full hover:no-underline">
         <div className="flex sm:flex-row flex-col sm:justify-between sm:items-start gap-2 w-full">
           {/* Left Side: Logo & Title */}
-          <div className="flex gap-4">
-            <div className="w-12 h-12">
+          <div className="flex gap-3">
+            <div className="w-11 sm:w-12 h-11 sm:h-12">
               <Image
                 height={45}
                 width={45}
@@ -32,45 +32,46 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
               />
             </div>
 
-            <div className="flex items-start gap-3">
-              <div className="flex flex-col justify-center">
+            <div className="flex flex-col w-full">
+              <div className="flex justify-between gap-2">
                 <Link
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-ibmPlexSans font-semibold text-md sm:text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
+                  className="font-ibmPlexSans font-semibold text-base sm:text-lg hover:underline leading-tight tracking-normal"
                 >
                   {company}
                 </Link>
 
-                <p className="text-muted-foreground text-sm -tracking-wider">{role}</p>
-              </div>
+                <div className="flex justify-between gap-2">
+                  {/* Working Badge */}
+                  {status === "working" && (
+                    <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
+                      <span className="relative flex w-2 h-2">
+                        <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
+                        <span className="relative bg-green-500 rounded-full w-2 h-2"></span>
+                      </span>
+                      <span className="font-bold text-[12px] text-green-500 tracking-tighter sm:tracking-wider">
+                        Working
+                      </span>
+                    </div>
+                  )}
 
-              {/* Working Badge */}
-              {status === "working" && (
-                <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
-                  <span className="relative flex w-2 h-2">
-                    <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
-                    <span className="relative bg-green-500 rounded-full w-2 h-2"></span>
-                  </span>
-                  <span className="font-bold text-[12px] text-green-500 tracking-tighter sm:tracking-wider">
-                    Working
-                  </span>
+                  {/* Expand Button */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <ChevronDown className="hover:bg-accent mt-1 rounded w-5 h-5 text-muted-foreground data-[state=open]:rotate-180 group-data-[state=open]:rotate-180 transition-transform duration-200" />
+                    </TooltipTrigger>
+                    <TooltipContent> {isOpen ? "Hide details" : "View details"}</TooltipContent>
+                  </Tooltip>
                 </div>
-              )}
-
-              {/* Expand Button */}
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <ChevronDown className="hover:bg-accent mt-1 rounded w-5 h-5 text-muted-foreground data-[state=open]:rotate-180 group-data-[state=open]:rotate-180 transition-transform duration-200" />
-                </TooltipTrigger>
-                <TooltipContent> {isOpen ? "Hide Details" : "View details"}</TooltipContent>
-              </Tooltip>
+              </div>
+              <p className="-mt-1 sm:mt-0 text-muted-foreground text-sm -tracking-wider">{role}</p>
             </div>
           </div>
 
           {/* Right Side: Date & Location */}
-          <div className="flex flex-col sm:items-end ml-16 sm:ml-0 text-left sm:text-right">
+          <div className="flex flex-col sm:items-end -mt-1 sm:mt-0 ml-13 sm:ml-0 text-left sm:text-right">
             <p className="font-medium text-muted-foreground text-sm">{duration}</p>
             <p className="text-muted-foreground text-sm">{location}</p>
           </div>
@@ -78,7 +79,9 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
       </AccordionTrigger>
       <AccordionContent>
         <div className="mt-5">
-          <h2 className="font-ibmPlexSans font-semibold tracking-wider">Technologies & Tools</h2>
+          <h2 className="font-ibmPlexSans font-semibold text-base tracking-wider">
+            Technologies & Tools
+          </h2>
 
           {/* Badges Container */}
           <div className="flex flex-wrap gap-3 mt-2">

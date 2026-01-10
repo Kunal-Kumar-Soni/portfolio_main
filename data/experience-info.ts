@@ -34,7 +34,7 @@ export const experienceInfo: ExperienceType[] = [
     role: "Photo Editor & Designer",
     logo: "/companyImg/workites.jpg",
     status: "not",
-    duration: "Dec 2021 - Aug 2023",
+    duration: "Dec 2021 - Sep 2023",
     location: "India (Remote)",
     technologies: ["photoshop"],
     points: [
