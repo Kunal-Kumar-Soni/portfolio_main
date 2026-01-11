@@ -31,10 +31,10 @@ export const experienceInfo: ExperienceType[] = [
     id: 2,
     company: "Workites",
     link: "https://www.linkedin.com/company/workites-technology-llp/",
-    role: "Photo Editor & Designer",
+    role: "Photo Editor",
     logo: "/companyImg/workites.jpg",
     status: "not",
-    duration: "Dec 2021 - Sep 2023",
+    duration: "Dec 2021 - Nov 2023",
     location: "India (Remote)",
     technologies: ["photoshop"],
     points: [
