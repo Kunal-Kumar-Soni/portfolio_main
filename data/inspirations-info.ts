@@ -29,17 +29,5 @@ export const inspirationsInfo = {
       focus: "Relentless growth • Discipline",
       image: "/inspirations/fictionalInspirations/goku.jpg",
     },
-    {
-      id: 3,
-      name: "Itachi Uchiha",
-      focus: "Sacrifice • Emotional restraint",
-      image: "/inspirations/fictionalInspirations/itachi.jpg",
-    },
-    {
-      id: 4,
-      name: "Sung Jin-Woo",
-      focus: "Self-made strength • Consistency",
-      image: "/inspirations/fictionalInspirations/jinwoo.jpg",
-    },
   ],
 };
