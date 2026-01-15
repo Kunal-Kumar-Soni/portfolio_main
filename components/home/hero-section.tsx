@@ -37,10 +37,10 @@ export default function HeroSection() {
       <div className="flex items-center gap-5">
         <div className="relative">
           {/* Profile */}
-          <Image src="/logo.jpg" alt="Profile" width={96} height={96} className="rounded-xl" />
+          <Image src="/logo/logo.jpg" alt="Profile" width={96} height={96} className="rounded-xl" />
           {/* Flag */}
           <span className="-right-1 -bottom-1 absolute">
-            <Image src="/india.png" alt="India" width={26} height={26} />
+            <Image src="/logo/india.png" alt="India" width={26} height={26} />
           </span>
         </div>
 

@@ -7,25 +7,16 @@ import { CiGlobe } from "react-icons/ci";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import { skillsIcon } from "@/components/ui/skills-icon";
-
-type ProjectCardProps = {
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  socialLinks?: {
-    label: string;
-    link: string;
-  }[];
-};
+import { ProjectsCardInfoType } from "@/data/projects-cards-info";
 
 export default function ProjectCard({
   title,
+  name,
   description,
   image,
   technologies,
   socialLinks,
-}: ProjectCardProps) {
+}: ProjectsCardInfoType) {
   return (
     <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
       {/* Image */}
@@ -81,9 +72,7 @@ export default function ProjectCard({
 
         {/*  */}
         <Link
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`/projects/${name}`}
           className="inline-flex items-center gap-1 mt-6 font-medium text-primary text-sm hover:underline"
         >
           View Details <ExternalLink size={14} />
