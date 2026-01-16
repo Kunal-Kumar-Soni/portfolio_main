@@ -1,27 +1,36 @@
-type projectInfoType = {
+export type ProjectInfoType = {
   id: number;
   title: string;
   name: string;
-  info: [{ Timeline: string }, { Role: string }, { Team: string }, { status: string }];
+  bio: string;
+  projectMeta: { Timeline: string; Role: string; Team: string; Status: string };
   description: string;
   image: string;
+  features?: string[];
   technologies: string[];
-  socialLinks: { label: string; link: string }[];
+  socialLinks: { liveDemo: string; github: string };
 };
-export const projectInfo: projectInfoType[] = [
+export const projectInfo: ProjectInfoType[] = [
   {
     id: 1,
     title: "Resume AI",
     name: "resumeai",
-    info: [
-      { Timeline: "25 days" },
-      { Role: "Full Stack" },
-      { Team: "Solo" },
-      { status: "completed" },
-    ],
+    bio: "Resume AI: Enhance resumes using AI",
+    projectMeta: { Timeline: "25 days", Role: "Full Stack", Team: "Solo", Status: "completed" },
+
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
     image: "/projectsImg/resumeai1.png",
+
+    features: [
+      "Secure authentication",
+      "AI resume analysis",
+      "ATS scoring",
+      "resume management",
+      "voice feedback",
+      "modern responsive UI",
+      "friendly error handling",
+    ],
     technologies: [
       "Next.js",
       "TypeScript",
@@ -32,41 +41,26 @@ export const projectInfo: projectInfoType[] = [
       "Shadcn/Ui",
       "Magic/Ui",
     ],
-    socialLinks: [
-      {
-        label: "Live Demo",
-        link: "https://resume-ai-kunal.vercel.app",
-      },
-      {
-        label: "Github",
-        link: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
-      },
-    ],
+    socialLinks: {
+      liveDemo: "https://resume-ai-kunal.vercel.app",
+      github: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
+    },
   },
   {
     id: 2,
     title: "Shop Karo",
     name: "shopkaro",
-    info: [
-      { Timeline: "15 days" },
-      { Role: "Front End" },
-      { Team: "Solo" },
-      { status: "completed" },
-    ],
+    bio: "ShopKaro: Simple and fast online shopping",
+    projectMeta: { Timeline: "15 days", Role: "Front End", Team: "Solo", Status: "completed" },
+
     description:
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
 
     image: "/projectsImg/shopkaro2.png",
     technologies: ["React.js", "JavaScript", "Tailwind", "Redux", "Motion (Framer)"],
-    socialLinks: [
-      {
-        label: "Live Demo",
-        link: "https://e-commerce-website-kunal.vercel.app/",
-      },
-      {
-        label: "Github",
-        link: "https://github.com/Kunal-Kumar-Soni/E-commerce",
-      },
-    ],
+    socialLinks: {
+      liveDemo: "https://e-commerce-website-kunal.vercel.app/",
+      github: "https://github.com/Kunal-Kumar-Soni/E-commerce",
+    },
   },
 ];
