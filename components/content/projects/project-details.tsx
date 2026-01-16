@@ -1,15 +1,16 @@
 "use client";
 import { MdArrowBackIosNew } from "react-icons/md";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { projectInfo, ProjectInfoType } from "@/data/projects-info";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from "../../ui/card";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
-import { Separator } from "../ui/separator";
+import { Separator } from "../../ui/separator";
+import { Overview } from "./project-overview";
 
 const ProjectDetails = ({ slug }: { slug: string }) => {
   const [projectData, setProjectData] = useState<ProjectInfoType>();
@@ -43,7 +44,7 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
         {/* Content Section */}
         <div className="space-y-5 mt-10">
           <h1 className="font-ibmPlexSans font-bold text-4xl md:text-5xl">{projectData.title}</h1>
-          <p>{projectData.description}</p>
+          <p className="text-muted-foreground text-lg">{projectData.description}</p>
         </div>
 
         {/* Project Meta */}
@@ -91,29 +92,11 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
       <h1 className="mb-10 font-ibmPlexSans font-bold text-3xl md:text-4xl">{projectData?.bio}</h1>
 
       <div className="space-y-10">
-        {/* Features*/}
-        <div>
-          <h1 className="font-ibmPlexSans font-semibold text-3xl">Features</h1>
-          <ul className="flex flex-col mt-4 pl-10">
-            {projectData?.features?.map((feature, i) => (
-              <li className="text-muted-foreground leading-loose tracking-wide list-disc" key={i}>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Overview Section*/}
 
-        {/* Tech Section */}
-        <div>
-          <h1 className="font-ibmPlexSans font-semibold text-3xl">Tech Stack</h1>
-          <ul className="flex flex-col mt-4 pl-10">
-            {projectData.technologies.map((tech, i) => (
-              <li className="text-muted-foreground leading-loose tracking-wide list-disc" key={i}>
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Overview title={"Why I Built This"} data={projectData?.overview?.whyIBuiltThis} />
+        <Overview title={"Features"} data={projectData?.overview?.features} />
+        <Overview title={"Tech Stack"} data={projectData?.overview?.technologies} />
       </div>
     </div>
   );

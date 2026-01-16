@@ -37,7 +37,7 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
 
     image: "/projectsImg/shopkaro2.png",
-    technologies: ["react", "javascript", "tailwind", "redux"],
+    technologies: ["react", "redux", "tailwind", "motion"],
     socialLinks: [
       {
         label: "Live Demo",

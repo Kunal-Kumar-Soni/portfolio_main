@@ -6,8 +6,11 @@ export type ProjectInfoType = {
   projectMeta: { Timeline: string; Role: string; Team: string; Status: string };
   description: string;
   image: string;
-  features?: string[];
-  technologies: string[];
+  overview: {
+    whyIBuiltThis: string[];
+    features: string[];
+    technologies: string[];
+  };
   socialLinks: { liveDemo: string; github: string };
 };
 export const projectInfo: ProjectInfoType[] = [
@@ -22,25 +25,31 @@ export const projectInfo: ProjectInfoType[] = [
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
     image: "/projectsImg/resumeai1.png",
 
-    features: [
-      "Secure authentication",
-      "AI resume analysis",
-      "ATS scoring",
-      "resume management",
-      "voice feedback",
-      "modern responsive UI",
-      "friendly error handling",
-    ],
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Supabase",
-      "Gemini",
-      "Groq",
-      "Shadcn/Ui",
-      "Magic/Ui",
-    ],
+    overview: {
+      whyIBuiltThis: [
+        "Enhance existing resumes instead of generating generic ones.",
+        "Use AI in a practical, real-world scenario.",
+        "Gain hands-on experience with AI integration.",
+        "Strengthen skills in Next.js, TypeScript, Tailwind CSS, and Supabase.",
+      ],
+      features: [
+        "Secure authentication",
+        "AI-powered resume analysis",
+        "ATS score evaluation",
+        "Resume management",
+        "Resume history tracking",
+        "Voice-based feedback",
+      ],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Supabase",
+        "Gemini",
+        "React Hook Form",
+        "Shadcn/Ui",
+      ],
+    },
     socialLinks: {
       liveDemo: "https://resume-ai-kunal.vercel.app",
       github: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
@@ -57,7 +66,24 @@ export const projectInfo: ProjectInfoType[] = [
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
 
     image: "/projectsImg/shopkaro2.png",
-    technologies: ["React.js", "JavaScript", "Tailwind", "Redux", "Motion (Framer)"],
+    overview: {
+      whyIBuiltThis: [
+        "Build a real-world e-commerce application using ShopKaro data.",
+        "Learn and practice React and Redux through a complete product flow.",
+        "Understand cart management, state handling, and UI interactions.",
+        "Gain hands-on experience building scalable, feature-driven applications.",
+      ],
+      features: [
+        "Dark / Light mode toggle",
+        "Smart product search",
+        "Category-based browsing",
+        "Detailed product view",
+        "Cart with quantity control",
+        "Redux Toolkit state management",
+      ],
+
+      technologies: ["React.js", "Redux", "Tailwind", "Motion (Framer)", "React Tostify"],
+    },
     socialLinks: {
       liveDemo: "https://e-commerce-website-kunal.vercel.app/",
       github: "https://github.com/Kunal-Kumar-Soni/E-commerce",

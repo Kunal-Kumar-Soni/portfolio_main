@@ -1,5 +1,5 @@
 import Container from "@/components/common/Container";
-import ProjectDetails from "@/components/content/project-details";
+import ProjectDetails from "@/components/content/projects/project-details";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
