@@ -48,16 +48,19 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
         </div>
 
         {/* Project Meta */}
-        <Card className="shadow-none">
-          <CardContent className="gap-6 md:gap-4 grid grid-cols-2 md:grid-cols-4">
-            {Object.entries(projectData.projectMeta).map(([key, value]) => (
-              <div key={key} className="space-y-1">
-                <p className="text-muted-foreground text-sm">{key}</p>
-                <p className="font-ibmPlexSans text-sm">{value}</p>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
+
+        <div className="gap-5 grid grid-cols-2 md:grid-cols-4">
+          {Object.entries(projectData.projectMeta).map(([key, value]) => (
+            <div
+              key={key}
+              className="bg-card hover:shadow-lg backdrop-blur p-4 border rounded-xl transition-all hover:-translate-y-1 duration-300"
+            >
+              <p className="text-[11px] text-muted-foreground uppercase tracking-widest">{key}</p>
+
+              <p className="mt-1 font-ibmPlexSans font-semibold text-base">{value}</p>
+            </div>
+          ))}
+        </div>
 
         {/* Social Links */}
         <div className="flex gap-3">
