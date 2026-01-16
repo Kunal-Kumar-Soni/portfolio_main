@@ -1,9 +1,15 @@
 import Container from "@/components/common/Container";
 import ProjectDetails from "@/components/content/projects/project-details";
+import { projectsCardInfo } from "@/data/projects-cards-info";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Project Details ",
+};
+
+export const generateStaticParams = () => {
+  return projectsCardInfo.map((project) => ({ slug: project.name }));
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

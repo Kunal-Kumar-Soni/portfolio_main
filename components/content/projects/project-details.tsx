@@ -4,20 +4,19 @@ import { Button } from "../../ui/button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { projectInfo, ProjectInfoType } from "@/data/projects-info";
-import { Card, CardContent } from "../../ui/card";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { Separator } from "../../ui/separator";
 import { Overview } from "./project-overview";
+import { projectInfos, ProjectsInfoType } from "@/data/projects-info";
 
 const ProjectDetails = ({ slug }: { slug: string }) => {
-  const [projectData, setProjectData] = useState<ProjectInfoType>();
+  const [projectData, setProjectData] = useState<ProjectsInfoType>();
   const router = useRouter();
 
   useEffect(() => {
-    const data = projectInfo.find((data) => data.name === slug);
+    const data = projectInfos.find((data) => data.name === slug);
     setProjectData(data);
   }, [slug]);
 
@@ -48,7 +47,6 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
         </div>
 
         {/* Project Meta */}
-
         <div className="gap-5 grid grid-cols-2 md:grid-cols-4">
           {Object.entries(projectData.projectMeta).map(([key, value]) => (
             <div
@@ -56,7 +54,6 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
               className="bg-card hover:shadow-lg backdrop-blur p-4 border rounded-xl transition-all hover:-translate-y-1 duration-300"
             >
               <p className="text-[11px] text-muted-foreground uppercase tracking-widest">{key}</p>
-
               <p className="mt-1 font-ibmPlexSans font-semibold text-base">{value}</p>
             </div>
           ))}

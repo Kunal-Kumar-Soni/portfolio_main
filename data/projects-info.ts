@@ -1,4 +1,4 @@
-export type ProjectInfoType = {
+export type ProjectsInfoType = {
   id: number;
   title: string;
   name: string;
@@ -13,7 +13,7 @@ export type ProjectInfoType = {
   };
   socialLinks: { liveDemo: string; github: string };
 };
-export const projectInfo: ProjectInfoType[] = [
+export const projectInfos: ProjectsInfoType[] = [
   {
     id: 1,
     title: "Resume AI",
