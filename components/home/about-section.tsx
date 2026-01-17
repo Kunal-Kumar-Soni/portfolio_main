@@ -17,7 +17,7 @@ const AboutSection = () => {
         {/* Image */}
         <div className="shrink-0">
           <Image
-            src="/logo.jpg"
+            src="/logo/logo.jpg"
             alt="Kunal Kumar Soni"
             width={220}
             height={220}
