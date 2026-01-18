@@ -108,11 +108,11 @@ export default function HeroSection() {
         {/* Resume Button */}
         <Button
           onClick={() => router.push("/resume")}
-          className="group hover:shadow-lg active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
+          className="group cursor-pointer"
         >
           <div className="flex items-center">
             <BsFillFileTextFill className="text-base group-hover:-rotate-20 transition-transform duration-300" />
-            <span className="ml-2">Resume / CV</span>
+            <span className="ml-2">Resume</span>
           </div>
         </Button>
 
@@ -120,7 +120,7 @@ export default function HeroSection() {
         <Button
           variant="secondary"
           onClick={() => router.push("/contact")}
-          className="group shadow-sm hover:shadow-lg active:scale-95 transition-all hover:-translate-y-1 duration-300 cursor-pointer"
+          className="group cursor-pointer"
         >
           <div className="flex items-center">
             <span className="mr-2">Get in touch</span>

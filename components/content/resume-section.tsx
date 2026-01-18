@@ -20,7 +20,6 @@ const ResumeSection = () => {
               href="https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
             >
               <ExternalLink size={16} />
               Open
@@ -31,7 +30,6 @@ const ResumeSection = () => {
             <Link
               href="/documents/Kunal's_Resume.pdf"
               download
-              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
             >
               <Download size={16} />
               Download

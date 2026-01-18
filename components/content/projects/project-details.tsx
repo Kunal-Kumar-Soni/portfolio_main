@@ -66,7 +66,6 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
               href={projectData.socialLinks.liveDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
             >
               <CiGlobe size={16} />
               Live Demo
@@ -78,7 +77,6 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
               href={projectData.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"
             >
               <FaGithub size={16} />
               Source Code
