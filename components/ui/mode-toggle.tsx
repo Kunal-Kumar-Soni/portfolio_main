@@ -20,11 +20,11 @@ export function ModeToggle() {
       variant="ghost"
       type="button"
       size="icon"
-      className="group hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 shadow-none hover:shadow-none rounded-full size-9 active:scale-none transition-all hover:translate-0 cursor-pointer"
+      className="group hover:bg-accent/50 hover:shadow-none rounded-full size-9 cursor-pointer"
       onClick={handleMode}
     >
-      <ImSun className="hidden dark:block size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
-      <RxMoon className="dark:hidden size-4 text-muted-foreground group-active:text-primary group-hover:text-primary transition-colors" />
+      <ImSun className="hidden dark:block size-4 text-muted-foreground group-hover:text-primary transition-colors" />
+      <RxMoon className="dark:hidden size-4 text-muted-foreground group-hover:text-primary transition-colors" />
     </Button>
   );
 }

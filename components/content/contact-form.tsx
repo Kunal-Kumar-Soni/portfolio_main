@@ -185,9 +185,10 @@ export default function ContactForm() {
               {/* Submit */}
 
               <Button
+              
                 disabled={isSubmitting}
                 type="submit"
-                className="inline-flex items-center gap-2 hover:opacity-90 px-8 py-2.5 font-medium text-background text-sm transition cursor-pointer"
+                className="inline-flex items-center gap-2 px-8 py-2.5 transition cursor-pointer"
               >
                 {isSubmitting ? (
                   <>

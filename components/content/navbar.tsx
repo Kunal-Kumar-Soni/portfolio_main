@@ -55,7 +55,7 @@ export function Navbar() {
                       href={item.href}
                       className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "relative size-9 rounded-full transition-all shadow-none hover:shadow-none active:scale-none hover:translate-0",
+                        "relative size-9 rounded-full",
                         active
                           ? "bg-accent text-accent-foreground shadow-sm"
                           : "text-muted-foreground hover:bg-accent/50"
@@ -86,7 +86,7 @@ export function Navbar() {
                     target="_blank"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-9 rounded-full text-muted-foreground hover:bg-accent/50 active:bg-accent dark:active:bg-accent/50 active:text-primary shadow-none hover:shadow-none active:scale-none hover:translate-0"
+                      "size-9 rounded-full text-muted-foreground hover:bg-accent/50"
                     )}
                   >
                     <social.icon className="size-4" />
@@ -109,7 +109,7 @@ export function Navbar() {
                   href="/contact"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "relative size-9 rounded-full transition-all shadow-none hover:shadow-none active:scale-none hover:translate-0",
+                    "relative size-9 rounded-full",
                     pathname === "/contact"
                       ? "bg-accent text-accent-foreground shadow-sm"
                       : "text-muted-foreground hover:bg-accent/50"
