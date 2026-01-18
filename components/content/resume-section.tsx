@@ -17,7 +17,7 @@ const ResumeSection = () => {
         <div className="flex gap-3">
           <Button asChild>
             <Link
-              href="https://drive.google.com/file/d/1j0duZnwpb9H1lkTkiOPmiUhqlTz0im8L/view?usp=sharing"
+              href="https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="shadow-sm hover:shadow-lg text-sm active:scale-95 transition-all hover:-translate-y-1 duration-300"

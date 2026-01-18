@@ -81,7 +81,7 @@ const GithubActivity = () => {
           blockRadius={0}
           fontSize={12}
           labels={{
-            totalCount: `{{count}} contributions in 2025`,
+            totalCount: `{{count}} contributions since 2025`,
           }}
           theme={{
             light: ["#ebedf0", "#b6dbff", "#7fbfff", "#4098ff", "#1f6fe0"],
