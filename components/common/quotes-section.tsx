@@ -22,7 +22,7 @@ const QuotesSection = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mx-auto px-4 max-w-3xl font-geistMono">
       <Separator className="mb-6" />
 
       {/* Heading */}

@@ -22,10 +22,10 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
         <div className="flex sm:flex-row flex-col sm:justify-between sm:items-start gap-2 w-full">
           {/* Left Side: Logo & Title */}
           <div className="flex gap-3">
-            <div className="w-11 sm:w-12 h-11 sm:h-12">
+            <div className="w-11 sm:w-12 h-11 sm:h-12 shrink-0">
               <Image
-                height={45}
-                width={45}
+                height={60}
+                width={60}
                 src={logo}
                 alt="company's_logo"
                 className="rounded-full object-cover"
@@ -38,7 +38,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-ibmPlexSans font-semibold text-[17px] sm:text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
+                  className="font-ibmPlexSans font-semibold text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
                 >
                   {company}
                 </Link>
@@ -66,12 +66,12 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
                   </Tooltip>
                 </div>
               </div>
-              <p className="-mt-1 sm:mt-0 text-muted-foreground text-sm tracking-tighter">{role}</p>
+              <p className="text-muted-foreground text-sm tracking-tight">{role}</p>
             </div>
           </div>
 
           {/* Right Side: Date & Location */}
-          <div className="flex flex-col sm:items-end -mt-1 sm:mt-0 ml-12.5 sm:ml-0 text-left sm:text-right">
+          <div className="flex flex-col sm:items-end ml-14 sm:ml-0 text-left sm:text-right">
             <p className="font-medium text-muted-foreground text-sm">{duration}</p>
             <p className="text-muted-foreground text-sm">{location}</p>
           </div>
@@ -95,7 +95,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
             {points.map((point, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-3 text-muted-foreground text-sm sm:text-base"
+                className="group flex items-start gap-3 text-muted-foreground text-base"
               >
                 <div className="flex items-center h-6 shrink-0">
                   <div className="bg-zinc-600 rounded-full w-1.5 h-1.5" />

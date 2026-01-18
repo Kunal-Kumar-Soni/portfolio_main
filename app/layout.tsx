@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/content/theme-provider";
-import { Navbar } from "@/components/content/navbar";
-import FooterSection from "@/components/footer/footer-section";
+import { ThemeProvider } from "@/components/common/theme-provider";
+import { Navbar } from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
+import QuotesSection from "@/components/common/quotes-section";
+
+
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans",
@@ -26,9 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
-        className={`${geistMono.variable} ${ibmPlexSans.variable}  antialiased`}
+        className={`${geistMono.variable} ${ibmPlexSans.variable}  antialiased `}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -39,7 +42,8 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <FooterSection />
+          <QuotesSection />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
