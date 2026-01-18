@@ -112,7 +112,7 @@ export default function HeroSection() {
         >
           <div className="flex items-center">
             <BsFillFileTextFill className="text-base group-hover:-rotate-20 transition-transform duration-300" />
-            <span className="ml-2">Resume</span>
+            <span className="ml-2">Resume / CV</span>
           </div>
         </Button>
 

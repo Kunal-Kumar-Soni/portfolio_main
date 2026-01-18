@@ -8,7 +8,7 @@ type QuotesInfoType = {
   author: string;
 };
 
-const QuotesSection = () => {
+const Quotes = () => {
   const [quotesInfo, setQuotesInfo] = useState<QuotesInfoType | null>(null);
 
   const getQuotesData = () => {
@@ -46,4 +46,4 @@ const QuotesSection = () => {
   );
 };
 
-export default QuotesSection;
+export default Quotes;

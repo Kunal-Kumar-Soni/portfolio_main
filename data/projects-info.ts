@@ -19,7 +19,7 @@ export const projectInfos: ProjectsInfoType[] = [
     title: "Resume AI",
     name: "resumeai",
     bio: "Resume AI: Enhance resumes using AI",
-    projectMeta: { Timeline: "25 days", Role: "Full Stack", Team: "Solo", Status: "completed" },
+    projectMeta: { Timeline: "25 days", Role: "Full Stack", Team: "Solo", Status: "Completed" },
 
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
@@ -60,7 +60,7 @@ export const projectInfos: ProjectsInfoType[] = [
     title: "Shop Karo",
     name: "shopkaro",
     bio: "ShopKaro: Simple and fast online shopping",
-    projectMeta: { Timeline: "15 days", Role: "Front End", Team: "Solo", Status: "completed" },
+    projectMeta: { Timeline: "15 days", Role: "Front End", Team: "Solo", Status: "Completed" },
 
     description:
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",

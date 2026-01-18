@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/common/theme-provider";
-import { Navbar } from "@/components/common/navbar";
-import Footer from "@/components/common/footer";
-import QuotesSection from "@/components/common/quotes-section";
+
+import { Navbar } from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
+import { ThemeProvider } from "@/components/common/ThemeProvider";
+import Quotes from "@/components/common/Quotes";
+import BackToTop from "@/components/common/BackToTop";
 
 
 
@@ -29,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang="en" suppressHydrationWarning style={{ scrollBehavior: "smooth" }}>
       <body
         className={`${geistMono.variable} ${ibmPlexSans.variable}  antialiased `}
         suppressHydrationWarning
@@ -42,7 +44,8 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <QuotesSection />
+          <BackToTop />
+          <Quotes />
           <Footer />
         </ThemeProvider>
       </body>
