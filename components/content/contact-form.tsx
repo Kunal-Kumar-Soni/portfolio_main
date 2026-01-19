@@ -1,13 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Spinner } from "@/components/ui/spinner";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { IoSendSharp } from "react-icons/io5";
 import type { ContactFormInput } from "@/types/contactForm";
 import { contactFormAction } from "@/actions/contact";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 
 export default function ContactForm() {
   const {
@@ -80,9 +80,8 @@ export default function ContactForm() {
                     id="name"
                     type="text"
                     placeholder="Your Name"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
-                      errors?.name ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                    }`}
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${errors?.name ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                      }`}
                     {...register("name", {
                       required: "Name is required",
                       minLength: { value: 2, message: "Name must be at least 2 characters." },
@@ -106,9 +105,8 @@ export default function ContactForm() {
                     id="phone"
                     type="tel"
                     placeholder="+1 XXX XXX XXXX"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition ${
-                      errors?.phone ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                    }`}
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition ${errors?.phone ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                      }`}
                     {...register("phone", {
                       required: "Phone number is required",
                       minLength: {
@@ -137,9 +135,8 @@ export default function ContactForm() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
-                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
-                    errors?.email ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                  }`}
+                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${errors?.email ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                    }`}
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -167,9 +164,8 @@ export default function ContactForm() {
                   id="message"
                   rows={5}
                   placeholder="Briefly describe your idea or question..."
-                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition resize-none ${
-                    errors?.message ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                  }`}
+                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition resize-none ${errors?.message ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                    }`}
                   {...register("message", {
                     required: "Message is required",
                     minLength: { value: 10, message: "Message must be at least 10 characters." },
@@ -185,10 +181,9 @@ export default function ContactForm() {
               {/* Submit */}
 
               <Button
-              
                 disabled={isSubmitting}
                 type="submit"
-                className="inline-flex items-center gap-2 px-8 py-2.5 transition cursor-pointer"
+                className="group inline-flex items-center gap-2 px-8 py-2.5 transition cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
@@ -198,7 +193,7 @@ export default function ContactForm() {
                 ) : (
                   <>
                     <span className="text-sm tracking-tight">Send Message</span>
-                    <IoSendSharp className="opacity-90 text-base" />
+                    <IoIosSend className="opacity-90 text-base group-hover:rotate-45 duration-300" />
                   </>
                 )}
               </Button>
