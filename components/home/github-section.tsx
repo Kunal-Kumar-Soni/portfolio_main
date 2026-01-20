@@ -14,6 +14,7 @@ const GithubActivity = () => {
   const { theme } = useTheme();
   const [totalContribution, setTotalContribution] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false)
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   const getData = useCallback(async () => {
@@ -28,7 +29,7 @@ const GithubActivity = () => {
         Object.values(data?.total).reduce((acc, curr) => (acc as number) + (curr as number), 0)
       );
     } catch (error) {
-      console.error("Could not fetch GitHub data:", error);
+      setIsError(true)
     } finally {
       setIsLoading(false);
     }
@@ -59,9 +60,15 @@ const GithubActivity = () => {
       ) : (
         <div className="mb-2 text-sm">
           <span className="mr-1 text-muted-foreground">Total contributions:</span>
-          <span className="bg-foreground/5 dark:bg-foreground/10 px-2 py-0.5 rounded font-medium text-foreground">
-            {totalContribution}
-          </span>
+          {isError ? (
+            <span className="text-foreground">
+              unavailable
+            </span>
+          ) : (
+            <span className="bg-foreground/5 dark:bg-foreground/10 px-2 py-0.5 rounded font-medium text-foreground">
+              {totalContribution}
+            </span>
+          )}
           <Link
             className="pl-2 text-muted-foreground hover:text-foreground underline"
             href="https://github.com/Kunal-Kumar-Soni"
