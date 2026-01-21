@@ -124,7 +124,7 @@ export default function HeroSection() {
         >
           <div className="flex items-center">
             <span className="mr-2">Get in touch</span>
-            <IoIosSend className="text-base transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 duration-300" />
+            <IoIosSend className="text-base group-hover:rotate-45 transition-transform duration-300" />
           </div>
         </Button>
       </div>
