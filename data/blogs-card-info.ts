@@ -1,28 +1,32 @@
 export type blogsCardInfoType = {
     id: number;
     name: string;
+    title:string
+    createdAt:string;
     description: string;
     image: string;
-    type: string;
+    types: string[];
   };
   export const blogsCardInfo: blogsCardInfoType[] = [
     {
       id: 1,
-      name: "Life",
+      name: "life",
+      title:"A Glimpse Into My Life.",
+      createdAt:"December 29, 2025",
       description:
-        "A collection of life experiences where coding, gaming, learning, and personal growth naturally come together.",
+        "Life built around coding, gaming, and continuous learning.",
       image: "/blogs/personal.png",
-      type: "Life" 
+      types: ["Life","Personal" ]
     },
-  
     {
       id: 2,
-      name: "Learning",
+      name: "learning",
+      title:"How I Learn New Tools.",
+      createdAt:"January 22, 2026",
       description:
-        "My journey of learning new tools through curiosity, practice, and real-world project experience.",
-      image: "/projectsImg/shopkaro2.png",
-      type: "Learning",
-     
+        "I master new tools by building real-world projects.",
+      image: "/blogs/howilearn.png",
+      types: ["Learning","Growth"],
     },
   ];
   
