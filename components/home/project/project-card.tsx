@@ -56,7 +56,7 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <p className="text-muted-foreground text-sm sm:text-base line-clamp-3 leading-relaxed tracking-tight">
+          <p className="text-muted-foreground text-base line-clamp-3 leading-relaxed tracking-tight">
             {description}
           </p>
 

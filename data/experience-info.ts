@@ -19,7 +19,7 @@ export const experienceInfo: ExperienceType[] = [
     role: "Frontend Developer Intern",
     logo: "/companyImg/02meta_scifor_technologies.jpg",
     status: "not",
-    duration: "Oct 2025 - Present",
+    duration: "Oct 2025 - Jan 2026",
     location: "India (Remote)",
     technologies: ["react", "nextjs", "typescript", "tailwind"],
     points: [
