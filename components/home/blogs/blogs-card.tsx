@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { blogsCardInfoType } from "@/data/blogs-card-info";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { FaCalendarAlt } from "react-icons/fa";
 import { BsCalendar3 } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 export default function BlogCard({
     name,
@@ -15,10 +14,12 @@ export default function BlogCard({
     image,
     types,
 }: blogsCardInfoType) {
+
+    const router = useRouter()
     return (
         <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
             {/* Image */}
-            <div className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden">
+            <div onClick={() => router.push(`/blogs/${name}`)} className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer">
                 <Image
                     src={image}
                     alt={name}
@@ -59,13 +60,13 @@ export default function BlogCard({
                         <p className="text-sm tracking-tight">{createdAt}</p>
                     </div>
 
-                    <Link
-                        href={`/projects/${name}`}
-                        className="inline-flex items-center gap-2 font-medium hover:text-primary text-sm hover:underline"
+                    <button
+                        onClick={() => router.push(`/blogs/${name}`)}
+                        className="inline-flex items-center gap-2 font-medium hover:text-primary text-sm hover:underline cursor-pointer"
                     >
                         Read more
                         <FaArrowRightLong size={14} />
-                    </Link>
+                    </button>
                 </div>
 
 
