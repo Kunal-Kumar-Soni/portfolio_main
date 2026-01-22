@@ -33,10 +33,16 @@ export default function BlogCard({
             <div className="flex flex-col flex-1 justify-between p-6">
 
                 <div className="flex gap-3">
-                    {types.map((t) => <p className="inline-block items-center gap-1 bg-primary/10 px-2 rounded-sm font-semibold text-[12px] text-primary tracking-tighter">
-                        {t}
-                    </p>)}
+                    {types.map((type) => (
+                        <span
+                            key={type}
+                            className="bg-primary/10 px-2 rounded-sm font-semibold text-[12px] text-primary tracking-tighter"
+                        >
+                            {type}
+                        </span>
+                    ))}
                 </div>
+
 
                 <p className="mt-4 font-ibmPlexSans font-semibold text-lg leading-relaxed tracking-wider">
                     {title}

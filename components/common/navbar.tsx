@@ -17,7 +17,7 @@ import { MdMail } from "react-icons/md";
 const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: LuNotebookTabs, label: "Blogs" },
+    { href: "/blogs", icon: LuNotebookTabs, label: "Blogs" },
   ],
   contact: {
     social: {

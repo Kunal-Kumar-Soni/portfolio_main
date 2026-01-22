@@ -1,4 +1,6 @@
+import { blogsCardInfo } from '@/data/blogs-card-info'
 import { Separator } from '../ui/separator'
+import BlogCard from '../home/blogs/blogs-card'
 
 const Blogs = () => {
     return (
@@ -13,11 +15,21 @@ const Blogs = () => {
             </div>
             <Separator className='my-10' />
 
-            <p className='text-muted-foreground leading-loose tracking-wide'>I’m a frontend developer who believes that learning happens best by building and sharing.
-                My journey hasn’t been perfect or linear, but every project and mistake has taught me something valuable.
-                This blog is a place where I document what I’m learning, the things I build, and the challenges I face while growing as a developer.Sometimes it’s about code, sometimes about problem-solving, and sometimes about mindset and consistency.I write these posts mainly for myself, to track progress and reflect on my journey, but I hope they also help or inspire someone who is walking a similar path.
-
-            </p>
+            {/* Cards */}
+            <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
+                {blogsCardInfo.map((blog) => (
+                    <BlogCard
+                        key={blog?.id}
+                        id={blog.id}
+                        name={blog.name}
+                        title={blog.title}
+                        createdAt={blog.createdAt}
+                        description={blog.description}
+                        image={blog.image}
+                        types={blog?.types}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
