@@ -25,7 +25,7 @@ export type blogsCardInfoType = {
       createdAt:"January 22, 2026",
       description:
         "I master new tools by building real-world projects.",
-      image: "/blogs/howilearn.png",
+      image: "/blogs/newtools.png",
       types: ["Learning","Growth"],
     },
   ];

@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import { skillsIcon } from "@/components/ui/skills-icon";
 import { ProjectsCardInfoType } from "@/data/projects-cards-info";
+import { useRouter } from "next/navigation";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function ProjectCard({
   title,
@@ -17,10 +18,11 @@ export default function ProjectCard({
   technologies,
   socialLinks,
 }: ProjectsCardInfoType) {
+  const router = useRouter()
   return (
     <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
       {/* Image */}
-      <div className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden">
+      <div onClick={() => router.push(`/projects/${name}`)} className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer">
         <Image
           src={image}
           alt={title}
@@ -61,7 +63,6 @@ export default function ProjectCard({
           </p>
 
           {/* Tech stack */}
-
           <div>
             <h1 className="font-ibmPlexSans text-muted-foreground text-sm sm:text-base tracking-wide">
               Technologies
@@ -70,13 +71,13 @@ export default function ProjectCard({
           </div>
         </div>
 
-        {/*  */}
-        <Link
-          href={`/projects/${name}`}
-          className="inline-flex items-center gap-1 mt-6 font-medium text-primary text-sm hover:underline"
+
+        <button
+          onClick={() => router.push(`/projects/${name}`)}
+          className="inline-flex items-center gap-2 mt-6 font-medium text-muted-foreground hover:text-primary text-sm hover:underline cursor-pointer"
         >
-          View Details <ExternalLink size={14} />
-        </Link>
+          View Details <FaArrowRightLong size={14} />
+        </button>
       </div>
     </div>
   );

@@ -65,7 +65,7 @@ export type blogsInfoType = {
       description:
         "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
   
-        image: "/blogs/howilearn.png",
+        image: "/blogs/newtools.png",
       overview: {
         whyIBuiltThis: [
           "Build a real-world e-commerce application using ShopKaro data.",
