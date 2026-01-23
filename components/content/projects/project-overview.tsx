@@ -1,4 +1,4 @@
-export const Overview = ({ data, title }: { data: string[]; title: string }) => {
+export const ProjectOverview = ({ data, title }: { data: string[]; title: string }) => {
   return (
     <div>
       <h1 className="font-ibmPlexSans font-semibold text-3xl">{title}</h1>

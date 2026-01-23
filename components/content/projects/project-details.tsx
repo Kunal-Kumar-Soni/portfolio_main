@@ -8,7 +8,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { Separator } from "../../ui/separator";
-import { Overview } from "./project-overview";
+import { ProjectOverview } from "./project-overview";
 import { projectInfos, ProjectsInfoType } from "@/data/projects-info";
 
 const ProjectDetails = ({ slug }: { slug: string }) => {
@@ -92,9 +92,9 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
       <div className="space-y-10">
         {/* Overview Section*/}
 
-        <Overview title={"Why I Built This"} data={projectData?.overview?.whyIBuiltThis} />
-        <Overview title={"Features"} data={projectData?.overview?.features} />
-        <Overview title={"Tech Stack"} data={projectData?.overview?.technologies} />
+        <ProjectOverview title={"Why I Built This"} data={projectData?.overview?.whyIBuiltThis} />
+        <ProjectOverview title={"Features"} data={projectData?.overview?.features} />
+        <ProjectOverview title={"Tech Stack"} data={projectData?.overview?.technologies} />
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ export default function BlogCard({
                 </p>
 
 
-                {/* */}
+                {/* Date and button*/}
                 <div className="flex justify-between mt-6 text-muted-foreground">
                     <div className="flex justify-center items-center gap-2">
                         <BsCalendar3 size={16} />

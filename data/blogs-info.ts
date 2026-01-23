@@ -3,26 +3,25 @@ export type blogsInfoType = {
     title: string;
     name: string;
     bio: string;
-    projectMeta: { Timeline: string; Role: string; Team: string; Status: string };
+    types: string[];
+    createdAt: string
     description: string;
     image: string;
     overview: {
-      whyIBuiltThis: string[];
-      features: string[];
-      technologies: string[];
+      [key:string]: string[];
     };
     socialLinks: { liveDemo: string; github: string };
   };
   export const blogsInfo: blogsInfoType[] = [
     {
       id: 1,
-      title: "Resume AI",
+      title: "Who am i?",
       name: "life",
       bio: "Resume AI: Enhance resumes using AI",
-      projectMeta: { Timeline: "25 days", Role: "Full Stack", Team: "Solo", Status: "Completed" },
-  
+      types: ["Life","Personal" ],
+      createdAt:"December 29, 2025",
       description:
-        "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
+        "A Personal Journey Built Around Coding Challenges, Gaming Passion, and the Strength I Draw from Family as I Grow and Evolve.",
       image: "/blogs/personal.png",
   
       overview: {
@@ -57,13 +56,13 @@ export type blogsInfoType = {
     },
     {
       id: 2,
-      title: "Shop Karo",
+      title: "How i learn new tools?",
       name: "learning",
       bio: "ShopKaro: Simple and fast online shopping",
-      projectMeta: { Timeline: "15 days", Role: "Front End", Team: "Solo", Status: "Completed" },
-  
+      types: ["Learning","Growth"],
+      createdAt:"January 22, 2026",
       description:
-        "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
+        "My Thoughtful and Practical Approach to Learning, Understanding, and Mastering New Tools Over Time.",
   
         image: "/blogs/newtools.png",
       overview: {
