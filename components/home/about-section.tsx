@@ -32,7 +32,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            I’m a frontend developer focused on building clean, reusable UI component libraries. I
+            I’m a frontend developer focused on building clean, reusable UI component. I
             enjoy creating consistent, well-structured components with a strong emphasis on user
             experience.
           </p>

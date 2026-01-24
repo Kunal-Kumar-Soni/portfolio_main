@@ -1,34 +1,27 @@
-"use client";
-import { MdArrowBackIosNew } from "react-icons/md";
 import { Button } from "../../ui/button";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { Separator } from "../../ui/separator";
 import { ProjectOverview } from "./project-overview";
-import { projectInfos, ProjectsInfoType } from "@/data/projects-info";
+import { projectInfos } from "@/data/projects-info";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 const ProjectDetails = ({ slug }: { slug: string }) => {
-  const [projectData, setProjectData] = useState<ProjectsInfoType>();
-  const router = useRouter();
-
-  useEffect(() => {
-    const data = projectInfos.find((data) => data.name === slug);
-    setProjectData(data);
-  }, [slug]);
+  const projectData = projectInfos.find((data) => data.name === slug);
 
   if (!slug || !projectData) return null;
+  const overviewKeys = Object.keys(projectData?.overview)
 
   return (
     <div className="mx-auto px-4 max-w-3xl">
       {/* back to home button */}
-      {/* <Button onClick={() => router.push("/")} variant="outline" className="group cursor-pointer">
-        <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />{" "}
-        Back to Home
-      </Button> */}
+      <Button variant="outline" className="group mb-6 cursor-pointer" asChild >
+        <Link href={"/"}>
+          <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />{" "}
+          Back to Home</Link>
+      </Button>
 
       <div className="space-y-5">
         {/* Image section */}
@@ -91,10 +84,7 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
 
       <div className="space-y-10">
         {/* Overview Section*/}
-
-        <ProjectOverview title={"Why I Built This"} data={projectData?.overview?.whyIBuiltThis} />
-        <ProjectOverview title={"Features"} data={projectData?.overview?.features} />
-        <ProjectOverview title={"Tech Stack"} data={projectData?.overview?.technologies} />
+        {overviewKeys.map((key, i) => <ProjectOverview key={i} title={key} data={projectData?.overview[key]} />)}
       </div>
     </div>
   );

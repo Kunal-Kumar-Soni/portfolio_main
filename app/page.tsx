@@ -8,6 +8,7 @@ import PersonalSection from "@/components/home/personal-section";
 import ProjectSection from "@/components/home/project/project-section";
 import SkillSection from "@/components/home/skills-section";
 
+
 const page = () => {
   return (
     <Container>

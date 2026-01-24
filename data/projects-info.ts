@@ -7,9 +7,7 @@ export type ProjectsInfoType = {
   description: string;
   image: string;
   overview: {
-    whyIBuiltThis: string[];
-    features: string[];
-    technologies: string[];
+    [key:string]: string[];
   };
   socialLinks: { liveDemo: string; github: string };
 };
@@ -26,13 +24,13 @@ export const projectInfos: ProjectsInfoType[] = [
     image: "/projectsImg/resumeai1.png",
 
     overview: {
-      whyIBuiltThis: [
+      "Why I Built This": [
         "Enhance existing resumes instead of generating generic ones.",
         "Use AI in a practical, real-world scenario.",
         "Gain hands-on experience with AI integration.",
         "Strengthen skills in Next.js, TypeScript, Tailwind CSS, and Supabase.",
       ],
-      features: [
+      "Features": [
         "Secure authentication",
         "AI-powered resume analysis",
         "ATS score evaluation",
@@ -40,7 +38,7 @@ export const projectInfos: ProjectsInfoType[] = [
         "Resume history tracking",
         "Voice-based feedback",
       ],
-      technologies: [
+      "Technologies": [
         "Next.js",
         "TypeScript",
         "Tailwind",
@@ -67,13 +65,13 @@ export const projectInfos: ProjectsInfoType[] = [
 
     image: "/projectsImg/shopkaro2.png",
     overview: {
-      whyIBuiltThis: [
+      "Why I Built This": [
         "Build a real-world e-commerce application using ShopKaro data.",
         "Learn and practice React and Redux through a complete product flow.",
         "Understand cart management, state handling, and UI interactions.",
         "Gain hands-on experience building scalable, feature-driven applications.",
       ],
-      features: [
+      "Features": [
         "Dark / Light mode toggle",
         "Smart product search",
         "Category-based browsing",
@@ -82,7 +80,7 @@ export const projectInfos: ProjectsInfoType[] = [
         "Redux Toolkit state management",
       ],
 
-      technologies: ["React.js", "Redux", "Tailwind", "Motion (Framer)", "React Tostify"],
+      "Technologies": ["React.js", "Redux", "Tailwind", "Motion (Framer)", "React Tostify"],
     },
     socialLinks: {
       liveDemo: "https://e-commerce-website-kunal.vercel.app/",

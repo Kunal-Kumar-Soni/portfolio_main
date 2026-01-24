@@ -62,16 +62,27 @@ export type blogsInfoType = {
         "My Thoughtful and Practical Approach to Learning, Understanding, and Mastering New Tools Over Time.",
   
         image: "/blogs/newtools.png",
-      overview: {
-        "Start with a few basic tutorials": 
-          ["I begin by watching one or two simple tutorial videos to understand the fundamentals."],
-        "Move quickly to real projects ": 
-          ["After that, I start building projects instead of relying on long video courses."],
-        "Prefer official documentation": ["I mainly use documentation because it contains the most accurate and up-to-date information."], 
-        "Practice repeatedly without AI":["I implement the same tool 10–15 times across different types of projects to build real understanding."],
-        "Learn by doing, not watching":["Once I feel comfortable, I trust hands-on project work more than watching tutorials."],
-        "Build confidence through implementation":["My learning style is simple: if I can implement it properly in a project, I know I’ve learned it."]
-      },
+        overview: {
+          "Build basics fast": [
+            "I begin with one or two simple tutorials to quickly understand the fundamentals. Instead of spending time on long courses, I move forward once the core concepts are clear."
+          ],
+        
+          "Shift early to real projects": [
+            "After grasping the basics, I focus on building real-world projects. This hands-on approach helps me learn faster and understand how things work in practical scenarios."
+          ],
+        
+          "Trust official documentation": [
+            "I rely heavily on official documentation because it provides the most accurate and up-to-date information, and helps me develop strong reading and research habits."
+          ],
+        
+          "Repeat to gain mastery": [
+            "I practice the same tool or concept multiple times—often 10 to 15 times—across different projects. I avoid overusing AI so I can strengthen my own problem-solving skills."
+          ],
+        
+          "Learn by implementation": [
+            "My learning rule is simple: if I can implement something confidently in a real project, I know I’ve truly learned it."
+          ]
+        }
      
     },
   ];

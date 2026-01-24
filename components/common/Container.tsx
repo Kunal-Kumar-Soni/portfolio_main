@@ -12,7 +12,7 @@ const Container = ({
   return (
     <div
       className={cn(
-        `bg-background fill-mode-both pt-15 pb-10 sm:pt-20 sm:pb-10  w-full font-geistMono text-foreground animate-in duration-700 ease-linear fade-in ${className}`
+        `bg-background fill-mode-both pt-15 pb-10 sm:pt-20 sm:pb-10  w-full font-geistMono text-foreground animate-in duration-500 ease-linear fade-in ${className}`
       )}
       {...props}
     >

@@ -1,35 +1,27 @@
-"use client";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { blogsInfo, blogsInfoType } from "@/data/blogs-info";
+import { blogsInfo } from "@/data/blogs-info";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { BsCalendar3 } from "react-icons/bs";
 import { BlogOverview } from "./blogs-overview";
+import Link from "next/link";
 
 const BlogDetails = ({ slug }: { slug: string }) => {
-    const [blogsData, setBlogsData] = useState<blogsInfoType>();
-    const router = useRouter()
-
-    useEffect(() => {
-        const data = blogsInfo.find((data) => data.name === slug);
-        setBlogsData(data);
-    }, [slug]);
-
+    const blogsData = blogsInfo.find((data) => data.name === slug);
 
     if (!slug || !blogsData) return null;
     const overviewKeys = Object.keys(blogsData?.overview)
-
 
     return (
         <div className="mx-auto px-4 max-w-3xl">
             {/* back to home button */}
             <div className="mb-4 w-full">
-                <Button variant={"outline"} onClick={() => router.push("/blogs")} className="group cursor-pointer">
-                    <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />{" "}
-                    blogs
+                <Button asChild variant={"outline"} className="group cursor-pointer">
+                    <Link href={"/blogs"}>
+                        <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />
+                        blogs
+                    </Link>
                 </Button>
             </div>
 
