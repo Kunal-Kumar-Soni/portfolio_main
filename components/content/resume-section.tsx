@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 
 const ResumeSection = () => {
+  const url = "https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view"
   return (
     <section className="mx-auto px-4 max-w-3xl">
 
@@ -21,7 +22,7 @@ const ResumeSection = () => {
       <div className="flex justify-end items-end gap-3 mb-6">
         <Button asChild>
           <Link
-            href="https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view?usp=sharing"
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,9 +46,8 @@ const ResumeSection = () => {
       <div className="relative bg-background shadow-sm border">
         <div>
           <iframe
-            src="/documents/Kunal's_Resume.pdf/#toolbar=0&navpanes=0"
+            src={url}
             className="w-full min-h-screen"
-            loading="lazy"
           />
         </div>
       </div>
