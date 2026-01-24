@@ -2,6 +2,7 @@ import { Download, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 const ResumeSection = () => {
   const url = "https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view"
@@ -43,14 +44,16 @@ const ResumeSection = () => {
       </div>
 
       {/* Resume PDF */}
-      <div className="relative bg-background shadow-sm border">
-        <div>
-          <iframe
-            src={url}
-            className="w-full min-h-screen"
-          />
-        </div>
+      <div className="relative rounded-md aspect-square">
+        <Image
+          alt="resume"
+          fill
+          src="/documents/resume.png"
+          className="rounded-md object-contain"
+          priority
+        />
       </div>
+
 
     </section>
   );
