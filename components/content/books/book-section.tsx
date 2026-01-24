@@ -1,9 +1,9 @@
-"use client";
 import { Separator } from "@/components/ui/separator";
 import { BooksInfo } from "@/data/books-info";
 import { BookGroup } from "./book-group";
 
 const BooksSection = () => {
+  const bookKeys = Object.keys(BooksInfo)
   return (
     <div className="mx-auto px-4 max-w-3xl">
       {/* Heading */}
@@ -16,8 +16,9 @@ const BooksSection = () => {
 
       <Separator className="mb-10" />
 
-      {/* Book: Power & Control  */}
-      <BookGroup title="Power & Control" data={BooksInfo?.powerAndControl} />
+      {/* Books Group */}
+      {bookKeys.map((key, i) => <BookGroup key={i} title={key} data={BooksInfo[key]} />)}
+
     </div>
   );
 };

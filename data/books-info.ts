@@ -1,5 +1,16 @@
-export const BooksInfo = {
-  powerAndControl: [
+type BooksInfoType = {
+  [key:string]: {
+    id: number,
+    name: string,
+    author: string,
+    image: string,
+    tag?: string,
+  }[]
+}
+
+
+export const BooksInfo:BooksInfoType = {
+  "Power And Control": [
     {
       id: 1,
       name: "Bhagavad Gita",

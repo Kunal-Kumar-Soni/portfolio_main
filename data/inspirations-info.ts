@@ -1,5 +1,15 @@
-export const inspirationsInfo = {
-  real: [
+type InspirationsInfoType = {
+  [key:string]: {
+    id: number,
+    name: string,
+    focus: string,
+    image: string,
+    tag?: string,
+  }[]
+}
+
+export const inspirationsInfo:InspirationsInfoType = {
+  "Real Inspirations": [
     {
       id: 1,
       name: "Cristiano Ronaldo",
@@ -15,7 +25,7 @@ export const inspirationsInfo = {
     },
   ],
 
-  fictional: [
+  "Fictional Inspirations": [
     {
       id: 1,
       name: "Ayanokoji Kiyotaka",

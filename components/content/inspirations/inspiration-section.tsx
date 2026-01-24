@@ -1,9 +1,9 @@
-"use client";
 import { Separator } from "../../ui/separator";
 import { inspirationsInfo } from "@/data/inspirations-info";
 import { InspirationGroup } from "./inspiration-group";
 
 const InspirationsSection = () => {
+  const inspirationKeys = Object.keys(inspirationsInfo)
   return (
     <div className="mx-auto px-4 max-w-3xl">
       {/* Heading */}
@@ -15,11 +15,8 @@ const InspirationsSection = () => {
       </div>
 
       <Separator className="mb-10" />
-      {/* Real inspirations */}
-      <InspirationGroup title="Real Inspirations" data={inspirationsInfo.real} />
-
-      {/* Fictional inspirations */}
-      <InspirationGroup title="Fictional Inspirations" data={inspirationsInfo.fictional} />
+      {/* Inspirations Group */}
+      {inspirationKeys.map((key, i) => <InspirationGroup key={i} title={key} data={inspirationsInfo[key]} />)}
     </div>
   );
 };
