@@ -44,7 +44,7 @@ const ResumeSection = () => {
       </div>
 
       {/* Resume PDF */}
-      <div className="relative rounded-md aspect-square">
+      <div className="relative bg-secondary rounded-md aspect-square">
         <Image
           alt="resume"
           fill

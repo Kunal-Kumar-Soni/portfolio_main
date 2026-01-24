@@ -1,5 +1,5 @@
 ## Preview
-![Project Preview](./screenshot/preview.png)
+![Project Preview](./public/screenshot/preview.png)
 
 ## Tech & Features
 
