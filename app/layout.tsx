@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
-import { Navbar } from "@/components/common/Navbar";
+import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 import Quotes from "@/components/common/Quotes";
