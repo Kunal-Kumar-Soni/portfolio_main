@@ -19,8 +19,9 @@ const BlogDetails = ({ slug }: { slug: string }) => {
     }, [slug]);
 
 
-
     if (!slug || !blogsData) return null;
+    const overviewKeys = Object.keys(blogsData?.overview)
+
 
     return (
         <div className="mx-auto px-4 max-w-3xl">
@@ -71,9 +72,7 @@ const BlogDetails = ({ slug }: { slug: string }) => {
 
             <div className="space-y-10">
                 {/* Overview Section*/}
-                <BlogOverview title={"Personal Life"} data={blogsData?.overview?.whyIBuiltThis} />
-                <BlogOverview title={"Coding Journey"} data={blogsData?.overview?.features} />
-                <BlogOverview title={"Gaming"} data={blogsData?.overview?.technologies} />
+                {overviewKeys.map((key, i) => <BlogOverview key={i} title={key} data={blogsData.overview[key]} />)}
             </div>
         </div>
     );

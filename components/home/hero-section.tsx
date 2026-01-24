@@ -37,10 +37,10 @@ export default function HeroSection() {
       <div className="flex items-center gap-5">
         <div className="relative">
           {/* Profile */}
-          <Image src="/logo/logo.jpg" alt="Profile" width={96} height={96} className="rounded-xl" />
+          <Image priority src="/logo/logo.jpg" alt="Profile" width={96} height={96} className="rounded-xl" />
           {/* Flag */}
           <span className="-right-1 -bottom-1 absolute">
-            <Image src="/logo/india.png" alt="India" width={26} height={26} />
+            <Image priority src="/logo/india.png" alt="India" width={26} height={26} />
           </span>
         </div>
 
@@ -74,8 +74,7 @@ export default function HeroSection() {
         {/* Left */}
         <div className="space-y-5">
           <IconBadge icon={<Code2 size={16} />} text="Frontend Developer" link="#" />
-          <IconBadge icon={<Phone size={16} />} text="+91 821 034 1466" link="tel:+918210341466" />
-          <IconBadge icon={<Globe size={16} />} text="kunalkumarsoni.com" link="#" />
+          <IconBadge icon={<Mars size={16} />} text="he/him" link="#" />
         </div>
 
         {/* Right */}
@@ -90,7 +89,7 @@ export default function HeroSection() {
             text="kunal.codes24@gmail.com"
             link="mailto:kunal.codes24@gmail.com"
           />
-          <IconBadge icon={<Mars size={16} />} text="he/him" link="#" />
+
         </div>
       </div>
 

@@ -1,14 +1,12 @@
+import ReactMarkdown from 'react-markdown';
 export const BlogOverview = ({ data, title }: { data: string[]; title: string }) => {
+    console.log(data)
     return (
-        <div>
+        <div className="space-y-4">
             <h1 className="font-ibmPlexSans font-semibold text-3xl">{title}</h1>
-            <ul className="flex flex-col mt-4 pl-10">
-                {data?.map((item, i) => (
-                    <li className="text-muted-foreground leading-loose list-disc" key={i}>
-                        {item}
-                    </li>
-                ))}
-            </ul>
+            <div className="space-y-4 text-muted-foreground">
+                {data.map((d, i) => <p key={i} className='leading-loose tracking-wide' >{d}</p>)}
+            </div>
         </div>
     );
 };

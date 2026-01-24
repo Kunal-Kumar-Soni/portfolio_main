@@ -10,7 +10,6 @@ export type blogsInfoType = {
     overview: {
       [key:string]: string[];
     };
-    socialLinks: { liveDemo: string; github: string };
   };
   export const blogsInfo: blogsInfoType[] = [
     {
@@ -25,34 +24,32 @@ export type blogsInfoType = {
       image: "/blogs/personal.png",
   
       overview: {
-        whyIBuiltThis: [
-          "Enhance existing resumes instead of generating generic ones.",
-          "Use AI in a practical, real-world scenario.",
-          "Gain hands-on experience with AI integration.",
-          "Strengthen skills in Next.js, TypeScript, Tailwind CSS, and Supabase.",
-        ],
-        features: [
-          "Secure authentication",
-          "AI-powered resume analysis",
-          "ATS score evaluation",
-          "Resume management",
-          "Resume history tracking",
-          "Voice-based feedback",
-        ],
-        technologies: [
-          "Next.js",
-          "TypeScript",
-          "Tailwind",
-          "Supabase",
-          "Gemini",
-          "React Hook Form",
-          "Shadcn/Ui",
+        "Personal Life": [
+        "My name is Kunal Kumar Soni, and I live in Bokaro, Jharkhand. I come from a small and supportive family consisting of my mother, my elder sister, and me.",
+         
+        "Since childhood, I have been deeply passionate about gaming, which first sparked my curiosity about computers and technology. Being a good student, I always balanced my studies with my interests. This early exposure to gaming eventually evolved into a professional dream: to become a software developer.",
+
+        "Today, I am consistently learning and working hard to build a successful career in tech. With the support of my family and my maternal grandfather (Nana ji), I am focused on my goals and ready to make them proud through patience and consistency."],
+
+        "Coding Journey": 
+          ["From the beginning, I have always been very interested in mobile phones and computers. In late 2021, I started working in photo editing and design, which helped me gain practical experience and confidence. With the money I earned, I bought my own PC.",
+          
+          "After some time, I realized that while design was good, I wanted something more challenging and meaningful for my career. While researching different options, I discovered full-stack development, and it immediately caught my interest. That day, I made a clear decision — I wanted to become a developer.",
+          
+          "My coding journey officially started in 2023, and it is still ongoing. Every day, I continue to learn, improve, and grow in this field. My goal is to build something impactful and achieve something meaningful in the world of technology."],
+
+        "Gaming": 
+          ["Gaming has always been a very important part of my life. Since childhood, I have played many computer and mobile games, and I truly enjoyed every moment of it. Games were not just entertainment for me; they were something I was deeply connected to.",
+            
+          "In 2018, when PUBG Mobile was released, it became a major turning point in my gaming journey. I became completely dedicated to the game. I practiced daily for 2–3 hours, played competitive matches, and constantly tried to improve my skills. During the lockdown period, I spent a lot of time gaming and seriously wanted to do well in this field.",
+
+          "In 2019, I received a POCO F1, which was a very powerful phone at that time. It helped me play better, and I enjoyed gaming even more. However, as time passed, family responsibilities and issues increased. Slowly, I stopped seeing a future in gaming, and in 2021, I made the difficult decision to step away from it. I still play occasionally, but my path eventually led me in a different direction.",
+
+          "Interestingly, I am still using the same POCO F1 today — a small reminder of how important gaming once was in shaping my journey."
+        
         ],
       },
-      socialLinks: {
-        liveDemo: "https://resume-ai-kunal.vercel.app",
-        github: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
-      },
+      
     },
     {
       id: 2,
@@ -66,27 +63,16 @@ export type blogsInfoType = {
   
         image: "/blogs/newtools.png",
       overview: {
-        whyIBuiltThis: [
-          "Build a real-world e-commerce application using ShopKaro data.",
-          "Learn and practice React and Redux through a complete product flow.",
-          "Understand cart management, state handling, and UI interactions.",
-          "Gain hands-on experience building scalable, feature-driven applications.",
-        ],
-        features: [
-          "Dark / Light mode toggle",
-          "Smart product search",
-          "Category-based browsing",
-          "Detailed product view",
-          "Cart with quantity control",
-          "Redux Toolkit state management",
-        ],
-  
-        technologies: ["React.js", "Redux", "Tailwind", "Motion (Framer)", "React Tostify"],
+        "Start with a few basic tutorials": 
+          ["I begin by watching one or two simple tutorial videos to understand the fundamentals."],
+        "Move quickly to real projects ": 
+          ["After that, I start building projects instead of relying on long video courses."],
+        "Prefer official documentation": ["I mainly use documentation because it contains the most accurate and up-to-date information."], 
+        "Practice repeatedly without AI":["I implement the same tool 10–15 times across different types of projects to build real understanding."],
+        "Learn by doing, not watching":["Once I feel comfortable, I trust hands-on project work more than watching tutorials."],
+        "Build confidence through implementation":["My learning style is simple: if I can implement it properly in a project, I know I’ve learned it."]
       },
-      socialLinks: {
-        liveDemo: "https://e-commerce-website-kunal.vercel.app/",
-        github: "https://github.com/Kunal-Kumar-Soni/E-commerce",
-      },
+     
     },
   ];
   
