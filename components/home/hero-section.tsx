@@ -95,11 +95,11 @@ export default function HeroSection() {
 
       <Separator className="my-6" />
 
-      <p className="text-muted-foreground text-sm sm:text-base leading-9 line">
-        Frontend developer experienced in <TechBadge tech="react" />, <TechBadge tech="nextjs" />,
-        and <TechBadge tech="typescript" />, focused on building modern and responsive web
-        applications. Skilled in <TechBadge tech="tailwind" /> and <TechBadge tech="shadcn" /> for
-        building clean, accessible, and consistent UI components.
+      <p className="text-muted-foreground text-base leading-9 line">
+        Frontend developer working with <TechBadge tech="react" />,{" "}
+        <TechBadge tech="nextjs" />, and <TechBadge tech="typescript" /> to build modern,
+        responsive web applications, using <TechBadge tech="tailwind" /> and{" "}
+        <TechBadge tech="shadcn" /> for clean and consistent UI.
       </p>
 
       {/* Buttons */}

@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export type BookCardPropsType = {
   id: number;
   name: string;
   author: string;
-  image: string;
+  image: StaticImageData | string;
   tag?: string;
 };
 

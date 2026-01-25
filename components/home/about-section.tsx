@@ -31,11 +31,14 @@ const AboutSection = () => {
             Kunal Kumar Soni
           </h2>
 
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            I’m a frontend developer focused on building clean, reusable UI component. I
-            enjoy creating consistent, well-structured components with a strong emphasis on user
-            experience.
+          <p className="text-muted-foreground text-base leading-relaxed">
+            I’m a <strong className="font-medium text-foreground">frontend developer</strong> who
+            blends <strong className="font-medium text-foreground">UI and UX</strong> to build
+            clean, intuitive, and user-friendly websites with a smooth user experience.
           </p>
+
+
+
         </div>
       </div>
     </section>

@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export type InspirationCardPropsType = {
   id: number;
   name: string;
   focus: string;
-  image: string;
+  image: StaticImageData | string;
   tag?: string;
 };
 
