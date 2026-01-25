@@ -6,7 +6,7 @@ export const InspirationCard = ({ item }: { item: InspirationCardPropsType }) =>
     <div className="relative bg-card hover:shadow-lg border border-border rounded-xl overflow-hidden transition-all hover:-translate-y-1 duration-300">
       {/* Image */}
       <div className="relative bg-muted w-full aspect-2/3">
-        <Image src={item.image} alt={item.name} fill className="object-cover" />
+        <Image src={item.image} alt={item.name} fill placeholder="blur" className="object-cover" />
       </div>
 
       {/* Text */}

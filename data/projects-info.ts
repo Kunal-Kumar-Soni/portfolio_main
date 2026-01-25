@@ -1,3 +1,7 @@
+import { StaticImageData } from "next/image";
+import resumeai from "@/assets/projectsImg/resumeai1.png"
+import shopkaro from "@/assets/projectsImg/shopkaro2.png"
+
 export type ProjectsInfoType = {
   id: number;
   title: string;
@@ -5,7 +9,7 @@ export type ProjectsInfoType = {
   bio: string;
   projectMeta: { Timeline: string; Role: string; Team: string; Status: string };
   description: string;
-  image: string;
+  image: StaticImageData | string;
   overview: {
     [key:string]: string[];
   };
@@ -21,7 +25,7 @@ export const projectInfos: ProjectsInfoType[] = [
 
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
-    image: "/projectsImg/resumeai1.png",
+    image: resumeai,
 
     overview: {
       "Why I Built This": [
@@ -63,7 +67,7 @@ export const projectInfos: ProjectsInfoType[] = [
     description:
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
 
-    image: "/projectsImg/shopkaro2.png",
+    image: shopkaro,
     overview: {
       "Why I Built This": [
         "Build a real-world e-commerce application using ShopKaro data.",

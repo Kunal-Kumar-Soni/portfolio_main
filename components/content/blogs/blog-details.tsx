@@ -32,6 +32,7 @@ const BlogDetails = ({ slug }: { slug: string }) => {
                     <Image
                         alt={blogsData.name}
                         fill
+                        placeholder="blur"
                         src={blogsData.image}
                         className="rounded-md object-cover"
                     />

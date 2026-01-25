@@ -1,10 +1,14 @@
+import { StaticImageData } from "next/image";
+import life from "@/assets/blogs/personal.png"
+import learning from "@/assets/blogs/newtools.png"
+
 export type blogsCardInfoType = {
     id: number;
     name: string;
     title:string
     createdAt:string;
     description: string;
-    image: string;
+    image:StaticImageData | string;
     types: string[];
   };
   export const blogsCardInfo: blogsCardInfoType[] = [
@@ -15,7 +19,7 @@ export type blogsCardInfoType = {
       createdAt:"December 29, 2025",
       description:
         "Life built around coding, gaming, and continuous learning.",
-      image: "/blogs/personal.png",
+      image: life,
       types: ["Life","Personal" ]
     },
     {
@@ -25,7 +29,7 @@ export type blogsCardInfoType = {
       createdAt:"January 22, 2026",
       description:
         "I master new tools by building real-world projects.",
-      image: "/blogs/newtools.png",
+      image: learning,
       types: ["Learning","Growth"],
     },
   ];

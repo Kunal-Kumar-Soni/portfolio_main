@@ -29,6 +29,7 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
           <Image
             alt={projectData.name}
             fill
+            placeholder="blur"
             src={projectData.image}
             className="rounded-md object-cover"
           />

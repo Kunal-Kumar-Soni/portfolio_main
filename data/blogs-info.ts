@@ -1,3 +1,7 @@
+import { StaticImageData } from "next/image";
+import life from "@/assets/blogs/personal.png"
+import learning from "@/assets/blogs/newtools.png"
+
 export type blogsInfoType = {
     id: number;
     title: string;
@@ -6,7 +10,7 @@ export type blogsInfoType = {
     types: string[];
     createdAt: string
     description: string;
-    image: string;
+    image: StaticImageData| string;
     overview: {
       [key:string]: string[];
     };
@@ -21,7 +25,7 @@ export type blogsInfoType = {
       createdAt:"December 29, 2025",
       description:
         "A Personal Journey Built Around Coding Challenges, Gaming Passion, and the Strength I Draw from Family as I Grow and Evolve.",
-      image: "/blogs/personal.png",
+      image: life,
   
       overview: {
         "Personal Life": [
@@ -61,7 +65,7 @@ export type blogsInfoType = {
       description:
         "My Thoughtful and Practical Approach to Learning, Understanding, and Mastering New Tools Over Time.",
   
-        image: "/blogs/newtools.png",
+        image: learning,
         overview: {
           "Build basics fast": [
             "I begin with one or two simple tutorials to quickly understand the fundamentals. Instead of spending time on long courses, I move forward once the core concepts are clear."

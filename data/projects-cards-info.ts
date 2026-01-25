@@ -1,9 +1,13 @@
+import { StaticImageData } from "next/image";
+import resumeai from "@/assets/projectsImg/resumeai1.png"
+import shopkaro from "@/assets/projectsImg/shopkaro2.png"
+
 export type ProjectsCardInfoType = {
   id: number;
   title: string;
   name: string;
   description: string;
-  image: string;
+  image: StaticImageData | string;
   technologies: string[];
   socialLinks: { label: string; link: string }[];
 };
@@ -14,7 +18,7 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
     name: "resumeai",
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
-    image: "/projectsImg/resumeai1.png",
+    image: resumeai,
     technologies: ["nextjs", "typescript", "tailwind", "supabase", "gemini", "shadcn"],
 
     socialLinks: [
@@ -36,7 +40,7 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
     description:
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
 
-    image: "/projectsImg/shopkaro2.png",
+    image: shopkaro,
     technologies: ["react", "redux", "tailwind", "motion"],
     socialLinks: [
       {
