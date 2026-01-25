@@ -15,15 +15,16 @@ export function IconBadge({
         <span className="w-4 h-4">{icon}</span>
       </span>
 
-      <Link
+      {link === "#" ? <div className="sm:text-[15px] text-sm tracking-wider">
+        {text}
+      </div> : <Link
         href={link}
         target="_blank"
-        className={`text-sm sm:text-[15px] tracking-wider cursor-default ${
-          link !== "#" && "hover:underline cursor-pointer"
-        }`}
+        className="sm:text-[15px] text-sm hover:underline tracking-wider cursor-pointer"
       >
         {text}
-      </Link>
+      </Link>}
     </div>
   );
 }
+

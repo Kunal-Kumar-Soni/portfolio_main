@@ -17,7 +17,7 @@ const BlogsSection = () => {
             </div>
 
             {/* Cards */}
-            <div className="gap-4 grid grid-cols-1 md:grid-cols-2">
+            <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">
                 {blogsCardInfo.map((blog) => (
                     <BlogCard
                         key={blog?.id}
