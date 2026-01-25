@@ -37,8 +37,6 @@ const AboutSection = () => {
             clean, intuitive, and user-friendly websites with a smooth user experience.
           </p>
 
-
-
         </div>
       </div>
     </section>

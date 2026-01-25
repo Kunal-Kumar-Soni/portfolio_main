@@ -1,5 +1,5 @@
 ## Preview
-![Project Preview](./public/screenshot/preview.png)
+![Project Preview](./public/screenshot/image.png)
 
 ## Tech & Features
 
@@ -36,9 +36,11 @@ cd your-repo-name
 npm install
 npm run dev
 
+```
 ---
 
 ## Author
 
 **Kunal Kumar Soni**  
+Thanks for visiting. Feel free to explore the code and share any feedback.
 
