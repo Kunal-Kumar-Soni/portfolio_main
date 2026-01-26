@@ -35,7 +35,7 @@ const ResumeSection = () => {
 
         <Button variant={"secondary"} asChild>
           <Link
-            href="/document/resume.pdf"
+            href="/resume.pdf"
             download
           >
             <Download size={16} />
@@ -45,16 +45,15 @@ const ResumeSection = () => {
       </div>
 
       {/* Resume PDF */}
-      <div className="relative bg-secondary rounded-md aspect-square">
+      <div className="group relative bg-secondary shadow-sm border rounded-xl aspect-square overflow-hidden">
         <Image
-          alt="resume"
+          alt="Resume preview"
           fill
-          placeholder="blur"
           src={resume}
-          className="rounded-md object-contain"
+          placeholder="blur"
+          className="p-4 object-contain group-hover:scale-[1.02] transition-transform duration-300"
         />
       </div>
-
 
     </section>
   );
