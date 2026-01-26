@@ -38,8 +38,8 @@ export const experienceInfo: ExperienceType[] = [
     location: "India (Remote)",
     technologies: ["photoshop"],
     points: [
-      "Handled professional photo editing tasks including precise cropping, background removal, and color grading to enhance visual quality and consistency.",
-      "Worked extensively on jewelry image editing, performing detailed product cropping and advanced color grading to achieve clean, studio-quality visuals.",
-    ],
+      "Executed professional photo editing with close attention to detail, visual balance, and consistent color presentation.",
+      "Enhanced visual assets to produce premium, studio-quality results aligned with brand and design standards.",
+    ]    
   },
 ];

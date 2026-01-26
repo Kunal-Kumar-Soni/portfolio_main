@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
+import resume from "@/assets/document/resume.png"
 
 const ResumeSection = () => {
   const url = "https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view"
@@ -34,7 +35,7 @@ const ResumeSection = () => {
 
         <Button variant={"secondary"} asChild>
           <Link
-            href="/documents/Kunal's_Resume.pdf"
+            href="/document/resume.pdf"
             download
           >
             <Download size={16} />
@@ -48,9 +49,9 @@ const ResumeSection = () => {
         <Image
           alt="resume"
           fill
-          src="/documents/resume.png"
+          placeholder="blur"
+          src={resume}
           className="rounded-md object-contain"
-          priority
         />
       </div>
 
