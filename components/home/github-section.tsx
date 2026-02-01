@@ -90,10 +90,10 @@ const GithubActivity = () => {
           labels={{
             totalCount: `{{count}} contributions since 2025`,
           }}
-          theme={{
-            light: ["#ebedf0", "#b6dbff", "#7fbfff", "#4098ff", "#1f6fe0"],
-            dark: ["#161b22", "#214f9a", "#1f6feb", "#58a6ff", "#a5d6ff"],
-          }}
+        // theme={{
+        //   light: ["#ebedf0", "#b6dbff", "#7fbfff", "#4098ff", "#1f6fe0"],
+        //   dark: ["#161b22", "#214f9a", "#1f6feb", "#58a6ff", "#a5d6ff"],
+        // }}
         />
       </div>
     </div>

@@ -54,7 +54,6 @@ const ResumeSection = () => {
           className="p-4 object-contain group-hover:scale-[1.02] transition-transform duration-300"
         />
       </div>
-
     </section>
   );
 };
