@@ -18,11 +18,14 @@ export default function ProjectCard({
   technologies,
   socialLinks,
 }: ProjectsCardInfoType) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
       {/* Image */}
-      <div onClick={() => router.push(`/projects/${name}`)} className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer">
+      <div
+        onClick={() => router.push(`/projects/${name}`)}
+        className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
+      >
         <Image
           src={image}
           alt={title}
@@ -67,10 +70,9 @@ export default function ProjectCard({
             <h1 className="font-ibmPlexSans text-muted-foreground text-sm sm:text-base tracking-wide">
               Technologies
             </h1>
-            <div className="mt-2">{skillsIcon(technologies, "h-6 w-6")}</div>
+            <div className="mt-2">{skillsIcon(technologies, "h-6 w-6", 3)}</div>
           </div>
         </div>
-
 
         <button
           onClick={() => router.push(`/projects/${name}`)}

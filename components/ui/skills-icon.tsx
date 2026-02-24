@@ -6,13 +6,14 @@ import Link from "next/link";
 
 export const skillsIcon = (
   iconsData: string[],
-  className: string = cn("inline-flex justify-center items-center w-8 h-8")
+  className: string = cn("inline-flex justify-center items-center w-10 h-10"),
+  gap: number = 5,
 ) => {
   const skillData = skillsIconInfo.filter((skillInfo) => iconsData.includes(skillInfo.name));
 
   return (
     <TooltipProvider>
-      <div className="flex flex-wrap gap-4">
+      <div className={`flex flex-wrap gap-${gap}`}>
         {skillData.map((data) => {
           const { link, color, name, icon: Icon, image, label } = data;
 

@@ -6,6 +6,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiRedux,
+  SiFirebase,
   SiSupabase,
   SiAppwrite,
   SiGit,
@@ -66,7 +67,7 @@ export const skillsIconInfo: SkillIconInfoType = [
   },
   {
     name: "shadcn",
-    label: "shadcn/ui",
+    label: "Shadcn/ui",
     icon: SiShadcnui,
     link: "https://ui.shadcn.com/",
   },
@@ -81,6 +82,12 @@ export const skillsIconInfo: SkillIconInfoType = [
   },
 
   // Backends / DB
+  {
+    name: "firebase",
+    label: "Firebase",
+    link: "https://firebase.google.com/",
+    image: "/iconsImage/firebase.png",
+  },
   {
     name: "supabase",
     label: "Supabase",
@@ -119,10 +126,10 @@ export const skillsIconInfo: SkillIconInfoType = [
 
   // Animations / Designs
   {
-    name: "motion",
-    label: "Motion",
-    link: "https://motion.dev/",
-    image: "/iconsImage/motion.png",
+    name: "figma",
+    label: "Figma",
+    link: "https://www.figma.com/",
+    image: "/iconsImage/figma.png",
   },
   {
     name: "photoshop",
@@ -130,8 +137,20 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://www.adobe.com/products/photoshop.html",
     image: "/iconsImage/photoshop.png",
   },
+  {
+    name: "motion",
+    label: "Motion",
+    link: "https://motion.dev/",
+    image: "/iconsImage/motion.png",
+  },
 
   //Models
+  {
+    name: "chatgpt",
+    label: "Chatgpt",
+    link: "https://chatgpt.com/",
+    image: "/iconsImage/chatgpt.png",
+  },
   {
     name: "gemini",
     label: "Gemini",
