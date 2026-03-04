@@ -43,7 +43,7 @@ export default function ContactForm() {
           Contact
         </h1>
         <p className="mt-4 text-muted-foreground text-lg text-center">
-          Have a question or project idea? I’ll get back to you soon.
+          Have a question or project in mind? Let’s connect.
         </p>
       </div>
 
@@ -80,8 +80,9 @@ export default function ContactForm() {
                     id="name"
                     type="text"
                     placeholder="Your Name"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${errors?.name ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                      }`}
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
+                      errors?.name ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                    }`}
                     {...register("name", {
                       required: "Name is required",
                       minLength: { value: 2, message: "Name must be at least 2 characters." },
@@ -105,8 +106,9 @@ export default function ContactForm() {
                     id="phone"
                     type="tel"
                     placeholder="+1 XXX XXX XXXX"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition ${errors?.phone ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                      }`}
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition ${
+                      errors?.phone ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                    }`}
                     {...register("phone", {
                       required: "Phone number is required",
                       minLength: {
@@ -135,8 +137,9 @@ export default function ContactForm() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
-                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${errors?.email ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                    }`}
+                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
+                    errors?.email ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                  }`}
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -163,9 +166,10 @@ export default function ContactForm() {
                 <textarea
                   id="message"
                   rows={5}
-                  placeholder="Briefly describe your idea or question..."
-                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition resize-none ${errors?.message ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
-                    }`}
+                  placeholder="Write your message here..."
+                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition resize-none ${
+                    errors?.message ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
+                  }`}
                   {...register("message", {
                     required: "Message is required",
                     minLength: { value: 10, message: "Message must be at least 10 characters." },
