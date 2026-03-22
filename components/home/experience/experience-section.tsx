@@ -13,8 +13,7 @@ const ExperienceSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <p className="text-muted-foreground text-sm tracking-widest">Professional Journey</p>
-        <h1 className="font-ibmPlexSans font-bold text-3xl">Experience</h1>
+        <h1 className="font-bold text-3xl">Experience</h1>
       </div>
 
       {/* Accordion */}

@@ -39,7 +39,7 @@ export default function ContactForm() {
     <div className="mx-auto px-4 max-w-3xl">
       {/* Header */}
       <div className="mb-10">
-        <h1 className="font-ibmPlexSans font-semibold text-4xl sm:text-5xl text-center tracking-tight">
+        <h1 className="font-hankenGrotesk font-semibold text-4xl sm:text-5xl text-center tracking-tight">
           Contact
         </h1>
         <p className="mt-4 text-muted-foreground text-lg text-center">
@@ -59,7 +59,7 @@ export default function ContactForm() {
               Message Sent Successfully
             </h2>
 
-            <p className="mt-2 max-w-xs text-muted-foreground text-sm leading-relaxed">
+            <p className="mt-2 max-w-xs text-muted-foreground leading-relaxed">
               Thanks for reaching out. I’ll get back to you as soon as possible.
             </p>
           </CardContent>
@@ -71,7 +71,7 @@ export default function ContactForm() {
                 <div className="space-y-1">
                   <label
                     htmlFor="name"
-                    className={`mb-2 font-medium text-sm ${errors?.name && "text-red-400"}`}
+                    className={`mb-2 font-medium  ${errors?.name && "text-red-400"}`}
                   >
                     Name*
                   </label>
@@ -80,7 +80,7 @@ export default function ContactForm() {
                     id="name"
                     type="text"
                     placeholder="Your Name"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full  transition ${
                       errors?.name ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
                     }`}
                     {...register("name", {
@@ -98,7 +98,7 @@ export default function ContactForm() {
                 <div className="space-y-1">
                   <label
                     htmlFor="phone"
-                    className={`mb-2 font-medium text-sm ${errors?.phone && "text-red-400"}`}
+                    className={`mb-2 font-medium  ${errors?.phone && "text-red-400"}`}
                   >
                     Phone*
                   </label>
@@ -106,7 +106,7 @@ export default function ContactForm() {
                     id="phone"
                     type="tel"
                     placeholder="+1 XXX XXX XXXX"
-                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition ${
+                    className={`mt-1 px-4 py-2.5 dark:bg-zinc-900 bg-zinc-50 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full  transition ${
                       errors?.phone ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
                     }`}
                     {...register("phone", {
@@ -129,7 +129,7 @@ export default function ContactForm() {
               <div className="space-y-1">
                 <label
                   htmlFor="email"
-                  className={`mb-2 font-medium text-sm ${errors?.email && "text-red-400"}`}
+                  className={`mb-2 font-medium  ${errors?.email && "text-red-400"}`}
                 >
                   Email*
                 </label>
@@ -137,7 +137,7 @@ export default function ContactForm() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
-                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full text-sm transition ${
+                  className={`mt-1 px-4 py-2.5 border dark:bg-zinc-900 bg-zinc-50 border-border focus:border-transparent rounded-lg outline-none focus:ring-2 w-full  transition ${
                     errors?.email ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
                   }`}
                   {...register("email", {
@@ -159,7 +159,7 @@ export default function ContactForm() {
               <div className="space-y-1">
                 <label
                   htmlFor="message"
-                  className={`mb-2 font-medium text-sm ${errors?.message && "text-red-400"}`}
+                  className={`mb-2 font-medium  ${errors?.message && "text-red-400"}`}
                 >
                   Message*
                 </label>
@@ -167,7 +167,7 @@ export default function ContactForm() {
                   id="message"
                   rows={5}
                   placeholder="Write your message here..."
-                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full text-sm transition resize-none ${
+                  className={`mt-1 px-4 dark:bg-zinc-900 bg-zinc-50 py-3 border border-border focus:border-transparent rounded-lg outline-none focus:ring-2  w-full  transition resize-none ${
                     errors?.message ? "focus:ring-red-400 border-red-400" : "focus:ring-ring"
                   }`}
                   {...register("message", {
@@ -191,12 +191,12 @@ export default function ContactForm() {
               >
                 {isSubmitting ? (
                   <>
-                    <span className="text-sm tracking-tight">Sending</span>
+                    <span className="tracking-tight">Sending</span>
                     <Spinner className="w-4 h-4" />
                   </>
                 ) : (
                   <>
-                    <span className="text-sm tracking-tight">Send Message</span>
+                    <span className="tracking-tight">Send Message</span>
                     <IoIosSend className="opacity-90 text-base group-hover:rotate-45 duration-300" />
                   </>
                 )}

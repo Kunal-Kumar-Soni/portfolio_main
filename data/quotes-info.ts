@@ -32,13 +32,10 @@ export const QuotesData = [
     author: "Virat Kohli",
   },
 
-
   //  Bhagavad Gita
-  { quote: "You have the right to work, but not to the results.", author: "Bhagavad Gita" },
   { quote: "Perform your duty without attachment.", author: "Bhagavad Gita" },
   { quote: "Change is the law of the universe.", author: "Bhagavad Gita" },
   { quote: "The soul is eternal; the body is temporary.", author: "Bhagavad Gita" },
-  { quote: "A disciplined mind brings happiness.", author: "Bhagavad Gita" },
   { quote: "Fear arises from attachment.", author: "Bhagavad Gita" },
   { quote: "Control your mind, or it will control you.", author: "Bhagavad Gita" },
   { quote: "One who conquers the mind is greater than a warrior.", author: "Bhagavad Gita" },
@@ -47,7 +44,7 @@ export const QuotesData = [
 
   //  Ayanokoji
   { quote: "All people are nothing but tools.", author: "Ayanokoji Kiyotaka" },
-  { quote: "At the end winning is everythin.", author: "Ayanokoji Kiyotaka" },
+  { quote: "At the end winning is everything.", author: "Ayanokoji Kiyotaka" },
   { quote: "People reveal their true nature under pressure.", author: "Ayanokoji Kiyotaka" },
   { quote: "Emotions are weaknesses.", author: "Ayanokoji Kiyotaka" },
   { quote: "Manipulation is just another strategy.", author: "Ayanokoji Kiyotaka" },

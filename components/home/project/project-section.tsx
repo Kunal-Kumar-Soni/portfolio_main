@@ -9,8 +9,7 @@ const ProjectSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <p className="text-muted-foreground text-sm tracking-widest">Builds</p>
-        <h1 className="font-ibmPlexSans font-bold text-3xl">Projects</h1>
+        <h1 className="font-hankenGrotesk font-bold text-3xl">Projects</h1>
       </div>
 
       <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">

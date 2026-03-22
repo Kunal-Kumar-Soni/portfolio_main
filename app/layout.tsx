@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Geist_Mono, Hanken_Grotesk, IBM_Plex_Sans, Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/common/Navbar";
@@ -10,14 +10,10 @@ import BackToTop from "@/components/common/BackToTop";
 import { Suspense } from "react";
 import BlurLoader from "@/components/common/BlurLoader";
 
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibmPlexSans",
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hankenGrotesk",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geistMono",
-  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -44,10 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning style={{ scrollBehavior: "smooth" }}>
-      <body
-        className={`${geistMono.variable} ${ibmPlexSans.variable}  antialiased `}
-        suppressHydrationWarning
-      >
+      <body className={`${hankenGrotesk.variable} antialiased `} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

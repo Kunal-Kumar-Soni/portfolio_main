@@ -13,73 +13,49 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolean }) => {
-  const { company, link, role, logo, status, duration, location, technologies, points } = data;
+  const { company, role, status, duration, location, technologies, points } = data;
 
   return (
     <>
       {/* Header Container */}
       <AccordionTrigger className="group [&>svg]:hidden p-0 w-full hover:no-underline">
-        <div className="flex sm:flex-row flex-col sm:justify-between sm:items-start gap-2 w-full">
-          {/* Left Side: Logo & Title */}
-          <div className="flex gap-3">
-            <div className="w-11 sm:w-12 h-11 sm:h-12 shrink-0">
-              <Image
-                height={60}
-                width={60}
-                src={logo}
-                alt="company's_logo"
-                className="rounded-full object-cover"
-              />
-            </div>
+        <div className="flex justify-between items-start w-full">
+          {/* Left Side */}
+          <div className="flex flex-col">
+            <div className="flex justify-between items-center gap-1 min-h-7">
+              <h1 className="font-semibold text-lg tracking-tight">{company}</h1>
 
-            <div className="flex flex-col w-full">
-              <div className="flex justify-between sm:gap-2">
-                <Link
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-ibmPlexSans font-semibold text-lg hover:underline leading-tight tracking-normal sm:tracking-wide"
-                >
-                  {company}
-                </Link>
-
-                <div className="flex justify-between gap-1 sm:gap-2">
-                  {/* Working Badge */}
-                  {status === "working" && (
-                    <div className="inline-flex items-center gap-1 bg-green-500/10 px-1.5 py-0.5 border border-green-500/20 rounded-sm h-fit shrink-0">
-                      <span className="relative flex w-1.5 sm:w-2 h-1.5 sm:h-2">
-                        <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping"></span>
-                        <span className="relative bg-green-500 rounded-full w-1.5 sm:w-2 h-1.5 sm:h-2"></span>
-                      </span>
-                      <span className="font-bold text-[11px] text-green-500 sm:text-[13px] tracking-tighter sm:tracking-normal">
-                        Working
-                      </span>
-                    </div>
-                  )}
-
-                  {/* Expand Button */}
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <ChevronDown className="hover:bg-accent mt-1 rounded w-5 h-5 text-muted-foreground data-[state=open]:rotate-180 group-data-[state=open]:rotate-180 transition-transform duration-200" />
-                    </TooltipTrigger>
-                    <TooltipContent> {isOpen ? "Hide details" : "View details"}</TooltipContent>
-                  </Tooltip>
+              {status === "working" && (
+                <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 border border-green-500/20 rounded">
+                  <span className="relative flex w-2 h-2">
+                    <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping" />
+                    <span className="bg-green-500 rounded-full w-2 h-2" />
+                  </span>
+                  <span className="font-semibold text-green-500 text-xs">Working</span>
                 </div>
-              </div>
-              <p className="text-muted-foreground text-sm tracking-tight">{role}</p>
+              )}
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <ChevronDown className="hover:bg-accent mt-1 rounded w-5 h-5 text-muted-foreground group-data-[state=open]:rotate-180 transition-transform duration-200" />
+                </TooltipTrigger>
+                <TooltipContent>{isOpen ? "Hide details" : "View details"}</TooltipContent>
+              </Tooltip>
             </div>
+
+            <p className="text-muted-foreground">{role}</p>
           </div>
 
-          {/* Right Side: Date & Location */}
-          <div className="flex flex-col sm:items-end ml-14 sm:ml-0 text-left sm:text-right">
-            <p className="font-medium text-muted-foreground text-sm">{duration}</p>
-            <p className="text-muted-foreground text-sm">{location}</p>
+          {/* Right Side */}
+          <div className="flex flex-col text-right tracking-tighter">
+            <p className="font-medium text-muted-foreground">{duration}</p>
+            <p className="text-muted-foreground">{location}</p>
           </div>
         </div>
       </AccordionTrigger>
       <AccordionContent>
         <div className="mt-5">
-          <h2 className="font-ibmPlexSans font-semibold text-base tracking-wider">
+          <h2 className="font-hankenGrotesk font-semibold text-base tracking-wider">
             Technologies & Tools
           </h2>
 

@@ -12,15 +12,16 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
   const projectData = projectInfos.find((data) => data.name === slug);
 
   if (!slug || !projectData) return null;
-  const overviewKeys = Object.keys(projectData?.overview)
+  const overviewKeys = Object.keys(projectData?.overview);
 
   return (
     <div className="mx-auto px-4 max-w-3xl">
       {/* back to home button */}
-      <Button variant="outline" className="group mb-6 cursor-pointer" asChild >
+      <Button variant="outline" className="group mb-6 cursor-pointer" asChild>
         <Link href={"/"}>
           <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />{" "}
-          Back to Home</Link>
+          Back to Home
+        </Link>
       </Button>
 
       <div className="space-y-5">
@@ -36,7 +37,7 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
         </div>
         {/* Content Section */}
         <div className="space-y-5 mt-10">
-          <h1 className="font-ibmPlexSans font-bold text-4xl md:text-5xl">{projectData.title}</h1>
+          <h1 className="font-hankenGrotesk font-bold text-4xl md:text-5xl">{projectData.title}</h1>
           <p className="text-muted-foreground text-lg">{projectData.description}</p>
         </div>
 
@@ -48,7 +49,7 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
               className="bg-card hover:shadow-lg backdrop-blur p-4 border rounded-xl transition-all hover:-translate-y-1 duration-300"
             >
               <p className="text-[11px] text-muted-foreground uppercase tracking-widest">{key}</p>
-              <p className="mt-1 font-ibmPlexSans font-semibold text-base">{value}</p>
+              <p className="mt-1 font-hankenGrotesk font-semibold text-base">{value}</p>
             </div>
           ))}
         </div>
@@ -56,22 +57,14 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
         {/* Social Links */}
         <div className="flex gap-3">
           <Button asChild>
-            <Link
-              href={projectData.socialLinks.liveDemo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={projectData.socialLinks.liveDemo} target="_blank" rel="noopener noreferrer">
               <CiGlobe size={16} />
               Live Demo
             </Link>
           </Button>
 
           <Button variant={"secondary"} asChild>
-            <Link
-              href={projectData.socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={projectData.socialLinks.github} target="_blank" rel="noopener noreferrer">
               <FaGithub size={16} />
               Source Code
             </Link>
@@ -81,11 +74,15 @@ const ProjectDetails = ({ slug }: { slug: string }) => {
 
       <Separator className="my-10" />
 
-      <h1 className="mb-10 font-ibmPlexSans font-bold text-3xl md:text-4xl">{projectData?.bio}</h1>
+      <h1 className="mb-10 font-hankenGrotesk font-bold text-3xl md:text-4xl">
+        {projectData?.bio}
+      </h1>
 
       <div className="space-y-10">
         {/* Overview Section*/}
-        {overviewKeys.map((key, i) => <ProjectOverview key={i} title={key} data={projectData?.overview[key]} />)}
+        {overviewKeys.map((key, i) => (
+          <ProjectOverview key={i} title={key} data={projectData?.overview[key]} />
+        ))}
       </div>
     </div>
   );

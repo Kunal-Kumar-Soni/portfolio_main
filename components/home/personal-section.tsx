@@ -10,8 +10,7 @@ const PersonalSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <p className="text-muted-foreground text-sm tracking-widest">Influences</p>
-        <h1 className="font-ibmPlexSans font-bold text-3xl">Books & Inspiration</h1>
+        <h1 className="font-hankenGrotesk font-bold text-3xl">Books & Inspiration</h1>
       </div>
 
       {/*Books & Inspiration Buttons */}
@@ -21,15 +20,11 @@ const PersonalSection = () => {
           href="/books"
           className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-4 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
-          <div className="flex justify-center items-center bg-muted rounded-lg w-10 h-10">
-            <BsBookHalf className="w-5 h-5 text-indigo-600 dark:text-indigo-500" />
-          </div>
-
           <div className="flex-1">
-            <h3 className="font-ibmPlexSans font-medium group-hover:text-foreground transition-colors">
+            <h3 className="font-hankenGrotesk font-medium group-hover:text-foreground transition-colors">
               Books
             </h3>
-            <p className="text-muted-foreground text-sm">Reads that shaped my thinking.</p>
+            <p className="text-muted-foreground">Reads that shaped my thinking.</p>
           </div>
 
           {/* Arrow */}
@@ -41,15 +36,11 @@ const PersonalSection = () => {
           href="/inspirations"
           className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-4 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
-          <div className="flex justify-center items-center bg-muted rounded-lg w-10 h-10">
-            <BsFire className="w-5 h-5 text-orange-500" />
-          </div>
-
           <div className="flex-1">
-            <h3 className="font-ibmPlexSans font-medium group-hover:text-foreground transition-colors">
+            <h3 className="font-hankenGrotesk font-medium group-hover:text-foreground transition-colors">
               Inspiration
             </h3>
-            <p className="text-muted-foreground text-sm">People and ideas that guide my journey.</p>
+            <p className="text-muted-foreground">People who guide my journey.</p>
           </div>
 
           {/* Arrow */}

@@ -3,12 +3,12 @@ import { inspirationsInfo } from "@/data/inspirations-info";
 import { InspirationGroup } from "./inspiration-group";
 
 const InspirationsSection = () => {
-  const inspirationKeys = Object.keys(inspirationsInfo)
+  const inspirationKeys = Object.keys(inspirationsInfo);
   return (
     <div className="mx-auto px-4 max-w-3xl">
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-ibmPlexSans font-bold text-4xl text-center">Inspirations</h1>
+        <h1 className="font-hankenGrotesk font-bold text-4xl text-center">Inspirations</h1>
         <p className="mt-5 text-muted-foreground text-center tracking-wide">
           A collection of real and fictional inspirations I learn from.
         </p>
@@ -16,7 +16,9 @@ const InspirationsSection = () => {
 
       <Separator className="mb-10" />
       {/* Inspirations Group */}
-      {inspirationKeys.map((key, i) => <InspirationGroup key={i} title={key} data={inspirationsInfo[key]} />)}
+      {inspirationKeys.map((key, i) => (
+        <InspirationGroup key={i} title={key} data={inspirationsInfo[key]} />
+      ))}
     </div>
   );
 };

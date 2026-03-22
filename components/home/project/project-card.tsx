@@ -40,7 +40,7 @@ export default function ProjectCard({
       <div className="flex flex-col flex-1 justify-between p-6">
         <div className="space-y-5">
           <div className="flex justify-between">
-            <h3 className="font-ibmPlexSans font-semibold text-xl">{title}</h3>
+            <h3 className="font-hankenGrotesk font-semibold text-xl">{title}</h3>
             {/* Live Demo & Github Icons */}
             <div className="flex gap-3">
               {socialLinks?.map((social, i) => (
@@ -61,13 +61,13 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <p className="text-muted-foreground text-base line-clamp-3 leading-relaxed tracking-tight">
+          <p className="text-muted-foreground line-clamp-3 leading-relaxed tracking-wide">
             {description}
           </p>
 
           {/* Tech stack */}
           <div>
-            <h1 className="font-ibmPlexSans text-muted-foreground text-sm sm:text-base tracking-wide">
+            <h1 className="font-hankenGrotesk text-muted-foreground sm:text-base tracking-wide">
               Technologies
             </h1>
             <div className="mt-2">{skillsIcon(technologies, "h-6 w-6", 3)}</div>
@@ -76,7 +76,7 @@ export default function ProjectCard({
 
         <button
           onClick={() => router.push(`/projects/${name}`)}
-          className="inline-flex items-center gap-2 mt-6 font-medium text-muted-foreground hover:text-primary text-sm hover:underline cursor-pointer"
+          className="inline-flex items-center gap-2 mt-6 font-medium text-muted-foreground hover:text-primary hover:underline cursor-pointer"
         >
           View Details <FaArrowRightLong size={14} />
         </button>

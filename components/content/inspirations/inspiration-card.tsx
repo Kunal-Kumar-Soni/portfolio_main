@@ -11,8 +11,8 @@ export const InspirationCard = ({ item }: { item: InspirationCardPropsType }) =>
 
       {/* Text */}
       <div className="p-4">
-        <h3 className="font-ibmPlexSans font-semibold text-lg">{item.name}</h3>
-        <p className="mt-1 text-muted-foreground text-sm">{item.focus}</p>
+        <h3 className="font-hankenGrotesk font-semibold text-lg">{item.name}</h3>
+        <p className="mt-1 text-muted-foreground">{item.focus}</p>
       </div>
 
       {/* Tag */}
