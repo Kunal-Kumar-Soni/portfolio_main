@@ -1,5 +1,5 @@
 import Container from "@/components/common/Container";
-import BlogsSection from "@/components/home/blogs/blogs-section";
+import BlogsSection from "@/components/home/blog/blog-section";
 import ExperienceSection from "@/components/home/experience/experience-section";
 import GithubActivity from "@/components/home/github-section";
 import HeroSection from "@/components/home/hero-section";

@@ -7,8 +7,6 @@ import Footer from "@/components/common/Footer";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 import Quotes from "@/components/common/Quotes";
 import BackToTop from "@/components/common/BackToTop";
-import { Suspense } from "react";
-import BlurLoader from "@/components/common/BlurLoader";
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hankenGrotesk",
@@ -47,13 +45,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Suspense fallback={<BlurLoader />}>
-            <Navbar />
-            {children}
-            <BackToTop />
-            <Quotes />
-            <Footer />
-          </Suspense>
+          <Navbar />
+          {children}
+          <BackToTop />
+          <Quotes />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

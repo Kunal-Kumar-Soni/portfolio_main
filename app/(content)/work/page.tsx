@@ -1,18 +1,17 @@
 import Container from "@/components/common/Container";
-import Blogs from "@/components/content/blogs";
-
+import Work from "@/components/content/experience/experience-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - Insights & Experiences"
-}
+  title: "Work Experience",
+};
 
 const page = () => {
   return (
     <Container>
-      <Blogs />
+      <Work />
     </Container>
-  )
+  );
 };
 
 export default page;

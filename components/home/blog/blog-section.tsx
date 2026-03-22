@@ -1,9 +1,11 @@
 import { Separator } from "../../ui/separator";
 import { blogsCardInfo } from "@/data/blogs-card-info";
-import BlogCard from "./blogs-card";
+import BlogCard from "./blog-card";
 import { Button } from "@/components/ui/button";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Link from "next/link";
+
+const blogsCardInfoTwoData = blogsCardInfo.slice(0, 2);
 
 const BlogsSection = () => {
   return (
@@ -17,7 +19,7 @@ const BlogsSection = () => {
 
       {/* Cards */}
       <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">
-        {blogsCardInfo.map((blog) => (
+        {blogsCardInfoTwoData.map((blog) => (
           <BlogCard
             key={blog?.id}
             id={blog.id}
@@ -34,7 +36,7 @@ const BlogsSection = () => {
       {/* button */}
       <div className="flex justify-center items-center mt-8">
         <Button variant="secondary" asChild>
-          <Link href="/blogs" className="flex items-center gap-2">
+          <Link href="/blog" className="flex items-center gap-2">
             Show all blogs
             <RiArrowRightSLine />
           </Link>

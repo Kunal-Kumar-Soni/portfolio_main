@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { BsCalendar3 } from "react-icons/bs";
-import { BlogOverview } from "./blogs-overview";
+import { BlogOverview } from "./blog-overview";
 import Link from "next/link";
 
 const BlogDetails = ({ slug }: { slug: string }) => {
@@ -18,9 +18,9 @@ const BlogDetails = ({ slug }: { slug: string }) => {
       {/* back to home button */}
       <div className="mb-4 w-full">
         <Button asChild variant={"outline"} className="group cursor-pointer">
-          <Link href={"/blogs"}>
+          <Link href={"/blog"}>
             <MdArrowBackIosNew className="transition-all group-hover:-translate-x-1 duration-200" />
-            blogs
+            blog
           </Link>
         </Button>
       </div>

@@ -1,13 +1,13 @@
 import { blogsCardInfo } from "@/data/blogs-card-info";
 import { Separator } from "../ui/separator";
-import BlogCard from "../home/blogs/blogs-card";
+import BlogCard from "../home/blog/blog-card";
 
-const Blogs = () => {
+const Blog = () => {
   return (
     <div className="mx-auto px-4 max-w-3xl">
       <div className="mb-10">
         <h1 className="font-hankenGrotesk font-semibold text-4xl sm:text-5xl text-center tracking-tight">
-          Blogs
+          Blog
         </h1>
         <p className="mt-4 text-muted-foreground text-lg text-center">
           Sharing my learnings, thoughts, and things I build along the way.
@@ -34,4 +34,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blog;

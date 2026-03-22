@@ -10,19 +10,9 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import { COMMAND_DATA } from "@/data/command-data";
-import {
-  CalculatorIcon,
-  CalendarIcon,
-  CreditCardIcon,
-  Search,
-  SettingsIcon,
-  SmileIcon,
-  UserIcon,
-} from "lucide-react";
-import { useTheme } from "next-themes";
+import { Search } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -30,8 +20,6 @@ export function CommandCenter() {
   const [open, setOpen] = useState<boolean>(false);
   const router = useRouter();
   const pathName = usePathname();
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
 
   const handleSelect = (path: string) => {
     if (path !== pathName) {
@@ -58,18 +46,14 @@ export function CommandCenter() {
       <div className="flex">
         <button
           onClick={() => setOpen(true)}
-          className="hidden sm:flex items-center gap-2 bg-muted/50 px-3 py-1.5 border border-border rounded-full text-muted-foreground hover:text-foreground text-sm transition"
+          className="hidden sm:flex items-center gap-2 bg-muted/50 px-3 py-1.5 border border-border rounded-full text-muted-foreground hover:text-foreground text-sm active:scale-95 transition"
         >
           <Search size={14} />
           <div className="flex gap-1">
-            <span
-              className={` ${isDark ? "bg-zinc-700" : "bg-zinc-200"} px-1.5 py-0.5 rounded font-medium text-[12px]`}
-            >
+            <span className="bg-foreground/15 px-1.5 py-0.5 rounded font-medium text-[12px]">
               Ctrl
             </span>
-            <span
-              className={`bg-zinc-200 ${isDark ? "bg-zinc-700" : "bg-zinc-200"}  px-1.5 py-0.5 rounded font-medium text-[12px]`}
-            >
+            <span className="bg-foreground/15 px-1.5 py-0.5 rounded font-medium text-[12px]">
               K
             </span>
           </div>

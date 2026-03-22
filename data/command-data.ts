@@ -19,8 +19,8 @@ export const COMMAND_DATA: CommandData[] = [
     heading: "Main",
     items: [
       { icon: Home, label: "Home", path: "/" },
-      { icon: Briefcase, label: "Works", path: "/works" },
-      { icon: FileText, label: "Blogs", path: "/blogs" },
+      { icon: Briefcase, label: "Work", path: "/work" },
+      { icon: FileText, label: "Blog", path: "/blogs" },
     ],
   },
   {

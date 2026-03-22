@@ -19,7 +19,7 @@ export default function BlogCard({
     <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
       {/* Image */}
       <div
-        onClick={() => router.push(`/blogs/${name}`)}
+        onClick={() => router.push(`/blog/${name}`)}
         className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
       >
         <Image
@@ -60,7 +60,7 @@ export default function BlogCard({
           </div>
 
           <button
-            onClick={() => router.push(`/blogs/${name}`)}
+            onClick={() => router.push(`/blog/${name}`)}
             className="inline-flex items-center gap-2 font-medium hover:text-primary hover:underline cursor-pointer"
           >
             Read more

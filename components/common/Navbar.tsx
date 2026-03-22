@@ -1,12 +1,12 @@
 "use client";
-import { Search } from "lucide-react";
+import Link from "next/link";
 import { ModeToggle } from "../ui/mode-toggle";
-import { CommandCenter } from "./CommnadConter";
+import { CommandCenter } from "./CommnadCenter";
 
 const DATA = [
   { href: "/", label: "Home" },
-  { href: "/works", label: "Works" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "/work", label: "Work" },
+  { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Resume" },
 ];
 
@@ -17,13 +17,13 @@ const Navbar = () => {
         {/* Links */}
         <div className="flex items-center gap-6 sm:gap-8 font-semibold text-sm">
           {DATA.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="group relative text-muted-foreground hover:text-foreground transition duration-200"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 

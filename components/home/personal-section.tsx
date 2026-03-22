@@ -18,7 +18,7 @@ const PersonalSection = () => {
         {/* Books */}
         <Link
           href="/books"
-          className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-4 border border-border rounded-xl transition-all hover:-translate-y-0.5"
+          className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-3 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
           <div className="flex-1">
             <h3 className="font-hankenGrotesk font-medium group-hover:text-foreground transition-colors">
@@ -34,7 +34,7 @@ const PersonalSection = () => {
         {/* Inspiration */}
         <Link
           href="/inspirations"
-          className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-4 border border-border rounded-xl transition-all hover:-translate-y-0.5"
+          className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-3 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
           <div className="flex-1">
             <h3 className="font-hankenGrotesk font-medium group-hover:text-foreground transition-colors">
