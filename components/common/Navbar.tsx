@@ -1,6 +1,7 @@
 "use client";
 import { Search } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
+import { CommandCenter } from "./CommnadConter";
 
 const DATA = [
   { href: "/", label: "Home" },
@@ -29,12 +30,7 @@ const Navbar = () => {
         {/* Right side */}
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Search */}
-          <div className="hidden sm:flex items-center gap-2 bg-muted hover:bg-accent px-3 py-1.5 border border-border rounded-full text-muted-foreground hover:text-foreground text-sm transition">
-            <Search size={14} />
-            <span className="text-xs tracking-wide">Ctrl K</span>
-          </div>
-
-          <Search size={14} className="sm:hidden" />
+          <CommandCenter />
 
           {/* Theme Toggle */}
           <ModeToggle />

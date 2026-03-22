@@ -130,3 +130,13 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
+/* hide scrollbar but keep scroll working */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
