@@ -23,7 +23,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
           {/* Left Side */}
           <div className="flex flex-col">
             <div className="flex justify-between items-center gap-1 min-h-7">
-              <h1 className="font-semibold text-lg tracking-tight">{company}</h1>
+              <h1 className="font-semibold text-lg tracking-tight md:tracking-normal">{company}</h1>
 
               {status === "working" && (
                 <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 border border-green-500/20 rounded">
@@ -37,7 +37,7 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <ChevronDown className="hover:bg-accent mt-1 rounded w-5 h-5 text-muted-foreground group-data-[state=open]:rotate-180 transition-transform duration-200" />
+                  <ChevronDown className="hover:bg-accent mt-1 rounded w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground group-data-[state=open]:rotate-180 transition-transform duration-200" />
                 </TooltipTrigger>
                 <TooltipContent>{isOpen ? "Hide details" : "View details"}</TooltipContent>
               </Tooltip>

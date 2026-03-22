@@ -10,7 +10,7 @@ const PersonalSection = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk font-bold text-3xl">Books & Inspiration</h1>
+        <h1 className="font-hankenGrotesk font-bold text-3xl">Personal</h1>
       </div>
 
       {/*Books & Inspiration Buttons */}

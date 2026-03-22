@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Hanken_Grotesk, IBM_Plex_Sans, Inter, Open_Sans } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/common/Navbar";

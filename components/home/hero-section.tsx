@@ -1,20 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { Code2, MapPin, Mail, Mars } from "lucide-react";
 import { BsFillFileTextFill, BsPatchCheckFill } from "react-icons/bs";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { IoIosSend } from "react-icons/io";
 import TechBadge from "@/components/ui/tech-badge";
-import { IconBadge } from "../ui/icon-badge";
+import { LinksIcon } from "../ui/link-icon";
 
 export default function HeroSection() {
   const router = useRouter();
 
   return (
-    <section className="mx-auto px-4 max-w-3xl">
+    <section className="space-y-6 mx-auto px-4 max-w-3xl">
       <div className="flex items-center gap-5">
         <div className="relative">
           {/* Profile */}
@@ -39,32 +38,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <Separator className="my-6" />
-
-      {/* IconBadge Grid */}
-      <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 text">
-        {/* Left */}
-        <div className="space-y-5">
-          <IconBadge icon={<Code2 size={16} />} text="Frontend Developer" link="#" />
-          <IconBadge icon={<Mars size={16} />} text="he/him" link="#" />
-        </div>
-
-        {/* Right */}
-        <div className="space-y-5">
-          <IconBadge
-            icon={<MapPin size={16} />}
-            text="Bokaro, Jharkhand, India"
-            link="https://www.google.com/maps/place/Bokaro+Thermal,+Jharkhand/@23.7929814,85.8729708,15z/data=!3m1!4b1!4m6!3m5!1s0x39f46b84cf401591:0xd366eaa0a2518c13!8m2!3d23.7978583!4d85.8844404!16s%2Fm%2F027pq5d?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-          />
-          <IconBadge
-            icon={<Mail size={16} />}
-            text="kunal.codes24@gmail.com"
-            link="mailto:kunal.codes24@gmail.com"
-          />
-        </div>
-      </div>
-
-      <Separator className="my-6" />
+      <Separator />
 
       <p className="text-muted-foreground text-lg leading-9 tracking-wide line">
         Frontend developer working with <TechBadge tech="react" />, <TechBadge tech="nextjs" />, and{" "}
@@ -72,8 +46,12 @@ export default function HeroSection() {
         <TechBadge tech="tailwind" /> and <TechBadge tech="shadcn" /> for clean and consistent UI.
       </p>
 
+      <div>
+        <LinksIcon />
+      </div>
+
       {/* Buttons */}
-      <div className="flex gap-4 mt-6">
+      <div className="flex gap-4">
         {/* Resume Button */}
         <Button onClick={() => router.push("/resume")} className="group cursor-pointer">
           <div className="flex items-center">
