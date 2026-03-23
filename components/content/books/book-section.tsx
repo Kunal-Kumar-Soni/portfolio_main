@@ -9,7 +9,7 @@ const BooksSection = () => {
       {/* Heading */}
       <div className="mb-6">
         <h1 className="font-hankenGrotesk font-bold text-4xl text-center">Books</h1>
-        <p className="mt-5 text-muted-foreground text-center tracking-wide">
+        <p className="mt-4 text-muted-foreground text-lg text-center">
           Books that have shaped my thinking, learning, and personal growth.
         </p>
       </div>

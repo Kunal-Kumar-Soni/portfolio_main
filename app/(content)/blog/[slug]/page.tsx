@@ -1,6 +1,6 @@
 import Container from "@/components/common/Container";
 import BlogDetails from "@/components/content/blog/blog-details";
-import { blogsCardInfo } from "@/data/blogs-card-info";
+import { blogCardInfo } from "@/data/blog-card-info";
 import { Metadata } from "next";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const blog = blogsCardInfo.find((b) => b.name === slug);
+  const blog = blogCardInfo.find((b) => b.name === slug);
 
   return {
     title: blog
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = () => {
-  return blogsCardInfo.map((blog) => ({ slug: blog.name }));
+  return blogCardInfo.map((blog) => ({ slug: blog.name }));
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

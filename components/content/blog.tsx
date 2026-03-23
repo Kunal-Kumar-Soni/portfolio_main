@@ -1,4 +1,4 @@
-import { blogsCardInfo } from "@/data/blogs-card-info";
+import { blogCardInfo } from "@/data/blog-card-info";
 import { Separator } from "../ui/separator";
 import BlogCard from "../home/blog/blog-card";
 
@@ -17,7 +17,7 @@ const Blog = () => {
 
       {/* Cards */}
       <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">
-        {blogsCardInfo.map((blog) => (
+        {blogCardInfo.map((blog) => (
           <BlogCard
             key={blog?.id}
             id={blog.id}

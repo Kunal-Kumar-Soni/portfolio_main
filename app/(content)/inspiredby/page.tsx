@@ -1,15 +1,15 @@
 import Container from "@/components/common/Container";
-import InspirationsSection from "@/components/content/inspirations/inspiration-section";
+import InspirationSection from "@/components/content/inspiredby/inspiredby-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Inspirations - Discipline & Mental Strength",
+  title: "Inspired By - Discipline & Mental Strength",
 };
 
 const page = () => {
   return (
     <Container>
-      <InspirationsSection />
+      <InspirationSection />
     </Container>
   );
 };

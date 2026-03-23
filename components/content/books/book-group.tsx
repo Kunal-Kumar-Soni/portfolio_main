@@ -1,4 +1,3 @@
-import { BsBookHalf } from "react-icons/bs";
 import { BookCard } from "./book-card";
 import type { BookGroupPropsType } from "@/types/books";
 

@@ -1,7 +1,7 @@
 import type { InspirationCardPropsType } from "@/types/inspirations";
 import Image from "next/image";
 
-export const InspirationCard = ({ item }: { item: InspirationCardPropsType }) => {
+export const InspiredbyCard = ({ item }: { item: InspirationCardPropsType }) => {
   return (
     <div className="relative bg-card hover:shadow-lg border border-border rounded-xl overflow-hidden transition-all hover:-translate-y-1 duration-300">
       {/* Image */}

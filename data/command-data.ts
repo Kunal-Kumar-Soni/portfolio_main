@@ -29,7 +29,7 @@ export const COMMAND_DATA: CommandData[] = [
       { icon: User, label: "Resume", path: "/resume" },
       { icon: Mail, label: "Contact", path: "/contact" },
       { icon: BookOpen, label: "Books", path: "/books" },
-      { icon: Sparkles, label: "Inspirations", path: "/inspirations" },
+      { icon: Sparkles, label: "Inspired By", path: "/inspiredby" },
     ],
   },
 ];

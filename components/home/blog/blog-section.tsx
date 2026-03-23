@@ -1,11 +1,11 @@
 import { Separator } from "../../ui/separator";
-import { blogsCardInfo } from "@/data/blogs-card-info";
+import { blogCardInfo } from "@/data/blog-card-info";
 import BlogCard from "./blog-card";
 import { Button } from "@/components/ui/button";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Link from "next/link";
 
-const blogsCardInfoTwoData = blogsCardInfo.slice(0, 2);
+const blogCardInfoTwoData = blogCardInfo.slice(0, 2);
 
 const BlogsSection = () => {
   return (
@@ -19,7 +19,7 @@ const BlogsSection = () => {
 
       {/* Cards */}
       <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">
-        {blogsCardInfoTwoData.map((blog) => (
+        {blogCardInfoTwoData.map((blog) => (
           <BlogCard
             key={blog?.id}
             id={blog.id}

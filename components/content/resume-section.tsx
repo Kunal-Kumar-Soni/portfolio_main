@@ -6,7 +6,7 @@ import Image from "next/image";
 import resume from "@/assets/document/resume.png";
 
 const ResumeSection = () => {
-  const url = "https://drive.google.com/file/d/14noj-TB1F7P8fyFwTVHOekVVRPcLQskq/view";
+  const url = "https://drive.google.com/file/d/1HNJMWxbZrf0aEAb_AyGhwUBLUx8kZAf-/view?usp=sharing";
   return (
     <section className="mx-auto px-4 max-w-3xl">
       <div className="mb-10">

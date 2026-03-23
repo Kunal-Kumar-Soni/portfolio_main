@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { blogsInfo } from "@/data/blogs-info";
+import { blogsInfo } from "@/data/blog-info";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { MdArrowBackIosNew } from "react-icons/md";

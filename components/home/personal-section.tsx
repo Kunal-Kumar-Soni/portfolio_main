@@ -31,14 +31,14 @@ const PersonalSection = () => {
           <ArrowUpRight className="opacity-0 group-hover:opacity-100 w-4 h-4 text-muted-foreground transition-all group-hover:translate-x-1" />
         </Link>
 
-        {/* Inspiration */}
+        {/* Inspired By */}
         <Link
-          href="/inspirations"
+          href="/inspiredby"
           className="group relative flex items-center gap-4 bg-card hover:shadow-sm px-5 py-3 border border-border rounded-xl transition-all hover:-translate-y-0.5"
         >
           <div className="flex-1">
             <h3 className="font-hankenGrotesk font-medium group-hover:text-foreground transition-colors">
-              Inspiration
+              Inspired By
             </h3>
             <p className="text-muted-foreground">People who guide my journey.</p>
           </div>

@@ -1,8 +1,7 @@
-import { BsFire } from "react-icons/bs";
-import { InspirationCard } from "./inspiration-card";
+import { InspiredbyCard } from "./inspiredby-card";
 import type { InspirationGroupPropsType } from "@/types/inspirations";
 
-export const InspirationGroup = ({ title, data }: InspirationGroupPropsType) => {
+export const InspiredbyGroup = ({ title, data }: InspirationGroupPropsType) => {
   return (
     <div className="mt-12">
       <div className="flex items-center gap-4 mb-6">
@@ -11,7 +10,7 @@ export const InspirationGroup = ({ title, data }: InspirationGroupPropsType) => 
 
       <div className="gap-x-10 gap-y-10 md:gap-y-20 grid grid-cols-1 md:grid-cols-2 mt-6">
         {data.map((item: any) => (
-          <InspirationCard key={item.id} item={item} />
+          <InspiredbyCard key={item.id} item={item} />
         ))}
       </div>
     </div>

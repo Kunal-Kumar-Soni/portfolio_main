@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { blogsCardInfoType } from "@/data/blogs-card-info";
+import { blogCardInfoType } from "@/data/blog-card-info";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BsCalendar3 } from "react-icons/bs";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,7 @@ export default function BlogCard({
   description,
   image,
   types,
-}: blogsCardInfoType) {
+}: blogCardInfoType) {
   const router = useRouter();
   return (
     <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
