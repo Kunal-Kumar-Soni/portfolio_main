@@ -20,7 +20,7 @@ export const COMMAND_DATA: CommandData[] = [
     items: [
       { icon: Home, label: "Home", path: "/" },
       { icon: Briefcase, label: "Work", path: "/work" },
-      { icon: FileText, label: "Blog", path: "/blogs" },
+      { icon: FileText, label: "Blog", path: "/blog" },
     ],
   },
   {

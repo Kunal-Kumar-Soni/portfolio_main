@@ -19,6 +19,6 @@ export const useHaptic = () => {
 
     document.addEventListener("click", handleGlobalClick);
 
-    return () => removeEventListener("click", handleGlobalClick);
+    return () => document.removeEventListener("click", handleGlobalClick);
   }, []);
 };

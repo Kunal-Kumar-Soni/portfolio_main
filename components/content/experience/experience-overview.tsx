@@ -16,7 +16,7 @@ const ExperienceOverview = ({ data }: { data: ExperienceType }) => {
             <h1 className="font-semibold text-lg tracking-tight md:tracking-normal">{company}</h1>
 
             {status === "working" && (
-              <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 border border-green-500/20 rounded">
+              <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 border border-green-500/20 rounded-sm">
                 <span className="relative flex w-2 h-2">
                   <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping" />
                   <span className="bg-green-500 rounded-full w-2 h-2" />
