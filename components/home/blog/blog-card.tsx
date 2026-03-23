@@ -21,6 +21,7 @@ export default function BlogCard({
       <div
         onClick={() => router.push(`/blog/${name}`)}
         className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
+        role="button"
       >
         <Image
           src={image}

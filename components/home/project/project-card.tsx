@@ -25,6 +25,7 @@ export default function ProjectCard({
       <div
         onClick={() => router.push(`/projects/${name}`)}
         className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
+        role="button"
       >
         <Image
           src={image}

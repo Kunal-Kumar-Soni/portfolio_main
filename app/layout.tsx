@@ -7,6 +7,7 @@ import Footer from "@/components/common/Footer";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 import Quotes from "@/components/common/Quotes";
 import BackToTop from "@/components/common/BackToTop";
+import { HapticHandler } from "@/components/common/HapticHandler";
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hankenGrotesk",
@@ -45,6 +46,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <HapticHandler />
           <Navbar />
           {children}
           <BackToTop />

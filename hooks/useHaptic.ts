@@ -1,0 +1,24 @@
+"use client";
+import { haptic } from "@/lib/haptic";
+import { useEffect } from "react";
+
+export const useHaptic = () => {
+  useEffect(() => {
+    const clickSound = new Audio("/sound/click.mp3");
+    clickSound.volume = 0.05;
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('button, a, [role="button"],');
+
+      if (target) {
+        haptic(7);
+
+        clickSound.currentTime = 0;
+        clickSound.play().catch(() => {});
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+
+    return () => removeEventListener("click", handleGlobalClick);
+  }, []);
+};
