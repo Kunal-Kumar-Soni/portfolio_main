@@ -16,7 +16,7 @@ export function ModeToggle() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.key.toLowerCase() === "d") {
+      if (e.key.toLowerCase() === "d") {
         e.preventDefault();
         handleMode();
       }
@@ -44,7 +44,10 @@ export function ModeToggle() {
             <RxMoon className="dark:hidden size-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </Button>
         </TooltipTrigger>
-        <TooltipContent side="bottom">Toggle Mode (D)</TooltipContent>
+        <TooltipContent side="bottom" className="py-2">
+          Toggle Mode{" "}
+          <span className="bg-background/20 px-1.5 py-0.5 rounded font-medium text-[12px]">D</span>
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
