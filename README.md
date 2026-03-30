@@ -1,4 +1,5 @@
 ## Preview
+
 ![Project Preview](./public/screenshot/image.png)
 
 ## Tech & Features
@@ -37,10 +38,10 @@ npm install
 npm run dev
 
 ```
+
 ---
 
 ## Author
 
 **Kunal Kumar Soni**  
 Thanks for visiting. Feel free to explore the code and share any feedback.
-

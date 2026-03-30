@@ -1,14 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+import Image from "next/image";
 import Link from "next/link";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
+import { useRouter } from "next/navigation";
+
 import { skillsIcon } from "@/components/ui/skills-icon";
 import { ProjectsCardInfoType } from "@/data/projects-cards-info";
-import { useRouter } from "next/navigation";
-import { FaArrowRightLong } from "react-icons/fa6";
+
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 
 export default function ProjectCard({
   title,
@@ -20,11 +23,11 @@ export default function ProjectCard({
 }: ProjectsCardInfoType) {
   const router = useRouter();
   return (
-    <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
+    <div className="group bg-card border-border gap-6 rounded-xl border transition-all hover:-translate-y-0.5 hover:shadow-md">
       {/* Image */}
       <div
         onClick={() => router.push(`/projects/${name}`)}
-        className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
+        className="relative aspect-16/10 w-full cursor-pointer overflow-hidden rounded-t-xl"
         role="button"
       >
         <Image
@@ -32,25 +35,31 @@ export default function ProjectCard({
           alt={title}
           fill
           priority
-          className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 355px"
         />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 justify-between p-6">
+      <div className="flex flex-1 flex-col justify-between p-6">
         <div className="space-y-5">
           <div className="flex justify-between">
-            <h3 className="font-hankenGrotesk font-semibold text-xl">{title}</h3>
+            <h3 className="font-hankenGrotesk text-xl font-semibold">
+              {title}
+            </h3>
             {/* Live Demo & Github Icons */}
             <div className="flex gap-3">
               {socialLinks?.map((social, i) => (
                 <Tooltip key={i}>
                   <TooltipTrigger
-                    className="text-muted-foreground hover:text-foreground text-2xl transition cursor-pointer"
+                    className="text-muted-foreground hover:text-foreground cursor-pointer text-2xl transition"
                     asChild
                   >
-                    <Link target="_blank" rel="noopener noreferrer" href={social.link}>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={social.link}
+                    >
                       {social.label === "Github" ? <FaGithub /> : <CiGlobe />}
                     </Link>
                   </TooltipTrigger>
@@ -68,7 +77,7 @@ export default function ProjectCard({
 
           {/* Tech stack */}
           <div>
-            <h1 className="font-hankenGrotesk text-muted-foreground sm:text-base tracking-wide">
+            <h1 className="font-hankenGrotesk text-muted-foreground tracking-wide sm:text-base">
               Technologies
             </h1>
             <div className="mt-2">{skillsIcon(technologies, "h-6 w-6", 3)}</div>
@@ -77,7 +86,7 @@ export default function ProjectCard({
 
         <button
           onClick={() => router.push(`/projects/${name}`)}
-          className="inline-flex items-center gap-2 mt-6 font-medium text-muted-foreground hover:text-primary hover:underline cursor-pointer"
+          className="text-muted-foreground hover:text-primary mt-6 inline-flex cursor-pointer items-center gap-2 font-medium hover:underline"
         >
           View Details <FaArrowRightLong size={14} />
         </button>

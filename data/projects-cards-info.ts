@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
-import resumeai from "@/assets/projectsImg/resumeai1.png"
-import shopkaro from "@/assets/projectsImg/shopkaro2.png"
+
+import resumeai from "@/assets/projectsImg/resumeai1.png";
+import shopkaro from "@/assets/projectsImg/shopkaro2.png";
 
 export type ProjectsCardInfoType = {
   id: number;
@@ -19,7 +20,14 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
     image: resumeai,
-    technologies: ["nextjs", "typescript", "tailwind", "supabase", "gemini", "shadcn"],
+    technologies: [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "supabase",
+      "gemini",
+      "shadcn",
+    ],
 
     socialLinks: [
       {

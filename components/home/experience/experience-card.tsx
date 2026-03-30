@@ -1,4 +1,9 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
+
+import { ChevronDown } from "lucide-react";
+
 import {
   Accordion,
   AccordionContent,
@@ -6,40 +11,54 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TechBadge from "@/components/ui/tech-badge";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { ExperienceType } from "@/data/experience-info";
-import { ChevronDown } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
-const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolean }) => {
-  const { company, role, status, duration, location, technologies, points } = data;
+const ExperienceCard = ({
+  data,
+  isOpen,
+}: {
+  data: ExperienceType;
+  isOpen: boolean;
+}) => {
+  const { company, role, status, duration, location, technologies, points } =
+    data;
 
   return (
     <>
       {/* Header Container */}
-      <AccordionTrigger className="group [&>svg]:hidden p-0 w-full hover:no-underline">
-        <div className="flex justify-between items-start w-full">
+      <AccordionTrigger className="group w-full p-0 hover:no-underline [&>svg]:hidden">
+        <div className="flex w-full items-start justify-between">
           {/* Left Side */}
           <div className="flex flex-col">
-            <div className="flex justify-between items-center gap-1 min-h-7">
-              <h1 className="font-semibold text-lg tracking-tight md:tracking-normal">{company}</h1>
+            <div className="flex min-h-7 items-center justify-between gap-1">
+              <h1 className="text-lg font-semibold tracking-tight md:tracking-normal">
+                {company}
+              </h1>
 
               {status === "working" && (
-                <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 border border-green-500/20 rounded-sm">
-                  <span className="relative flex w-2 h-2">
-                    <span className="absolute inset-0 bg-green-400 opacity-75 rounded-full animate-ping" />
-                    <span className="bg-green-500 rounded-full w-2 h-2" />
+                <div className="flex items-center gap-1 rounded-sm border border-green-500/20 bg-green-500/10 px-2 py-1">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-green-400 opacity-75" />
+                    <span className="h-2 w-2 rounded-full bg-green-500" />
                   </span>
-                  <span className="font-semibold text-green-500 text-xs">Working</span>
+                  <span className="text-xs font-semibold text-green-500">
+                    Working
+                  </span>
                 </div>
               )}
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <ChevronDown className="hover:bg-accent mt-1 rounded w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground group-data-[state=open]:rotate-180 transition-transform duration-200" />
+                  <ChevronDown className="hover:bg-accent text-muted-foreground mt-1 h-4 w-4 rounded transition-transform duration-200 group-data-[state=open]:rotate-180 sm:h-5 sm:w-5" />
                 </TooltipTrigger>
-                <TooltipContent>{isOpen ? "Hide details" : "View details"}</TooltipContent>
+                <TooltipContent>
+                  {isOpen ? "Hide details" : "View details"}
+                </TooltipContent>
               </Tooltip>
             </div>
 
@@ -48,33 +67,33 @@ const ExperienceCard = ({ data, isOpen }: { data: ExperienceType; isOpen: boolea
 
           {/* Right Side */}
           <div className="flex flex-col text-right tracking-tighter">
-            <p className="font-medium text-muted-foreground">{duration}</p>
+            <p className="text-muted-foreground font-medium">{duration}</p>
             <p className="text-muted-foreground">{location}</p>
           </div>
         </div>
       </AccordionTrigger>
       <AccordionContent>
         <div className="mt-5">
-          <h2 className="font-hankenGrotesk font-semibold text-base tracking-wider">
+          <h2 className="font-hankenGrotesk text-base font-semibold tracking-wider">
             Technologies & Tools
           </h2>
 
           {/* Badges Container */}
-          <div className="flex flex-wrap gap-3 mt-2">
+          <div className="mt-2 flex flex-wrap gap-3">
             {technologies.map((tech) => (
               <TechBadge key={tech} tech={tech} />
             ))}
           </div>
 
           {/* Experience Details */}
-          <div className="space-y-1 mt-5">
+          <div className="mt-5 space-y-1">
             {points.map((point, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-3 text-muted-foreground text-base"
+                className="group text-muted-foreground flex items-start gap-3 text-base"
               >
-                <div className="flex items-center h-6 shrink-0">
-                  <div className="bg-zinc-600 rounded-full w-1.5 h-1.5" />
+                <div className="flex h-6 shrink-0 items-center">
+                  <div className="h-1.5 w-1.5 rounded-full bg-zinc-600" />
                 </div>
                 <p>{point}</p>
               </div>

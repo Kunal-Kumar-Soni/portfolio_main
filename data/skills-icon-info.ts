@@ -1,19 +1,19 @@
 import { IconType } from "react-icons/lib";
 import {
-  SiTypescript,
-  SiJavascript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiRedux,
-  SiFirebase,
-  SiSupabase,
   SiAppwrite,
+  SiFirebase,
   SiGit,
   SiGithub,
-  SiPrisma,
-  SiShadcnui,
   SiGooglegemini,
+  SiJavascript,
+  SiNextdotjs,
+  SiPrisma,
+  SiReact,
+  SiRedux,
+  SiShadcnui,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
 type SkillIconInfoType = {

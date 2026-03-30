@@ -1,15 +1,30 @@
 "use client";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
+import Link from "next/link";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export const LinksIcon = () => {
   const LinksInfo = [
-    { icon: FaGithub, link: "https://github.com/Kunal-Kumar-Soni", label: "GitHub" },
-    { icon: FaLinkedin, link: "https://www.linkedin.com/in/kunal-kumar-soni", label: "LinkedIn" },
+    {
+      icon: FaGithub,
+      link: "https://github.com/Kunal-Kumar-Soni",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/kunal-kumar-soni",
+      label: "LinkedIn",
+    },
     { icon: BsTwitterX, link: "https://x.com/KunalKumar_Soni", label: "X" },
     { icon: IoMail, link: "mailto:kunalcodes24@gmail.com", label: "Email" },
   ];
@@ -27,11 +42,11 @@ export const LinksIcon = () => {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex justify-center items-center text-muted-foreground hover:text-foreground hover:scale-105 active:scale-95 transition-all duration-200"
+                  className="group text-muted-foreground hover:text-foreground flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   <Icon
                     size={20}
-                    className="group-hover:rotate-6 transition-transform duration-200"
+                    className="transition-transform duration-200 group-hover:rotate-6"
                   />
                 </Link>
               </TooltipTrigger>

@@ -1,15 +1,16 @@
-import { Separator } from "../ui/separator";
 import { skillsIcon } from "@/components/ui/skills-icon";
 import { skills } from "@/data/skills";
 
+import { Separator } from "../ui/separator";
+
 const SkillSection = () => {
   return (
-    <div id="skills" className="mx-auto mt-8 px-4 max-w-3xl">
+    <div id="skills" className="mx-auto mt-8 max-w-3xl px-4">
       <Separator className="mb-6" />
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk font-bold text-3xl">Stack</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">Stack</h1>
       </div>
 
       {/* Skills */}

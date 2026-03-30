@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import { blogCardInfoType } from "@/data/blog-card-info";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { BsCalendar3 } from "react-icons/bs";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+
+import { blogCardInfoType } from "@/data/blog-card-info";
 
 export default function BlogCard({
   name,
@@ -16,11 +18,11 @@ export default function BlogCard({
 }: blogCardInfoType) {
   const router = useRouter();
   return (
-    <div className="group gap-6 bg-card hover:shadow-md border border-border rounded-xl transition-all hover:-translate-y-0.5">
+    <div className="group bg-card border-border gap-6 rounded-xl border transition-all hover:-translate-y-0.5 hover:shadow-md">
       {/* Image */}
       <div
         onClick={() => router.push(`/blog/${name}`)}
-        className="relative rounded-t-xl w-full aspect-16/10 overflow-hidden cursor-pointer"
+        className="relative aspect-16/10 w-full cursor-pointer overflow-hidden rounded-t-xl"
         role="button"
       >
         <Image
@@ -28,41 +30,41 @@ export default function BlogCard({
           alt={name}
           fill
           priority
-          className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 355px"
         />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 justify-between p-6">
+      <div className="flex flex-1 flex-col justify-between p-6">
         <div className="flex gap-3">
           {types.map((type) => (
             <span
               key={type}
-              className="bg-primary/10 px-2 py-0.5 rounded-sm font-semibold text-[12px] text-primary"
+              className="bg-primary/10 text-primary rounded-sm px-2 py-0.5 text-[12px] font-semibold"
             >
               {type}
             </span>
           ))}
         </div>
 
-        <p className="mt-4 font-hankenGrotesk font-semibold text-lg leading-relaxed tracking-wider">
+        <p className="font-hankenGrotesk mt-4 text-lg leading-relaxed font-semibold tracking-wider">
           {title}
         </p>
-        <p className="mt-4 text-muted-foreground line-clamp-3 leading-relaxed tracking-wide">
+        <p className="text-muted-foreground mt-4 line-clamp-3 leading-relaxed tracking-wide">
           {description}
         </p>
 
         {/* Date and button*/}
-        <div className="flex justify-between mt-6 text-muted-foreground">
-          <div className="flex justify-center items-center gap-2">
+        <div className="text-muted-foreground mt-6 flex justify-between">
+          <div className="flex items-center justify-center gap-2">
             <BsCalendar3 size={16} />
             <p className="tracking-tight">{createdAt}</p>
           </div>
 
           <button
             onClick={() => router.push(`/blog/${name}`)}
-            className="inline-flex items-center gap-2 font-medium hover:text-primary hover:underline cursor-pointer"
+            className="hover:text-primary inline-flex cursor-pointer items-center gap-2 font-medium hover:underline"
           >
             Read more
             <FaArrowRightLong size={14} />

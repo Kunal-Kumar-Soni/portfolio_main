@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
-import life from "@/assets/blog/personal.png";
+
 import learning from "@/assets/blog/newtools.png";
+import life from "@/assets/blog/personal.png";
 
 export type blogsInfoType = {
   id: number;

@@ -1,10 +1,19 @@
-export const ProjectOverview = ({ data, title }: { data: string[]; title: string }) => {
+export const ProjectOverview = ({
+  data,
+  title,
+}: {
+  data: string[];
+  title: string;
+}) => {
   return (
     <div>
-      <h1 className="font-hankenGrotesk font-semibold text-3xl">{title}</h1>
-      <ul className="flex flex-col mt-4 pl-10">
+      <h1 className="font-hankenGrotesk text-3xl font-semibold">{title}</h1>
+      <ul className="mt-4 flex flex-col pl-10">
         {data?.map((item, i) => (
-          <li className="text-muted-foreground text-lg leading-8 list-disc" key={i}>
+          <li
+            className="text-muted-foreground list-disc text-lg leading-8"
+            key={i}
+          >
             {item}
           </li>
         ))}

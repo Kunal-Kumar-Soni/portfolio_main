@@ -1,11 +1,19 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
+import { useEffect } from "react";
 import { ImSun } from "react-icons/im";
 import { RxMoon } from "react-icons/rx";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
-import { useEffect } from "react";
+
+import { useTheme } from "next-themes";
+
+import { Button } from "@/components/ui/button";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./tooltip";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
@@ -37,16 +45,18 @@ export function ModeToggle() {
             variant="ghost"
             type="button"
             size="icon"
-            className="group hover:bg-accent/50 hover:shadow-none rounded-full size-9 cursor-pointer"
+            className="group hover:bg-accent/50 size-9 cursor-pointer rounded-full hover:shadow-none"
             onClick={handleMode}
           >
-            <ImSun className="hidden dark:block size-4 text-muted-foreground group-hover:text-primary transition-colors" />
-            <RxMoon className="dark:hidden size-4 text-muted-foreground group-hover:text-primary transition-colors" />
+            <ImSun className="text-muted-foreground group-hover:text-primary hidden size-4 transition-colors dark:block" />
+            <RxMoon className="text-muted-foreground group-hover:text-primary size-4 transition-colors dark:hidden" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom" className="py-2">
           Toggle Mode{" "}
-          <span className="bg-background/20 px-1.5 py-0.5 rounded font-medium text-[12px]">D</span>
+          <span className="bg-background/20 rounded px-1.5 py-0.5 text-[12px] font-medium">
+            D
+          </span>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

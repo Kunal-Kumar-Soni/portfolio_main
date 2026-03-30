@@ -1,5 +1,6 @@
-import { cn } from "@/lib/utils";
 import React from "react";
+
+import { cn } from "@/lib/utils";
 
 const Container = ({
   children,
@@ -12,7 +13,7 @@ const Container = ({
   return (
     <div
       className={cn(
-        `bg-background fill-mode-both pt-5 pb-10 w-full font-hankenGrotesk text-foreground animate-in duration-500 ease-linear fade-in ${className}`,
+        `bg-background fill-mode-both font-hankenGrotesk text-foreground animate-in fade-in w-full pt-5 pb-10 duration-500 ease-linear ${className}`,
       )}
       {...props}
     >

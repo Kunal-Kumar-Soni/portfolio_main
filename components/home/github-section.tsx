@@ -1,10 +1,13 @@
 "use client";
-import { GitHubCalendar } from "react-github-calendar";
-import { Separator } from "../ui/separator";
-import { useTheme } from "next-themes";
 import { useCallback, useEffect, useState } from "react";
-import { GithubStates } from "@/types/github-activity";
+import { GitHubCalendar } from "react-github-calendar";
+
+import { useTheme } from "next-themes";
 import Link from "next/link";
+
+import { GithubStates } from "@/types/github-activity";
+
+import { Separator } from "../ui/separator";
 import { Spinner } from "../ui/spinner";
 
 //Github Username
@@ -26,7 +29,10 @@ const GithubActivity = () => {
       const data: GithubStates = await res.json();
 
       setTotalContribution(
-        Object.values(data?.total).reduce((acc, curr) => (acc as number) + (curr as number), 0),
+        Object.values(data?.total).reduce(
+          (acc, curr) => (acc as number) + (curr as number),
+          0,
+        ),
       );
     } catch (error) {
       setIsError(true);
@@ -43,31 +49,35 @@ const GithubActivity = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="mx-auto mt-8 px-4 max-w-3xl">
+    <div className="mx-auto mt-8 max-w-3xl px-4">
       <Separator className="mb-6" />
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk font-bold text-3xl">GitHub Activity</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">
+          GitHub Activity
+        </h1>
       </div>
 
       {isLoading ? (
-        <div className="flex items-center gap-2 text-muted-foreground">
+        <div className="text-muted-foreground flex items-center gap-2">
           <span>Loading…</span>
-          <Spinner className="w-4 h-4" />
+          <Spinner className="h-4 w-4" />
         </div>
       ) : (
         <div className="mb-2">
-          <span className="mr-1 text-muted-foreground">Total contributions:</span>
+          <span className="text-muted-foreground mr-1">
+            Total contributions:
+          </span>
           {isError ? (
             <span className="text-foreground">unavailable</span>
           ) : (
-            <span className="bg-foreground/5 dark:bg-foreground/10 px-2 py-0.5 rounded font-medium text-foreground">
+            <span className="bg-foreground/5 dark:bg-foreground/10 text-foreground rounded px-2 py-0.5 font-medium">
               {totalContribution}
             </span>
           )}
           <Link
-            className="pl-2 text-muted-foreground hover:text-foreground underline"
+            className="text-muted-foreground hover:text-foreground pl-2 underline"
             href="https://github.com/Kunal-Kumar-Soni"
             target="_blank"
           >

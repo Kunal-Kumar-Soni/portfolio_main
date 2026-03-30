@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
 import { cn } from "@/lib/utils";
@@ -18,7 +19,9 @@ function TooltipProvider({
   );
 }
 
-function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
+function Tooltip({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Root>) {
   return (
     <TooltipProvider>
       <TooltipPrimitive.Root data-slot="tooltip" {...props} />
@@ -26,7 +29,9 @@ function Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root
   );
 }
 
-function TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
+function TooltipTrigger({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
   return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />;
 }
 
@@ -42,13 +47,13 @@ function TooltipContent({
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "data-[side=left]:slide-in-from-right-2 data-[side=top]:slide-in-from-bottom-2 z-50 bg-primary data-[side=bottom]:slide-in-from-top-2 data-[side=right]:slide-in-from-left-2 px-3 py-1.5 rounded-md overflow-hidden font-hankenGrotesk text-primary-foreground text-xs animate-in data-[state=closed]:animate-out fade-in-0 zoom-in-95 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+          "data-[side=left]:slide-in-from-right-2 data-[side=top]:slide-in-from-bottom-2 bg-primary data-[side=bottom]:slide-in-from-top-2 data-[side=right]:slide-in-from-left-2 font-hankenGrotesk text-primary-foreground animate-in data-[state=closed]:animate-out fade-in-0 zoom-in-95 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 z-50 overflow-hidden rounded-md px-3 py-1.5 text-xs",
           className,
         )}
         {...props}
       >
         {children}
-        <TooltipPrimitive.Arrow className="z-50 bg-primary fill-primary rounded-[2px] size-2.5 rotate-45 translate-y-[calc(-50%-2px)]" />
+        <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%-2px)] rotate-45 rounded-[2px]" />
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
   );

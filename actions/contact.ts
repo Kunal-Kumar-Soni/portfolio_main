@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+
 import type { ContactFormInput } from "@/types/contactForm";
 
 const resend = new Resend(process.env.RESEND_API_KEY);

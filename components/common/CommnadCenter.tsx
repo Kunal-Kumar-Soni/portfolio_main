@@ -1,5 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+import { usePathname, useRouter } from "next/navigation";
+
+import { Search } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -12,9 +18,6 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { COMMAND_DATA } from "@/data/command-data";
-import { Search } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export function CommandCenter() {
   const [open, setOpen] = useState<boolean>(false);
@@ -46,14 +49,14 @@ export function CommandCenter() {
       <div className="flex">
         <button
           onClick={() => setOpen(true)}
-          className="hidden sm:flex items-center gap-2 bg-muted/50 px-3 py-1.5 border border-border rounded-full text-muted-foreground hover:text-foreground text-sm active:scale-95 transition"
+          className="bg-muted/50 border-border text-muted-foreground hover:text-foreground hidden items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition active:scale-95 sm:flex"
         >
           <Search size={14} />
           <div className="flex gap-1">
-            <span className="bg-foreground/15 px-1.5 py-0.5 rounded font-medium text-[12px]">
+            <span className="bg-foreground/15 rounded px-1.5 py-0.5 text-[12px] font-medium">
               Ctrl
             </span>
-            <span className="bg-foreground/15 px-1.5 py-0.5 rounded font-medium text-[12px]">
+            <span className="bg-foreground/15 rounded px-1.5 py-0.5 text-[12px] font-medium">
               K
             </span>
           </div>

@@ -1,18 +1,19 @@
-import { Separator } from "../../ui/separator";
 import { projectsCardInfo } from "@/data/projects-cards-info";
+
+import { Separator } from "../../ui/separator";
 import ProjectCard from "./project-card";
 
 const ProjectSection = () => {
   return (
-    <div id="projects" className="mx-auto mt-6 px-4 max-w-3xl">
+    <div id="projects" className="mx-auto mt-6 max-w-3xl px-4">
       <Separator className="mb-6" />
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk font-bold text-3xl">Projects</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">Projects</h1>
       </div>
 
-      <div className="gap-10 md:gap-6 grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-6">
         {projectsCardInfo.map((project) => (
           <ProjectCard
             key={project.id}

@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
-import resumeai from "@/assets/projectsImg/resumeai1.png"
-import shopkaro from "@/assets/projectsImg/shopkaro2.png"
+
+import resumeai from "@/assets/projectsImg/resumeai1.png";
+import shopkaro from "@/assets/projectsImg/shopkaro2.png";
 
 export type ProjectsInfoType = {
   id: number;
@@ -11,7 +12,7 @@ export type ProjectsInfoType = {
   description: string;
   image: StaticImageData | string;
   overview: {
-    [key:string]: string[];
+    [key: string]: string[];
   };
   socialLinks: { liveDemo: string; github: string };
 };
@@ -21,7 +22,12 @@ export const projectInfos: ProjectsInfoType[] = [
     title: "Resume AI",
     name: "resumeai",
     bio: "Resume AI: Enhance resumes using AI",
-    projectMeta: { Timeline: "25 days", Role: "Full Stack", Team: "Solo", Status: "Completed" },
+    projectMeta: {
+      Timeline: "25 days",
+      Role: "Full Stack",
+      Team: "Solo",
+      Status: "Completed",
+    },
 
     description:
       "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
@@ -34,7 +40,7 @@ export const projectInfos: ProjectsInfoType[] = [
         "Gain hands-on experience with AI integration.",
         "Strengthen skills in Next.js, TypeScript, Tailwind CSS, and Supabase.",
       ],
-      "Features": [
+      Features: [
         "Secure authentication",
         "AI-powered resume analysis",
         "ATS score evaluation",
@@ -42,7 +48,7 @@ export const projectInfos: ProjectsInfoType[] = [
         "Resume history tracking",
         "Voice-based feedback",
       ],
-      "Technologies": [
+      Technologies: [
         "Next.js",
         "TypeScript",
         "Tailwind",
@@ -62,7 +68,12 @@ export const projectInfos: ProjectsInfoType[] = [
     title: "Shop Karo",
     name: "shopkaro",
     bio: "ShopKaro: Simple and fast online shopping",
-    projectMeta: { Timeline: "15 days", Role: "Front End", Team: "Solo", Status: "Completed" },
+    projectMeta: {
+      Timeline: "15 days",
+      Role: "Front End",
+      Team: "Solo",
+      Status: "Completed",
+    },
 
     description:
       "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
@@ -75,7 +86,7 @@ export const projectInfos: ProjectsInfoType[] = [
         "Understand cart management, state handling, and UI interactions.",
         "Gain hands-on experience building scalable, feature-driven applications.",
       ],
-      "Features": [
+      Features: [
         "Dark / Light mode toggle",
         "Smart product search",
         "Category-based browsing",
@@ -84,7 +95,13 @@ export const projectInfos: ProjectsInfoType[] = [
         "Redux Toolkit state management",
       ],
 
-      "Technologies": ["React.js", "Redux", "Tailwind", "Motion (Framer)", "React Tostify"],
+      Technologies: [
+        "React.js",
+        "Redux",
+        "Tailwind",
+        "Motion (Framer)",
+        "React Tostify",
+      ],
     },
     socialLinks: {
       liveDemo: "https://e-commerce-website-kunal.vercel.app/",

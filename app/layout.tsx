@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
-import "./globals.css";
 
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
-import { ThemeProvider } from "@/components/common/ThemeProvider";
-import Quotes from "@/components/common/Quotes";
 import BackToTop from "@/components/common/BackToTop";
+import Footer from "@/components/common/Footer";
 import { HapticHandler } from "@/components/common/HapticHandler";
+import Navbar from "@/components/common/Navbar";
+import Quotes from "@/components/common/Quotes";
+import { ThemeProvider } from "@/components/common/ThemeProvider";
+
+import "./globals.css";
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hankenGrotesk",
@@ -38,8 +39,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning style={{ scrollBehavior: "smooth" }}>
-      <body className={`${hankenGrotesk.variable} antialiased `} suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <body
+        className={`${hankenGrotesk.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,11 +1,11 @@
 // Real Inspiration
-import ronaldo from "@/assets/inspiredby/real/ronaldo.jpg";
-import davidgoggins from "@/assets/inspiredby/real/DavidGoggins.jpg";
+import { StaticImageData } from "next/image";
+
 // Fictional Inspiration
 import ayanokoji from "@/assets/inspiredby/fictional/ayanokoji.jpg";
 import goku from "@/assets/inspiredby/fictional/goku.jpg";
-
-import { StaticImageData } from "next/image";
+import davidgoggins from "@/assets/inspiredby/real/DavidGoggins.jpg";
+import ronaldo from "@/assets/inspiredby/real/ronaldo.jpg";
 
 type InspiredbyInfoType = {
   [key: string]: {

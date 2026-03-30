@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Separator } from "../ui/separator";
+
 import { QuotesData } from "@/data/quotes-info";
+
+import { Separator } from "../ui/separator";
 
 type QuotesInfoType = {
   quote: string;
@@ -22,24 +24,26 @@ const Quotes = () => {
   }, []);
 
   return (
-    <div className="mx-auto px-4 max-w-3xl font-hankenGrotesk">
+    <div className="font-hankenGrotesk mx-auto max-w-3xl px-4">
       <Separator className="mb-6" />
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk font-bold text-3xl">Quotes</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">Quotes</h1>
       </div>
-      <div className="relative bg-card px-6 py-5 border border-border rounded-xl overflow-hidden">
+      <div className="bg-card border-border relative overflow-hidden rounded-xl border px-6 py-5">
         {/* Accent bar */}
-        <div className="top-0 left-0 absolute bg-linear-to-b from-muted-foreground/40 to-transparent w-1 h-full" />
+        <div className="from-muted-foreground/40 absolute top-0 left-0 h-full w-1 bg-linear-to-b to-transparent" />
 
         {/* Quote */}
-        <p className="font-hankenGrotesk text-muted-foreground text-base sm:text-lg italic leading-relaxed">
+        <p className="font-hankenGrotesk text-muted-foreground text-base leading-relaxed italic sm:text-lg">
           "{quotesInfo?.quote}"
         </p>
 
         {/* Author */}
-        <div className="mt-4 font-semibold text-right">— {quotesInfo?.author}</div>
+        <div className="mt-4 text-right font-semibold">
+          — {quotesInfo?.author}
+        </div>
       </div>
     </div>
   );

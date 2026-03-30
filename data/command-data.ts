@@ -1,18 +1,22 @@
-import {
-  Home,
-  Briefcase,
-  FileText,
-  User,
-  FolderKanban,
-  Code,
-  Github,
-  Mail,
-  BookOpen,
-  Sparkles,
-} from "lucide-react";
 import { IconType } from "react-icons/lib";
 
-type CommandData = { heading: string; items: { icon: IconType; label: string; path: string }[] };
+import {
+  BookOpen,
+  Briefcase,
+  Code,
+  FileText,
+  FolderKanban,
+  Github,
+  Home,
+  Mail,
+  Sparkles,
+  User,
+} from "lucide-react";
+
+type CommandData = {
+  heading: string;
+  items: { icon: IconType; label: string; path: string }[];
+};
 
 export const COMMAND_DATA: CommandData[] = [
   {

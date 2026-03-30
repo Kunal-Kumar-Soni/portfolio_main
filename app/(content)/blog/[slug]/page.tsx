@@ -1,7 +1,8 @@
+import { Metadata } from "next";
+
 import Container from "@/components/common/Container";
 import BlogDetails from "@/components/content/blog/blog-details";
 import { blogCardInfo } from "@/data/blog-card-info";
-import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string }>;

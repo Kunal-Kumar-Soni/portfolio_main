@@ -1,26 +1,30 @@
-import { Download, ExternalLink } from "lucide-react";
-import Link from "next/link";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
 import Image from "next/image";
+import Link from "next/link";
+
+import { Download, ExternalLink } from "lucide-react";
+
 import resume from "@/assets/document/resume.png";
 
+import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
+
 const ResumeSection = () => {
-  const url = "https://drive.google.com/file/d/1HNJMWxbZrf0aEAb_AyGhwUBLUx8kZAf-/view?usp=sharing";
+  const url =
+    "https://drive.google.com/file/d/1HNJMWxbZrf0aEAb_AyGhwUBLUx8kZAf-/view?usp=sharing";
   return (
-    <section className="mx-auto px-4 max-w-3xl">
+    <section className="mx-auto max-w-3xl px-4">
       <div className="mb-10">
-        <h1 className="font-hankenGrotesk font-semibold text-4xl sm:text-5xl text-center tracking-tight">
+        <h1 className="font-hankenGrotesk text-center text-4xl font-semibold tracking-tight sm:text-5xl">
           Resume
         </h1>
-        <p className="mt-4 text-muted-foreground text-lg text-center">
+        <p className="text-muted-foreground mt-4 text-center text-lg">
           View my resume to explore my skills, experience, and projects.
         </p>
       </div>
       <Separator className="my-10" />
 
       {/* Buttons */}
-      <div className="flex justify-end items-end gap-3 mb-6">
+      <div className="mb-6 flex items-end justify-end gap-3">
         <Button asChild>
           <Link href={url} target="_blank" rel="noopener noreferrer">
             <ExternalLink size={16} />
@@ -37,13 +41,13 @@ const ResumeSection = () => {
       </div>
 
       {/* Resume PDF */}
-      <div className="group relative bg-secondary shadow-sm border rounded-xl aspect-square overflow-hidden">
+      <div className="group bg-secondary relative aspect-square overflow-hidden rounded-xl border shadow-sm">
         <Image
           alt="Resume preview"
           fill
           src={resume}
           placeholder="blur"
-          className="p-4 object-contain group-hover:scale-[1.02] transition-transform duration-300"
+          className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </div>
     </section>

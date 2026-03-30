@@ -1,24 +1,37 @@
-import type { InspirationCardPropsType } from "@/types/inspirations";
 import Image from "next/image";
 
-export const InspiredbyCard = ({ item }: { item: InspirationCardPropsType }) => {
+import type { InspirationCardPropsType } from "@/types/inspirations";
+
+export const InspiredbyCard = ({
+  item,
+}: {
+  item: InspirationCardPropsType;
+}) => {
   return (
-    <div className="relative bg-card hover:shadow-lg border border-border rounded-xl overflow-hidden transition-all hover:-translate-y-1 duration-300">
+    <div className="bg-card border-border relative overflow-hidden rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Image */}
-      <div className="relative bg-muted w-full aspect-2/3">
-        <Image src={item.image} alt={item.name} fill placeholder="blur" className="object-cover" />
+      <div className="bg-muted relative aspect-2/3 w-full">
+        <Image
+          src={item.image}
+          alt={item.name}
+          fill
+          placeholder="blur"
+          className="object-cover"
+        />
       </div>
 
       {/* Text */}
       <div className="p-4">
-        <h3 className="font-hankenGrotesk font-semibold text-lg">{item.name}</h3>
-        <p className="mt-1 text-muted-foreground">{item.focus}</p>
+        <h3 className="font-hankenGrotesk text-lg font-semibold">
+          {item.name}
+        </h3>
+        <p className="text-muted-foreground mt-1">{item.focus}</p>
       </div>
 
       {/* Tag */}
       {item.tag && (
-        <div className="top-0 right-0 absolute w-20 h-20 overflow-hidden">
-          <span className="top-4 -right-8 absolute bg-red-600 w-28 font-semibold text-[11px] text-white text-center rotate-45">
+        <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden">
+          <span className="absolute top-4 -right-8 w-28 rotate-45 bg-red-600 text-center text-[11px] font-semibold text-white">
             {item.tag}
           </span>
         </div>
