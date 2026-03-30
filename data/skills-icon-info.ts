@@ -1,7 +1,6 @@
 import { IconType } from "react-icons/lib";
 import {
   SiAppwrite,
-  SiFirebase,
   SiGit,
   SiGithub,
   SiGooglegemini,

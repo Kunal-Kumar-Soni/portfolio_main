@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
-import resumeai from "@/assets/projectsImg/resumeai1.png";
-import shopkaro from "@/assets/projectsImg/shopkaro2.png";
+import resumeai from "@/assets/projectsImg/resumeai.png";
+import shopkaro from "@/assets/projectsImg/shopkaro.png";
 
 export type ProjectsCardInfoType = {
   id: number;

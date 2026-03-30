@@ -24,8 +24,8 @@ export default function NotFound() {
         {/* Content Area */}
         <div className="mt-4 space-y-6">
           <p className="mx-auto max-w-md text-lg text-gray-600 dark:text-gray-400">
-            Oops! The page you are looking for doesn't exist or has been moved
-            to another galaxy.
+            Oops! The page you are looking for doesn&lsquo;t exist or has been
+            moved to another galaxy.
           </p>
           {/* Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">

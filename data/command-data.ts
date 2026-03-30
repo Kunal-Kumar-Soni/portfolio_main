@@ -3,10 +3,7 @@ import { IconType } from "react-icons/lib";
 import {
   BookOpen,
   Briefcase,
-  Code,
   FileText,
-  FolderKanban,
-  Github,
   Home,
   Mail,
   Sparkles,

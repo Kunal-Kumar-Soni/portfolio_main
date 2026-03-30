@@ -1,4 +1,4 @@
-import type { BookGroupPropsType } from "@/types/books";
+import type { BookCardPropsType, BookGroupPropsType } from "@/types/books";
 
 import { BookCard } from "./book-card";
 
@@ -10,7 +10,7 @@ export const BookGroup = ({ title, data }: BookGroupPropsType) => {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 md:gap-y-20">
-        {data.map((item: any) => (
+        {data.map((item: BookCardPropsType) => (
           <BookCard key={item.id} item={item} />
         ))}
       </div>

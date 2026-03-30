@@ -38,7 +38,7 @@ export const QuotesData = [
     author: "Virat Kohli",
   },
   {
-    quote: "The only time you truly fall is when you decide to give up",
+    quote: "The only time you truly fail, is when you decide to give up",
     author: "Virat Kohli",
   },
   {
@@ -69,7 +69,7 @@ export const QuotesData = [
   },
   { quote: "Calmness is the sign of wisdom.", author: "Bhagavad Gita" },
 
-  //  Ayanokoji
+  //  Ayanokoji Kiyotaka
   { quote: "All people are nothing but tools.", author: "Ayanokoji Kiyotaka" },
   { quote: "At the end winning is everything.", author: "Ayanokoji Kiyotaka" },
   {
