@@ -1,9 +1,5 @@
 "use client";
-import { MdArrowBackIosNew } from "react-icons/md";
 
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { experienceInfo } from "@/data/experience-info";
 
@@ -25,7 +21,7 @@ const ExperienceSection = () => {
 
       {/* Experience Info */}
       <div className="flex flex-col gap-8">
-        {experienceInfo.map((data, index) => {
+        {experienceInfo.map((data) => {
           return (
             <div key={data.id}>
               <Separator className="mb-8" />

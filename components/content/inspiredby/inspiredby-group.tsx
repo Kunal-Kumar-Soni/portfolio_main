@@ -1,4 +1,7 @@
-import type { InspirationGroupPropsType } from "@/types/inspirations";
+import type {
+  InspirationCardPropsType,
+  InspirationGroupPropsType,
+} from "@/types/inspirations";
 
 import { InspiredbyCard } from "./inspiredby-card";
 
@@ -10,7 +13,7 @@ export const InspiredbyGroup = ({ title, data }: InspirationGroupPropsType) => {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 md:gap-y-20">
-        {data.map((item: any) => (
+        {data.map((item: InspirationCardPropsType) => (
           <InspiredbyCard key={item.id} item={item} />
         ))}
       </div>

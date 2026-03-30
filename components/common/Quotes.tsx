@@ -37,7 +37,7 @@ const Quotes = () => {
 
         {/* Quote */}
         <p className="font-hankenGrotesk text-muted-foreground text-base leading-relaxed italic sm:text-lg">
-          "{quotesInfo?.quote}"
+          &quot;{quotesInfo?.quote}&quot;
         </p>
 
         {/* Author */}

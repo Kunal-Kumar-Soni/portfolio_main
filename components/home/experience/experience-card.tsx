@@ -1,15 +1,8 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 
 import { ChevronDown } from "lucide-react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { AccordionContent, AccordionTrigger } from "@/components/ui/accordion";
 import TechBadge from "@/components/ui/tech-badge";
 import {
   Tooltip,

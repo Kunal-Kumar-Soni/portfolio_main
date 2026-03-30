@@ -1,5 +1,3 @@
-import { BsBookHalf, BsFire } from "react-icons/bs";
-
 import Link from "next/link";
 
 import { ArrowUpRight } from "lucide-react";
