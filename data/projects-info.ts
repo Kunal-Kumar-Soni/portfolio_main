@@ -100,9 +100,8 @@ export const projectInfos: ProjectsInfoType[] = [
       Challenges: [
         "Building a custom calendar view and aligning activities day by day was challenging",
         "Handling API integration for fetching distance and route data between locations",
-        "Preventing repeated API calls when updating the same data",
+        "Managing complex drag-and-drop interactions across multiple sections (timeline, activities, transport)",
         "Handling map issues when displaying both markers and routes together",
-        "Controlling route visibility based on grouping logic",
       ],
 
       Technologies: [
@@ -118,7 +117,7 @@ export const projectInfos: ProjectsInfoType[] = [
 
     socialLinks: {
       liveDemo: "https://tripping-rho.vercel.app",
-      github: "https://github.com/Kunal-Kumar-Soni/tripping_app",
+      github: "https://github.com/Kunal-Kumar-Soni/Tripping.git",
     },
   },
 ];
