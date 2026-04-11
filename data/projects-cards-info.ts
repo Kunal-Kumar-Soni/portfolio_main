@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import resumeai from "@/assets/projectsImg/resumeai.png";
-import shopkaro from "@/assets/projectsImg/shopkaro.png";
+import tripping from "@/assets/projectsImg/tripping.png";
 
 export type ProjectsCardInfoType = {
   id: number;
@@ -15,6 +15,26 @@ export type ProjectsCardInfoType = {
 export const projectsCardInfo: ProjectsCardInfoType[] = [
   {
     id: 1,
+    title: "Tripping App",
+    name: "tripping",
+    description:
+      "A modern and interactive trip planning application that helps users organize activities, manage timelines, and visualize routes on a map — all in a smooth drag-and-drop experience.",
+
+    image: tripping,
+    technologies: ["nextjs", "typescript", "tailwind", "firebase", "shadcn"],
+    socialLinks: [
+      {
+        label: "Live Demo",
+        link: "https://tripping-rho.vercel.app/",
+      },
+      {
+        label: "Github",
+        link: "https://github.com/Kunal-Kumar-Soni/Tripping.git",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Resume AI",
     name: "resumeai",
     description:
@@ -37,27 +57,6 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
       {
         label: "Github",
         link: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
-      },
-    ],
-  },
-
-  {
-    id: 2,
-    title: "Shop Karo",
-    name: "shopkaro",
-    description:
-      "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
-
-    image: shopkaro,
-    technologies: ["react", "redux", "tailwind", "motion"],
-    socialLinks: [
-      {
-        label: "Live Demo",
-        link: "https://e-commerce-website-kunal.vercel.app/",
-      },
-      {
-        label: "Github",
-        link: "https://github.com/Kunal-Kumar-Soni/E-commerce",
       },
     ],
   },

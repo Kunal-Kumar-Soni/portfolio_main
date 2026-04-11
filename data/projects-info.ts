@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import resumeai from "@/assets/projectsImg/resumeai.png";
-import shopkaro from "@/assets/projectsImg/shopkaro.png";
+import tripping from "@/assets/projectsImg/tripping.png";
 
 export type ProjectsInfoType = {
   id: number;
@@ -65,47 +65,60 @@ export const projectInfos: ProjectsInfoType[] = [
   },
   {
     id: 2,
-    title: "Shop Karo",
-    name: "shopkaro",
-    bio: "ShopKaro: Simple and fast online shopping",
+    title: "Tripping App",
+    name: "tripping",
+    bio: "Smart trip planner with drag-and-drop timeline and map visualization",
+
     projectMeta: {
-      Timeline: "15 days",
-      Role: "Front End",
-      Team: "Solo",
+      Timeline: "60 days",
+      Role: "Full Stack",
+      Team: "3 Members",
       Status: "Completed",
     },
 
     description:
-      "A scalable e-commerce application featuring product browsing, cart state management with Redux, responsive design, and optimized UI interactions for a smooth user shopping experience.",
+      "An interactive trip planning application that allows users to organize their travel itinerary using a drag-and-drop timeline, visualize routes on a map, and manage activities efficiently with real-time updates and transport integration.",
 
-    image: shopkaro,
+    image: tripping,
+
     overview: {
       "Why I Built This": [
-        "Build a real-world e-commerce application using ShopKaro data.",
-        "Learn and practice React and Redux through a complete product flow.",
-        "Understand cart management, state handling, and UI interactions.",
-        "Gain hands-on experience building scalable, feature-driven applications.",
+        "Solve real-world problem of messy trip planning and scattered information.",
+        "Build an intuitive drag-and-drop based UI for better user experience.",
+        "Work deeply with maps, routes, and geolocation-based features.",
+        "Strengthen frontend architecture and state management skills.",
+        "Handle complex UI interactions and real-time updates.",
       ],
+
       Features: [
-        "Dark / Light mode toggle",
-        "Smart product search",
-        "Category-based browsing",
-        "Detailed product view",
-        "Cart with quantity control",
-        "Redux Toolkit state management",
+        "Drag & drop activities between timeline and activity panel",
+        "Day-wise timeline planning with automatic time adjustments",
+        "Transport integration between activities",
+        "Dynamic route visualization on map",
+        "Distance & duration calculation between locations",
+      ],
+      Challenges: [
+        "Building a custom calendar view and aligning activities day by day was challenging",
+        "Handling API integration for fetching distance and route data between locations",
+        "Preventing repeated API calls when updating the same data",
+        "Handling map issues when displaying both markers and routes together",
+        "Controlling route visibility based on grouping logic",
       ],
 
       Technologies: [
-        "React.js",
-        "Redux",
-        "Tailwind",
-        "Motion (Framer)",
-        "React Tostify",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Google Maps API",
+        "@dnd-kit",
+        "Firebase",
+        "Shadcn/UI",
       ],
     },
+
     socialLinks: {
-      liveDemo: "https://e-commerce-website-kunal.vercel.app/",
-      github: "https://github.com/Kunal-Kumar-Soni/E-commerce",
+      liveDemo: "https://tripping-rho.vercel.app",
+      github: "https://github.com/Kunal-Kumar-Soni/tripping_app",
     },
   },
 ];
