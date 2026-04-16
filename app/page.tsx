@@ -1,6 +1,7 @@
 import Container from "@/components/common/Container";
 import BlogsSection from "@/components/home/blog/blog-section";
 import ExperienceSection from "@/components/home/experience/experience-section";
+import Feedback from "@/components/home/feedback";
 import GithubActivity from "@/components/home/github-section";
 import HeroSection from "@/components/home/hero-section";
 import PersonalSection from "@/components/home/personal-section";
@@ -13,6 +14,7 @@ const page = () => {
       <HeroSection />
       <ExperienceSection />
       <ProjectSection />
+      <Feedback />
       <SkillSection />
       <GithubActivity />
       <BlogsSection />
