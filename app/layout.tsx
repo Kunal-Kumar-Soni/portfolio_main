@@ -17,20 +17,55 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Kunal - Frontend Developer",
+  metadataBase: new URL("https://kunalkumarsoni.in"),
+  title: "Kunal Kumar Soni - Frontend Developer Portfolio",
   description:
-    "Frontend Developer focused on creating clean, responsive, and high-performance web applications using modern frontend technologies.",
+    "Hi, I'm Kunal Kumar Soni, a frontend developer specializing in Next.js, React, and modern web technologies. Explore my projects and portfolio.",
+
   keywords: [
     "Kunal Kumar Soni",
-    "Frontend Developer",
-    "React Developer",
+    "Kunal Kumar Soni portfolio",
+    "Frontend Developer India",
     "Next.js Developer",
+    "React Developer",
     "Web Developer Portfolio",
-    "JavaScript Developer",
-    "UI Developer",
   ],
+
   authors: [{ name: "Kunal Kumar Soni" }],
   creator: "Kunal Kumar Soni",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Kunal Kumar Soni - Frontend Developer",
+    description:
+      "Frontend Developer specializing in Next.js and React. Explore my portfolio and projects.",
+    url: "https://kunalkumarsoni.in",
+    siteName: "Kunal Kumar Soni Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Kunal Kumar Soni - Frontend Developer",
+    description: "Frontend Developer specializing in Next.js and React.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -48,6 +83,23 @@ export default function RootLayout({
         className={`${hankenGrotesk.variable} antialiased`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Kunal Kumar Soni",
+              url: "https://kunalkumarsoni.in",
+              image: "https://kunalkumarsoni.in/og-image.jpg",
+              jobTitle: "Frontend Developer",
+              sameAs: [
+                "https://github.com/Kunal-Kumar-Soni",
+                "https://www.linkedin.com/in/kunal-kumar-soni",
+              ],
+            }),
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
