@@ -19,8 +19,9 @@ export const experienceInfo: ExperienceType[] = [
     location: "Remote",
     technologies: ["react", "nextjs", "typescript", "tailwind", "firebase"],
     points: [
-      "Developed responsive web applications using Next.js, React, and Tailwind CSS, focusing on clean UI and performance.",
-      "Integrated APIs, authentication, and handled dynamic data with real-world problem solving.",
+      "Developed 3+ responsive web applications using Next.js and React, improving UI performance and user experience.",
+      "Integrated REST APIs and authentication systems, handling dynamic data and real-world application logic.",
+      "Built reusable and scalable component structures, reducing development time by 25–30%.",
     ],
   },
   {
@@ -32,8 +33,9 @@ export const experienceInfo: ExperienceType[] = [
     location: "Remote",
     technologies: ["react", "nextjs", "typescript", "tailwind"],
     points: [
-      "Built responsive and reusable UI components for an LMS platform using React and Next.js.",
-      "Followed clean component architecture and modern UI practices to improve usability.",
+      "Built 10+ reusable UI components for an LMS platform using React and Next.js.",
+      "Improved usability by applying clean architecture and modern UI/UX practices.",
+      "Collaborated on real-world features and contributed to frontend performance optimization.",
     ],
   },
   {

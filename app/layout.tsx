@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 
 import BackToTop from "@/components/common/BackToTop";
@@ -18,21 +18,33 @@ const hankenGrotesk = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kunalkumarsoni.in"),
-  title: "Kunal Kumar Soni - Frontend Developer Portfolio",
+  title: "Kunal Kumar Soni - Frontend Developer",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description:
-    "Hi, I'm Kunal Kumar Soni, a frontend developer specializing in Next.js, React, and modern web technologies. Explore my projects and portfolio.",
+    "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
+  applicationName: "Kunal Kumar Soni Portfolio",
 
   keywords: [
     "Kunal Kumar Soni",
     "Kunal Kumar Soni portfolio",
+    "Software Developer",
+    "Frontend Developer",
     "Frontend Developer India",
     "Next.js Developer",
     "React Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
     "Web Developer Portfolio",
+    "Portfolio Website",
+    "SEO Friendly Developer",
   ],
 
-  authors: [{ name: "Kunal Kumar Soni" }],
+  authors: [{ name: "Kunal Kumar Soni", url: "https://kunalkumarsoni.in" }],
   creator: "Kunal Kumar Soni",
+  publisher: "Kunal Kumar Soni",
+  category: "technology",
 
   alternates: {
     canonical: "/",
@@ -41,31 +53,46 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   openGraph: {
     title: "Kunal Kumar Soni - Frontend Developer",
     description:
-      "Frontend Developer specializing in Next.js and React. Explore my portfolio and projects.",
+      "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     url: "https://kunalkumarsoni.in",
     siteName: "Kunal Kumar Soni Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://kunalkumarsoni.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kunal Kumar Soni - Frontend Developer",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Kunal Kumar Soni - Frontend Developer",
-    description: "Frontend Developer specializing in Next.js and React.",
-    images: ["/og-image.jpg"],
+    description:
+      "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
+    images: ["https://kunalkumarsoni.in/og-image.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0f172a",
 };
 
 export default function RootLayout({
@@ -83,23 +110,6 @@ export default function RootLayout({
         className={`${hankenGrotesk.variable} antialiased`}
         suppressHydrationWarning
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Kunal Kumar Soni",
-              url: "https://kunalkumarsoni.in",
-              image: "https://kunalkumarsoni.in/og-image.jpg",
-              jobTitle: "Frontend Developer",
-              sameAs: [
-                "https://github.com/Kunal-Kumar-Soni",
-                "https://www.linkedin.com/in/kunal-kumar-soni",
-              ],
-            }),
-          }}
-        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

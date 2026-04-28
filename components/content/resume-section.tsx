@@ -10,7 +10,7 @@ import { Separator } from "../ui/separator";
 
 const ResumeSection = () => {
   const url =
-    "https://drive.google.com/file/d/1P2fPUsaE5OATzAimKboGpdLV7LNDXMOJ/view?usp=sharing";
+    "https://drive.google.com/file/d/1lM7h9PjajMJSN_HuytoDEw1sM9Cjf1GP/view?usp=sharing";
   return (
     <section className="mx-auto max-w-3xl px-4">
       <div className="mb-10">
