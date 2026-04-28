@@ -25,7 +25,9 @@ export const metadata: Metadata = {
   description:
     "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
   applicationName: "Kunal Kumar Soni Portfolio",
-
+  appleWebApp: {
+    title: "Kunal Kumar Soni",
+  },
   keywords: [
     "Kunal Kumar Soni",
     "Kunal Kumar Soni portfolio",
@@ -67,7 +69,7 @@ export const metadata: Metadata = {
     description:
       "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     url: "https://kunalkumarsoni.in",
-    siteName: "Kunal Kumar Soni Portfolio",
+    siteName: "Kunal Kumar Soni",
     locale: "en_IN",
     type: "website",
     images: [
@@ -92,7 +94,15 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f172a",
+  themeColor: "#22d3ee",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Kunal Kumar Soni",
+  alternateName: ["Kunal Kumar Soni", "Kunal Kumar Soni Portfolio"],
+  url: "https://kunalkumarsoni.in",
 };
 
 export default function RootLayout({
@@ -110,6 +120,10 @@ export default function RootLayout({
         className={`${hankenGrotesk.variable} antialiased`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
