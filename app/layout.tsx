@@ -18,18 +18,19 @@ const hankenGrotesk = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kunalkumarsoni.in"),
-  title: "Kunal Kumar Soni - Frontend Developer",
+  title: "Kunal Kumar Soni - KunalCodes",
   icons: {
     icon: "/favicon.ico",
   },
   description:
     "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
-  applicationName: "Kunal Kumar Soni Portfolio",
+  applicationName: "Kunal Kumar Soni",
   appleWebApp: {
     title: "Kunal Kumar Soni",
   },
   keywords: [
     "Kunal Kumar Soni",
+    "KunalCodes",
     "Kunal Kumar Soni portfolio",
     "Software Developer",
     "Frontend Developer",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   category: "technology",
 
   alternates: {
-    canonical: "/",
+    canonical: "https://kunalkumarsoni.in",
   },
 
   robots: {
@@ -65,11 +66,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Kunal Kumar Soni - Frontend Developer",
+    title: "Kunal Kumar Soni - KunalCodes",
     description:
       "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     url: "https://kunalkumarsoni.in",
-    siteName: "Kunal Kumar Soni",
+    siteName: "KunalCodes",
     locale: "en_IN",
     type: "website",
     images: [
@@ -77,14 +78,14 @@ export const metadata: Metadata = {
         url: "https://kunalkumarsoni.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kunal Kumar Soni - Frontend Developer",
+        alt: "Kunal Kumar Soni - KunalCodes",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Kunal Kumar Soni - Frontend Developer",
+    title: "Kunal Kumar Soni - KunalCodes",
     description:
       "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     images: ["https://kunalkumarsoni.in/og-image.png"],
@@ -94,16 +95,26 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#22d3ee",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Kunal Kumar Soni",
-  alternateName: ["Kunal Kumar Soni", "Kunal Kumar Soni Portfolio"],
-  url: "https://kunalkumarsoni.in",
-};
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "KunalCodes",
+    url: "https://kunalkumarsoni.in",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Kunal Kumar Soni",
+    url: "https://kunalkumarsoni.in",
+    sameAs: [
+      "https://github.com/Kunal-Kumar-Soni",
+      "https://www.linkedin.com/in/kunal-kumar-soni",
+    ],
+  },
+];
 
 export default function RootLayout({
   children,
