@@ -10,14 +10,14 @@ import BlogCard from "./blog-card";
 
 const blogCardInfoTwoData = blogCardInfo.slice(0, 2);
 
-const BlogsSection = () => {
+const BlogSection = () => {
   return (
     <div className="mx-auto mt-6 max-w-3xl px-4">
       <Separator className="mb-6" />
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk text-3xl font-bold">Blogs</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">Blog</h1>
       </div>
 
       {/* Cards */}
@@ -49,4 +49,4 @@ const BlogsSection = () => {
   );
 };
 
-export default BlogsSection;
+export default BlogSection;

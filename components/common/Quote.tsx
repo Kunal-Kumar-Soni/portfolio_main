@@ -10,7 +10,7 @@ type QuotesInfoType = {
   author: string;
 };
 
-const Quotes = () => {
+const Quote = () => {
   const [quotesInfo, setQuotesInfo] = useState<QuotesInfoType | null>(null);
 
   const getQuotesData = () => {
@@ -29,7 +29,7 @@ const Quotes = () => {
 
       {/* Heading */}
       <div className="mb-6">
-        <h1 className="font-hankenGrotesk text-3xl font-bold">Quotes</h1>
+        <h1 className="font-hankenGrotesk text-3xl font-bold">Quote</h1>
       </div>
       <div className="bg-card border-border relative overflow-hidden rounded-xl border px-6 py-5">
         {/* Accent bar */}
@@ -49,4 +49,4 @@ const Quotes = () => {
   );
 };
 
-export default Quotes;
+export default Quote;

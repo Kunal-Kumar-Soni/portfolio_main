@@ -5,7 +5,7 @@ import BackToTop from "@/components/common/BackToTop";
 import Footer from "@/components/common/Footer";
 import { HapticHandler } from "@/components/common/HapticHandler";
 import Navbar from "@/components/common/Navbar";
-import Quotes from "@/components/common/Quotes";
+import Quote from "@/components/common/Quote";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 
 import "./globals.css";
@@ -18,7 +18,7 @@ const hankenGrotesk = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kunalkumarsoni.in"),
-  title: "Kunal Kumar Soni - KunalCodes",
+  title: "Kunal Kumar Soni - Frontend Developer",
   icons: {
     icon: "/favicon.ico",
   },
@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Kunal Kumar Soni",
-    "KunalCodes",
     "Kunal Kumar Soni portfolio",
     "Software Developer",
     "Frontend Developer",
@@ -41,7 +40,6 @@ export const metadata: Metadata = {
     "JavaScript Developer",
     "Web Developer Portfolio",
     "Portfolio Website",
-    "SEO Friendly Developer",
   ],
 
   authors: [{ name: "Kunal Kumar Soni", url: "https://kunalkumarsoni.in" }],
@@ -66,11 +64,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Kunal Kumar Soni - KunalCodes",
+    title: "Kunal Kumar Soni - Frontend Developer",
     description:
       "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     url: "https://kunalkumarsoni.in",
-    siteName: "KunalCodes",
+    siteName: "Kunal Kumar Soni",
     locale: "en_IN",
     type: "website",
     images: [
@@ -78,14 +76,14 @@ export const metadata: Metadata = {
         url: "https://kunalkumarsoni.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kunal Kumar Soni - KunalCodes",
+        alt: "Kunal Kumar Soni - Frontend Developer",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Kunal Kumar Soni - KunalCodes",
+    title: "Kunal Kumar Soni - Frontend Developer",
     description:
       "Kunal Kumar Soni is a Frontend Developer specializing in Next.js, React, and modern web technologies. Explore his portfolio and projects.",
     images: ["https://kunalkumarsoni.in/og-image.png"],
@@ -145,7 +143,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <BackToTop />
-          <Quotes />
+          <Quote />
           <Footer />
         </ThemeProvider>
       </body>
