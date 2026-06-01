@@ -4,10 +4,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { FaCheck } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 
-import { contactFormAction } from "@/actions/contact";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Spinner } from "@/components/ui/spinner";
+import { contactFormAction } from "@/lib/contact";
 import type { ContactFormInput } from "@/types/contactForm";
 
 export default function ContactForm() {
@@ -15,7 +15,6 @@ export default function ContactForm() {
     register,
     formState: { errors, isSubmitting },
     handleSubmit,
-    watch,
     reset,
   } = useForm<ContactFormInput>();
   const [isSuccess, setIsSuccess] = useState(false);

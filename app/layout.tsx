@@ -99,7 +99,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "KunalCodes",
+    name: "Kunal Kumar Soni",
     url: "https://kunalkumarsoni.in",
   },
   {
