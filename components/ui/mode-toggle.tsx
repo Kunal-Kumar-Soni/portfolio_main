@@ -24,7 +24,7 @@ export function ModeToggle() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "d") {
+      if (e.ctrlKey && e.key.toLowerCase() === "d") {
         e.preventDefault();
         handleMode();
       }
@@ -54,6 +54,9 @@ export function ModeToggle() {
         </TooltipTrigger>
         <TooltipContent side="bottom" className="py-2">
           Toggle Mode{" "}
+          <span className="bg-background/20 rounded px-1.5 py-0.5 text-[12px] font-medium">
+            Ctrl
+          </span>{" "}
           <span className="bg-background/20 rounded px-1.5 py-0.5 text-[12px] font-medium">
             D
           </span>

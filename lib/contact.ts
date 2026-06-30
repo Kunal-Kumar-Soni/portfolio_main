@@ -11,7 +11,7 @@ export const contactFormAction = async (fromData: ContactFormInput) => {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Kunal's Portfolio <onboarding@resend.dev>",
+      from: "Kunal's Portfolio <contact@kunalkumarsoni.in>",
       to: ["kunal.codes24@gmail.com"],
       subject: `New Contact Form Message from ${name}`,
       replyTo: email,
@@ -26,17 +26,18 @@ export const contactFormAction = async (fromData: ContactFormInput) => {
             <p style="color: #444; line-height: 1.6;">${message}</p>
           </div>
           <p style="font-size: 12px; color: #888; margin-top: 30px; text-align: center;">
-            This email was sent from your Kunal's portfolio contact form.
+            This email was sent from Kunal's portfolio contact form.
           </p>
         </div>
       `,
     });
     if (error) {
       console.log(error);
+      return { status: false, error: error };
     }
     return { status: true, output: data };
   } catch (error) {
     console.log(error);
-    return { status: true, error: error };
+    return { status: false, error: error };
   }
 };
