@@ -18,4 +18,10 @@ export const skills = [
   "photoshop",
   "chatgpt",
   "gemini",
+  "nodejs",
+  "express",
+  "mongodb",
+  "redis",
+  "aws",
+  "linux",
 ];

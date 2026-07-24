@@ -17,71 +17,96 @@ export default function HeroSection() {
 
   return (
     <section className="mx-auto max-w-3xl space-y-6 px-4">
-      <div className="flex items-center gap-5">
-        <div className="relative">
-          {/* Profile */}
-          <Image
-            priority
-            src="/logo/logo.jpg"
-            alt="Profile"
-            width={96}
-            height={96}
-            className="rounded-xl"
-          />
+      <div className="w-full">
+        {/* Cover */}
+        <div className="relative h-40 overflow-hidden rounded-3xl sm:h-60">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/logo/itachi.mp4" type="video/mp4" />
+          </video>
+
+          {/* Subtle overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-black/5" />
         </div>
 
-        {/* Name */}
-        <div>
-          <h1 className="flex items-center gap-2 text-xl font-semibold sm:text-2xl">
-            Kunal Kumar Soni
-            <BsPatchCheckFill size={20} className="text-sky-400" />
-          </h1>
+        {/* Bottom content */}
+        <div className="relative">
+          {/* Profile - doesn't take layout space */}
+          <div className="absolute -top-15 left-5 sm:left-8">
+            <div className="border-background bg-background rounded-full border-2 shadow-lg">
+              <Image
+                priority
+                src="/logo/logo.jpg"
+                alt="Kunal Kumar Soni"
+                width={105}
+                height={105}
+                className="size-24 rounded-full object-cover"
+              />
+            </div>
+          </div>
 
-          <p className="text-muted-foreground md:text-base">
-            23&apos; Engineer
-          </p>
+          {/* Name + Title */}
+          <div className="flex justify-between pt-16 sm:justify-between">
+            <div>
+              <h1 className="flex items-center gap-2 text-xl font-semibold sm:text-2xl">
+                Kunal Kumar Soni
+                <BsPatchCheckFill size={20} className="text-sky-400" />
+              </h1>
+
+              <p className="text-muted-foreground mt-0.5 text-sm sm:text-base">
+                Full Stack Developer
+              </p>
+            </div>
+            <div>
+              <LinksIcon />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mt-4 flex gap-4">
+            {/* Resume Button */}
+            <Button
+              onClick={() => router.push("/resume")}
+              className="group cursor-pointer"
+            >
+              <div className="flex items-center">
+                <BsFillFileTextFill className="text-base transition-transform duration-300 group-hover:-rotate-20" />
+                <span className="ml-2">Resume / CV</span>
+              </div>
+            </Button>
+
+            {/* Contact Button */}
+            <Button
+              variant="secondary"
+              onClick={() => router.push("/contact")}
+              className="group cursor-pointer"
+            >
+              <div className="flex items-center">
+                <span className="mr-2">Get in touch</span>
+                <IoIosSend className="text-base transition-transform duration-300 group-hover:rotate-45" />
+              </div>
+            </Button>
+          </div>
         </div>
       </div>
 
+      {/* Next Section */}
       <Separator />
 
       <p className="text-muted-foreground line text-lg leading-9 tracking-wide">
-        Frontend developer working with <TechBadge tech="react" />,{" "}
-        <TechBadge tech="nextjs" />, and <TechBadge tech="typescript" /> to
-        build modern, responsive web applications, using{" "}
-        <TechBadge tech="tailwind" /> and <TechBadge tech="shadcn" /> for clean
-        and consistent UI.
+        Full Stack Developer building modern and scalable web applications with{" "}
+        <TechBadge tech="react" /> and <TechBadge tech="typescript" /> on the
+        frontend, and <TechBadge tech="nodejs" />, <TechBadge tech="express" />,{" "}
+        <TechBadge tech="mongodb" />, and <TechBadge tech="redis" /> on the
+        backend, with <TechBadge tech="aws" /> for cloud infrastructure and
+        deployment.
       </p>
-
-      <div>
-        <LinksIcon />
-      </div>
-
-      {/* Buttons */}
-      <div className="flex gap-4">
-        {/* Resume Button */}
-        <Button
-          onClick={() => router.push("/resume")}
-          className="group cursor-pointer"
-        >
-          <div className="flex items-center">
-            <BsFillFileTextFill className="text-base transition-transform duration-300 group-hover:-rotate-20" />
-            <span className="ml-2">Resume / CV</span>
-          </div>
-        </Button>
-
-        {/* Contact Button */}
-        <Button
-          variant="secondary"
-          onClick={() => router.push("/contact")}
-          className="group cursor-pointer"
-        >
-          <div className="flex items-center">
-            <span className="mr-2">Get in touch</span>
-            <IoIosSend className="text-base transition-transform duration-300 group-hover:rotate-45" />
-          </div>
-        </Button>
-      </div>
     </section>
   );
 }

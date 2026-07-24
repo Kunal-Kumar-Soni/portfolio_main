@@ -1,13 +1,19 @@
 import { IconType } from "react-icons/lib";
 import {
+  SiAmazonwebservices,
   SiAppwrite,
+  SiExpress,
   SiGit,
   SiGithub,
   SiGooglegemini,
   SiJavascript,
+  SiLinux,
+  SiMongodb,
   SiNextdotjs,
+  SiNodedotjs,
   SiPrisma,
   SiReact,
+  SiRedis,
   SiRedux,
   SiShadcnui,
   SiSupabase,
@@ -25,7 +31,27 @@ type SkillIconInfoType = {
 }[];
 
 export const skillsIconInfo: SkillIconInfoType = [
-  // Frameworks and Libraries
+  // =========================
+  // Languages
+  // =========================
+  {
+    name: "javascript",
+    label: "JavaScript",
+    icon: SiJavascript,
+    color: "#F7DF1E",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "typescript",
+    label: "TypeScript",
+    icon: SiTypescript,
+    color: "#3178C6",
+    link: "https://www.typescriptlang.org/",
+  },
+
+  // =========================
+  // Frontend
+  // =========================
   {
     name: "react",
     label: "React.js",
@@ -39,24 +65,6 @@ export const skillsIconInfo: SkillIconInfoType = [
     icon: SiNextdotjs,
     link: "https://nextjs.org/",
   },
-
-  // Languages
-  {
-    name: "typescript",
-    label: "TypeScript",
-    icon: SiTypescript,
-    color: "#3178C6",
-    link: "https://www.typescriptlang.org/",
-  },
-  {
-    name: "javascript",
-    label: "JavaScript",
-    icon: SiJavascript,
-    color: "#F7DF1E",
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-
-  // Styling / UI
   {
     name: "tailwind",
     label: "Tailwind CSS",
@@ -70,23 +78,64 @@ export const skillsIconInfo: SkillIconInfoType = [
     icon: SiShadcnui,
     link: "https://ui.shadcn.com/",
   },
-
-  // States
   {
     name: "redux",
-    label: "Redux",
+    label: "Redux Toolkit",
     icon: SiRedux,
     color: "#764ABC",
     link: "https://redux.js.org/",
   },
-
-  // Backends / DB
   {
-    name: "firebase",
-    label: "Firebase",
-    link: "https://firebase.google.com/",
-    image: "/iconsImage/firebase.png",
+    name: "motion",
+    label: "Motion",
+    link: "https://motion.dev/",
+    image: "/iconsImage/motion.png",
   },
+
+  // =========================
+  // Backend
+  // =========================
+  {
+    name: "nodejs",
+    label: "Node.js",
+    icon: SiNodedotjs,
+    color: "#5FA04E",
+    link: "https://nodejs.org/",
+  },
+  {
+    name: "express",
+    label: "Express.js",
+    icon: SiExpress,
+    link: "https://expressjs.com/",
+  },
+
+  // =========================
+  // Databases & ORM
+  // =========================
+  {
+    name: "mongodb",
+    label: "MongoDB",
+    icon: SiMongodb,
+    color: "#47A248",
+    link: "https://www.mongodb.com/",
+  },
+  {
+    name: "prisma",
+    label: "Prisma",
+    icon: SiPrisma,
+    link: "https://www.prisma.io/",
+  },
+  {
+    name: "redis",
+    label: "Redis",
+    icon: SiRedis,
+    color: "#DC382D",
+    link: "https://redis.io/",
+  },
+
+  // =========================
+  // Backend Platforms / BaaS
+  // =========================
   {
     name: "supabase",
     label: "Supabase",
@@ -95,20 +144,35 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://supabase.com/",
   },
   {
+    name: "firebase",
+    label: "Firebase",
+    link: "https://firebase.google.com/",
+    image: "/iconsImage/firebase.png",
+  },
+  {
     name: "appwrite",
     label: "Appwrite",
     icon: SiAppwrite,
     color: "#F02E65",
     link: "https://appwrite.io/",
   },
-  {
-    name: "prisma",
-    label: "Prisma",
-    icon: SiPrisma,
-    link: "https://www.prisma.io/",
-  },
 
-  // Tools
+  // =========================
+  // Cloud & DevOps
+  // =========================
+  {
+    name: "aws",
+    label: "AWS",
+    icon: SiAmazonwebservices,
+    color: "#FF9900",
+    link: "https://aws.amazon.com/",
+  },
+  {
+    name: "linux",
+    label: "Linux",
+    icon: SiLinux,
+    link: "https://www.linux.org/",
+  },
   {
     name: "git",
     label: "Git",
@@ -123,7 +187,9 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://github.com/",
   },
 
-  // Animations / Designs
+  // =========================
+  // Design
+  // =========================
   {
     name: "figma",
     label: "Figma",
@@ -136,17 +202,13 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://www.adobe.com/products/photoshop.html",
     image: "/iconsImage/photoshop.png",
   },
-  {
-    name: "motion",
-    label: "Motion",
-    link: "https://motion.dev/",
-    image: "/iconsImage/motion.png",
-  },
 
-  //Models
+  // =========================
+  // AI Tools
+  // =========================
   {
     name: "chatgpt",
-    label: "Chatgpt",
+    label: "ChatGPT",
     link: "https://chatgpt.com/",
     image: "/iconsImage/chatgpt.png",
   },

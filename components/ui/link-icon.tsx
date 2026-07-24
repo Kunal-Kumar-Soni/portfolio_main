@@ -31,7 +31,7 @@ export const LinksIcon = () => {
 
   return (
     <TooltipProvider>
-      <div className="flex gap-3">
+      <div className="flex gap-3 sm:gap-4">
         {LinksInfo.map((linkInfo) => {
           const { icon: Icon, label, link } = linkInfo;
 
@@ -44,10 +44,7 @@ export const LinksIcon = () => {
                   rel="noopener noreferrer"
                   className="group text-muted-foreground hover:text-foreground flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
                 >
-                  <Icon
-                    size={20}
-                    className="transition-transform duration-200 group-hover:rotate-6"
-                  />
+                  <Icon className="size-5.5 transition-transform duration-200 group-hover:rotate-6 sm:size-6" />
                 </Link>
               </TooltipTrigger>
 
