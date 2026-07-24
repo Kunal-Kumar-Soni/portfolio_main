@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import Container from "@/components/common/Container";
+import Reveal from "@/components/common/Revel";
 import ProjectDetails from "@/components/content/projects/project-details";
 import { projectsCardInfo } from "@/data/projects-cards-info";
 
@@ -28,7 +29,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <Container>
-      <ProjectDetails slug={data} />
+      <Reveal>
+        <ProjectDetails slug={data} />
+      </Reveal>
     </Container>
   );
 };

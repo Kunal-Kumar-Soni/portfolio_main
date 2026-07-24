@@ -1,4 +1,5 @@
 import Container from "@/components/common/Container";
+import Reveal from "@/components/common/Revel";
 import BlogSection from "@/components/home/blog/blog-section";
 import ExperienceSection from "@/components/home/experience/experience-section";
 import Feedback from "@/components/home/feedback";
@@ -12,13 +13,34 @@ const page = () => {
   return (
     <Container>
       <HeroSection />
-      <ExperienceSection />
-      <ProjectSection />
-      <Feedback />
-      <SkillSection />
-      <GithubActivity />
-      <BlogSection />
-      <PersonalSection />
+
+      <Reveal>
+        <ExperienceSection />
+      </Reveal>
+
+      <Reveal>
+        <ProjectSection />
+      </Reveal>
+
+      <Reveal>
+        <Feedback />
+      </Reveal>
+
+      <Reveal>
+        <SkillSection />
+      </Reveal>
+
+      <Reveal>
+        <GithubActivity />
+      </Reveal>
+
+      <Reveal>
+        <BlogSection />
+      </Reveal>
+
+      <Reveal>
+        <PersonalSection />
+      </Reveal>
     </Container>
   );
 };

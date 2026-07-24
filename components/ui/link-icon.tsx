@@ -25,7 +25,7 @@ export const LinksIcon = () => {
       link: "https://www.linkedin.com/in/kunal-kumar-soni",
       label: "LinkedIn",
     },
-    { icon: BsTwitterX, link: "https://x.com/KunalKumar_Soni", label: "X" },
+    { icon: BsTwitterX, link: "https://x.com/kunalonstack", label: "X" },
     { icon: IoMail, link: "mailto:kunalcodes24@gmail.com", label: "Email" },
   ];
 

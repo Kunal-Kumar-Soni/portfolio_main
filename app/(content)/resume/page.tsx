@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import Container from "@/components/common/Container";
+import Reveal from "@/components/common/Revel";
 import ResumeSection from "@/components/content/resume-section";
 
 export const metadata: Metadata = {
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <Container>
-      <ResumeSection />
+      <Reveal>
+        <ResumeSection />
+      </Reveal>
     </Container>
   );
 };

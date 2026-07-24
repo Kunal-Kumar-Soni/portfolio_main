@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import Container from "@/components/common/Container";
+import Reveal from "@/components/common/Revel";
 import BlogDetails from "@/components/content/blog/blog-details";
 import { blogCardInfo } from "@/data/blog-card-info";
 
@@ -28,7 +29,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <Container>
-      <BlogDetails slug={data} />
+      <Reveal>
+        <BlogDetails slug={data} />
+      </Reveal>
     </Container>
   );
 };
