@@ -1,6 +1,6 @@
+import { FaAws } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import {
-  SiAmazonwebservices,
   SiAppwrite,
   SiExpress,
   SiGit,
@@ -163,7 +163,7 @@ export const skillsIconInfo: SkillIconInfoType = [
   {
     name: "aws",
     label: "AWS",
-    icon: SiAmazonwebservices,
+    icon: FaAws,
     color: "#FF9900",
     link: "https://aws.amazon.com/",
   },
