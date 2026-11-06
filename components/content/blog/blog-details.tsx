@@ -37,6 +37,7 @@ const BlogDetails = ({ slug }: { slug: string }) => {
             placeholder="blur"
             src={blogsData.image}
             className="rounded-md object-cover"
+            sizes="(max-width: 768px) calc(100vw - 2rem), 736px"
           />
         </div>
         {/* Content Section */}

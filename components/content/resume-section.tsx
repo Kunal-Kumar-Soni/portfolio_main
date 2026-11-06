@@ -48,6 +48,7 @@ const ResumeSection = () => {
           src={resume}
           placeholder="blur"
           className="object-contain p-4 transition-transform duration-300 group-hover:scale-[1.02]"
+          sizes="(max-width: 768px) calc(100vw - 2rem), 736px"
         />
       </div>
     </section>

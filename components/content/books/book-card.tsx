@@ -13,6 +13,7 @@ export const BookCard = ({ item }: { item: BookCardPropsType }) => {
           placeholder="blur"
           fill
           className="object-cover"
+          sizes="(max-width: 768px) calc(100vw - 2rem), 348px"
         />
       </div>
 

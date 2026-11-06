@@ -17,6 +17,7 @@ export const InspiredbyCard = ({
           fill
           placeholder="blur"
           className="object-cover"
+          sizes="(max-width: 768px) calc(100vw - 2rem), 348px"
         />
       </div>
 

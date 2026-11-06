@@ -28,7 +28,7 @@ const ExperienceCard = ({
         <div className="flex w-full items-start justify-between">
           {/* Left Side */}
           <div className="flex flex-col">
-            <div className="flex min-h-7 items-center justify-between gap-1">
+            <div className="flex min-h-7 items-center gap-1">
               <h1 className="text-lg font-semibold tracking-tight md:tracking-normal">
                 {company}
               </h1>
