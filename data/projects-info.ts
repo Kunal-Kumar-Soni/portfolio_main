@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import resumeai from "@/assets/projectsImg/resumeai.png";
+import storageapp from "@/assets/projectsImg/storageapp.png";
 import tripping from "@/assets/projectsImg/tripping.png";
 
 export type ProjectsInfoType = {
@@ -18,49 +18,64 @@ export type ProjectsInfoType = {
 };
 export const projectInfos: ProjectsInfoType[] = [
   {
-    id: 1,
-    title: "Resume AI",
-    name: "resumeai",
-    bio: "Resume AI: Enhance resumes using AI",
+    id: 3,
+    title: "Cloud Storage App",
+    name: "storageapp",
+    bio: "Cloud storage platform with secure file management, subscription-based storage, and automated deployments",
+
     projectMeta: {
-      Timeline: "25 days",
-      Role: "Full Stack",
+      Timeline: "Ongoing",
+      Role: "Full Stack Developer",
       Team: "Solo",
-      Status: "Completed",
+      Status: "Deployed",
     },
 
     description:
-      "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
-    image: resumeai,
+      "A full-stack cloud storage platform that enables users to upload, organize, and manage files with AWS S3. It includes subscription-based storage plans, integrated online payments, storage quota management, and automated deployment workflows.",
+
+    image: storageapp,
 
     overview: {
       "Why I Built This": [
-        "Enhance existing resumes instead of generating generic ones.",
-        "Use AI in a practical, real-world scenario.",
-        "Gain hands-on experience with AI integration.",
-        "Strengthen skills in Next.js, TypeScript, Tailwind CSS, and Supabase.",
+        "Build a practical cloud storage platform with real-world file management workflows.",
+        "Understand cloud object storage and production deployment architecture.",
+        "Implement subscription-based access to storage resources.",
+        "Gain hands-on experience with payment processing and DevOps automation.",
       ],
+
       Features: [
-        "Secure authentication",
-        "AI-powered resume analysis",
-        "ATS score evaluation",
-        "Resume management",
-        "Resume history tracking",
-        "Voice-based feedback",
+        "Upload and manage user files using AWS S3.",
+        "Subscription plans with different storage capacities.",
+        "Razorpay integration for subscription payments.",
+        "Storage quota management based on the user's subscription.",
+        "Cloud-hosted frontend with a separately deployed backend.",
       ],
+
+      Challenges: [
+        "Configuring secure cross-origin requests for frontend, backend, and S3 uploads.",
+        "Handling Razorpay webhook signature verification and payment event processing.",
+        "Keeping subscription status and storage quotas consistent with payment events.",
+        "Configuring Nginx as a reverse proxy for the backend API.",
+        "Automated frontend and backend deployment pipelines using GitHub Actions, AWS S3, and server deployment workflows.",
+      ],
+
       Technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind",
-        "Supabase",
-        "Gemini",
-        "React Hook Form",
-        "Shadcn/Ui",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "AWS S3",
+        "Razorpay",
+        "Cloudflare",
+        "Nginx",
+        "PM2",
+        "GitHub Actions",
       ],
     },
+
     socialLinks: {
-      liveDemo: "https://resume-ai-kunal.vercel.app",
-      github: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
+      liveDemo: "https://app.kunalkumarsoni.in/",
+      github: "https://github.com/Kunal-Kumar-Soni/storageApp-backend",
     },
   },
   {

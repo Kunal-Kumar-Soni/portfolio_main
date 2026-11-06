@@ -1,17 +1,21 @@
 import { FaAws } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import {
-  SiAppwrite,
+  SiCloudflare,
   SiExpress,
   SiGit,
   SiGithub,
+  SiGithubactions,
   SiGooglegemini,
   SiJavascript,
   SiLinux,
   SiMongodb,
   SiNextdotjs,
+  SiNginx,
   SiNodedotjs,
+  SiPostgresql,
   SiPrisma,
+  SiRazorpay,
   SiReact,
   SiRedis,
   SiRedux,
@@ -74,22 +78,9 @@ export const skillsIconInfo: SkillIconInfoType = [
   },
   {
     name: "shadcn",
-    label: "Shadcn/ui",
+    label: "shadcn/ui",
     icon: SiShadcnui,
     link: "https://ui.shadcn.com/",
-  },
-  {
-    name: "redux",
-    label: "Redux Toolkit",
-    icon: SiRedux,
-    color: "#764ABC",
-    link: "https://redux.js.org/",
-  },
-  {
-    name: "motion",
-    label: "Motion",
-    link: "https://motion.dev/",
-    image: "/iconsImage/motion.png",
   },
 
   // =========================
@@ -118,6 +109,13 @@ export const skillsIconInfo: SkillIconInfoType = [
     icon: SiMongodb,
     color: "#47A248",
     link: "https://www.mongodb.com/",
+  },
+  {
+    name: "postgresql",
+    label: "PostgreSQL",
+    icon: SiPostgresql,
+    color: "#4169E1",
+    link: "https://www.postgresql.org/",
   },
   {
     name: "prisma",
@@ -149,16 +147,9 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://firebase.google.com/",
     image: "/iconsImage/firebase.png",
   },
-  {
-    name: "appwrite",
-    label: "Appwrite",
-    icon: SiAppwrite,
-    color: "#F02E65",
-    link: "https://appwrite.io/",
-  },
 
   // =========================
-  // Cloud & DevOps
+  // Cloud & Infrastructure
   // =========================
   {
     name: "aws",
@@ -168,11 +159,29 @@ export const skillsIconInfo: SkillIconInfoType = [
     link: "https://aws.amazon.com/",
   },
   {
+    name: "nginx",
+    label: "Nginx",
+    icon: SiNginx,
+    color: "#009639",
+    link: "https://nginx.org/",
+  },
+  {
+    name: "cloudflare",
+    label: "Cloudflare",
+    icon: SiCloudflare,
+    color: "#F38020",
+    link: "https://www.cloudflare.com/",
+  },
+  {
     name: "linux",
     label: "Linux",
     icon: SiLinux,
     link: "https://www.linux.org/",
   },
+
+  // =========================
+  // Version Control & CI/CD
+  // =========================
   {
     name: "git",
     label: "Git",
@@ -185,6 +194,24 @@ export const skillsIconInfo: SkillIconInfoType = [
     label: "GitHub",
     icon: SiGithub,
     link: "https://github.com/",
+  },
+  {
+    name: "github-actions",
+    label: "GitHub Actions",
+    icon: SiGithubactions,
+    color: "#2088FF",
+    link: "https://github.com/features/actions",
+  },
+
+  // =========================
+  // Payments
+  // =========================
+  {
+    name: "razorpay",
+    label: "Razorpay",
+    icon: SiRazorpay,
+    color: "#3395FF",
+    link: "https://razorpay.com/",
   },
 
   // =========================

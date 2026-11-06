@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import resumeai from "@/assets/projectsImg/resumeai.png";
+import storageapp from "@/assets/projectsImg/storageapp.png";
 import tripping from "@/assets/projectsImg/tripping.png";
 
 export type ProjectsCardInfoType = {
@@ -15,6 +15,33 @@ export type ProjectsCardInfoType = {
 export const projectsCardInfo: ProjectsCardInfoType[] = [
   {
     id: 1,
+    title: "Cloud Storage App",
+    name: "storageapp",
+    description:
+      "A full-stack cloud storage platform that allows users to securely upload, manage, and access their files with scalable storage powered by AWS S3. Features subscription-based storage plans, payment integration with Razorpay, and automated CI/CD deployments.",
+    image: storageapp,
+    technologies: [
+      "react",
+      "nodejs",
+      "express",
+      "mongodb",
+      "aws",
+      "razorpay",
+      "github-actions",
+    ],
+    socialLinks: [
+      {
+        label: "Live Demo",
+        link: "https://app.kunalkumarsoni.in/",
+      },
+      {
+        label: "Github",
+        link: "https://github.com/Kunal-Kumar-Soni/storageApp-backend",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Tripping App",
     name: "tripping",
     description:
@@ -30,33 +57,6 @@ export const projectsCardInfo: ProjectsCardInfoType[] = [
       {
         label: "Github",
         link: "https://github.com/Kunal-Kumar-Soni/Tripping.git",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Resume AI",
-    name: "resumeai",
-    description:
-      "An AI-powered resume builder that analyzes content, improves clarity, and provides ATS-friendly scoring with real-time feedback.",
-    image: resumeai,
-    technologies: [
-      "nextjs",
-      "typescript",
-      "tailwind",
-      "supabase",
-      "gemini",
-      "shadcn",
-    ],
-
-    socialLinks: [
-      {
-        label: "Live Demo",
-        link: "https://resume-ai-kunal.vercel.app",
-      },
-      {
-        label: "Github",
-        link: "https://github.com/Kunal-Kumar-Soni/ai_resume_analyser",
       },
     ],
   },

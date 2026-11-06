@@ -14,8 +14,8 @@ export const experienceInfo: ExperienceType[] = [
     id: 1,
     company: "Freelance",
     role: "Frontend Developer",
-    status: "working",
-    duration: "Jan 2026 - Present",
+    status: "not",
+    duration: "Jan 2026 - APR 2026",
     location: "Remote",
     technologies: ["react", "nextjs", "typescript", "tailwind", "firebase"],
     points: [
